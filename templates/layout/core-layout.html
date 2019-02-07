@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+	{% block title %}
+    Welcome
+  {% endblock %}
+  </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: #FF9C33">
+
+<!--Heading-->
+<div class="jumbotron" style="padding-top: 10px;padding-bottom: 10px;margin-bottom: 0px;background-color: #f9f9f9">
+    <h1 style="text-align: center;">Gursahib Singh</h1> 
+    <p style="text-align: center;">Computer Engineer</p> 
+</div>
+
+<div class="app-container">
+    <div class="row content-container">
+        <!-- <navbar> -->
+         {% include 'navbar-top/navbar-top.html' %}
+        <!-- </navbar> -->
+    <div class="container-fluid">
+      <!-- <main> -->
+      <div class="side-body">
+        {% block content %} 
+
+        {% endblock %}
+      </div>
+      <!-- </main> -->
+    </div>
+</div>
+
+<!--Footer Bar-->
+<nav class="navbar navbar-inverse" style="margin-bottom: 2px">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">GS</a>
+    </div>
+  </div>
+</nav>
+</body>
+</html>
