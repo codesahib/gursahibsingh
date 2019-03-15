@@ -9,17 +9,19 @@
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" src="F:\Projects\Website\mysite\templates\layout\layout.css" type="text/css">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    
 </head>
 
-<body style="background-color: #FF9C33">
+<body style="background-color: #eae7dc">
 
 <!--Heading-->
-<div class="container-fluid jumbotron" style="padding-top: 10px;padding-bottom: 10px;margin-bottom: 0px;background-color: #ffffff">
-    <h1 style="text-align: center;">Gursahib Singh</h1> 
-    <p style="text-align: center;">Computer Engineer</p> 
+<div class="container-fluid jumbotron" style="padding-top: 10px;padding-bottom: 10px;margin-bottom: 0px;background-color: #eae7dc">
+    <h1 style="text-align: center;color:#8d8e8a">Gursahib Singh</h1> 
+    <p style="text-align: center;color: #8d8e8a">Computer Engineer</p> 
 </div>
 
 <div class="container-fluid app-container">
@@ -40,17 +42,19 @@
 </div>
 
 <!--Footer Bar-->
-<div class="container-fluid app-container" style="margin-bottom: 2px;margin-top: 20px ;width:100%">
+<div class="container-fluid app-container " style="margin-bottom: 0px;margin-top: 20px ;width:100%">
   <div class="row content-container">
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default" style="background-color: #e98074">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="http://127.0.0.1:8000/home">GS</a>
+          <a class="navbar-brand" href="http://127.0.0.1:8000/home" style="color: #000000;box-shadow: 0 0 25px 0 black;">GS</a>
         </div>
       </div>
     </nav>  
   </div>
 </div>
-<script type="text/javascript" src="F:\Projects\Website\mysite\templates\layout\script.js"></script>
+{% load static %}
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
 </body>
 </html>
