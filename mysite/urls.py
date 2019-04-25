@@ -17,14 +17,9 @@ from django.contrib import admin
 from django.conf.urls import include,url
 
 urlpatterns = [
-<<<<<<< HEAD
     url(r'', include('apps.home.urls')),
 	url(r'^home/', include('apps.home.urls')),
 	url(r'^contact/', include('apps.contact.urls')),
     url(r'^about/', include('apps.about.urls')),
     url(r'^projects/', include('apps.projects.urls')),
-=======
-	url(r'^home/', include('home.urls')),
->>>>>>> 20a50cd5d6db642767dace90f2f28dab1cbb5220
-    url(r'^admin/', admin.site.urls),
 ]
