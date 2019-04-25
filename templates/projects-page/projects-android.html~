@@ -34,6 +34,15 @@
           <div class="col-md-12" style="background-color: #d8c3a5;height:400px;">
             <h1>Android</h1>
             <h2>Page Under Construction</h2>
+            <select id="Option 1">
+		    <option value="Select User">A</option>
+		    <option value="Select User">B</option>
+		    <option value="Select User">C</option>
+		    <option value="Select User">D</option>
+            <select>
+            <select id="Option 2">
+		    <option value="" ></option>
+            <select>
 	  </div>
         </div> 
     </div>
