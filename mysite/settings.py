@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  #F:\Projects\Website\mysite
 
 
 # Quick-start development settings - unsuitable for production
@@ -85,13 +85,15 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #F:\Projects\Website\mysite\static
 STATIC_URL = '/static/'
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__)) #F:\Projects\Website\mysite\mysite
+
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
+    os.path.join(PROJECT_ROOT, 'static'), #F:\Projects\Website\mysite\mysite\static
+ )
+
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

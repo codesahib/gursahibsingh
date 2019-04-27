@@ -1,0 +1,11 @@
+.item{
+  width:100%;
+  height:420px;
+  img{
+    display:none;
+  }
+}
+
+section{
+  padding:25px;
+}

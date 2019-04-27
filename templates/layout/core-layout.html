@@ -8,54 +8,130 @@
   </title>
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    {% load static %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
+    
+    {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+   
     
 </head>
 
-<body style="background-color: #eae7dc">
+<body style="background-color: #ffffff">
 
-<!--Heading-->
-<div class="container-fluid jumbotron" style="padding-top: 10px;padding-bottom: 10px;margin-bottom: 0px;background-color: #eae7dc">
-    <h1 style="text-align: center;color:#8d8e8a">Gursahib Singh</h1> 
-    <p style="text-align: center;color: #8d8e8a">Computer Engineer</p> 
+<!--Heading<div class="jumbotron jumbotron-fluid" style="padding-top: 10px;padding-bottom: 10px;margin-bottom: 0px;background-color: #ffffff">
+    <div class="container">
+    	<h1 class="display-4" style="text-align: center;color:#361F00">Gursahib Singh</h1> 
+    	<p class="lead" style="text-align: center;color: #361F00">Computer Engineer</p> 
+    </div>
 </div>
+-->
 
 <div class="container-fluid app-container">
-  <div class="row content-container">
+  <div class="row content-container" >
 
         <!-- <navbar> -->
          {% include 'navbar-top/navbar-top.html' %}
-        <!-- </navbar> -->
-    <div class="container-fluid">
+    
       <!-- <main> -->
-      <div class="side-body">
+      
         {% block content %} 
-
+  
         {% endblock %}
-      </div>
+      
       <!-- </main> -->
-    </div>
+        
 
   </div>
+
 </div>
 
-<!--Footer Bar-->
-<div class="container-fluid app-container " style="margin-bottom: 0px;margin-top: 20px ;width:100%">
-  <div class="row content-container">
-    <nav class="navbar navbar-default" style="background-color: #e98074">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="http://127.0.0.1:8000/home" style="color: #000000;box-shadow: 0 0 25px 0 black;">GS</a>
+<!-- Footer -->
+<footer class="page-footer font-small pt-4" style="background-color: #243D42" >
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase" style="color: #AEFF00">Contact</h5>
+          <p style="color: #ffffff">Contact or follow on given platforms. Would love to hear from you all!</p>
+
         </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase" style="color: #AEFF00">Links</h5>
+
+            <ul class="list-unstyled" style="color: #ffffff">
+              <li>
+                <a href="https://www.linkedin.com/in/gursahib-singh-04849b156/" style="color: #ffffff" target="_blank">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://github.com/codesahib" style="color: #ffffff" target="_blank">GitHub</a>
+              </li>
+              <li>
+                <a style="color: #ffffff">Email: gursahib.kvm@gmail.com</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            
+            <br>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.instagram.com/gursahib__singh/?hl=en" style="color: #ffffff" target="_blank">Instagram</a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/GS223" style="color: #ffffff" target="_blank">Facebook</a>
+              </li>
+              <li>
+                <a href="https://www.quora.com/profile/GurSahib-Singh-16" style="color: #ffffff" target="_blank">Quora</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
       </div>
-    </nav>  
-  </div>
-</div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color: #ffffff">© 2019 Copyright:
+      <a href="http://127.0.0.1:8000/home" style="color: #ffffff" > GursahibSingh.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+{% block script %}
+{% endblock %}
 {% load static %}
 <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/carousel.js' %}"></script>
 </body>
 </html>

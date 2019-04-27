@@ -1,4 +1,3 @@
-<!--
 <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation" style="background-color: #1BECD9">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -33,39 +32,5 @@
               <ul class="nav navbar-nav navbar-right" style="padding-right: 10px">
                 <li><a href="http://127.0.0.1:8000/contact" style="color: #000000;font-size: 18px">Contact</a></li>
               </ul>
-            </div>  <!-/.navbar-collapse ->
-</nav>
-#361F00-brown
-#494E4A-mettalic grey
--->
-<nav class="navbar navbar-expand-lg  nav-full w-100" style="background-color:  #243D42;">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="http://127.0.0.1:8000/home" style="color: #AEFF00;font-size: 18px;font-style: italic;">Gursahib Singh</a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="http://127.0.0.1:8000/about" style="color: #ffffff;font-size: 18px">About</a>
-      </li>
-   	  <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;font-size: 18px">Projects</a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><a class="dropdown-item" href="http://127.0.0.1:8000/projects/ml" target="_blank" style="color: #000000;font-size: 18px">Machine Learning</a></li>
-          <li><a class="dropdown-item" href="http://127.0.0.1:8000/projects/web" target="_blank" style="color: #000000;font-size: 18px">Web Development</a></li>
-          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Others</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" target="_blank" style="color: #000000;font-size: 18px">DBMS</a></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:8000/projects/android" target="_blank" style="color: #000000;font-size: 18px">android</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #AEFF00;font-size: 18px">Search</button>
-    </form>
-  </div>
+            </div><!-- /.navbar-collapse -->
 </nav>
