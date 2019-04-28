@@ -1,37 +1,59 @@
 {% extends "layout/core-layout.html" %}
+{% load static from staticfiles %}
+
+{% block title %}
+  About | Gursahib Singh
+{% endblock %}    
+
+{% block content %}
+<div class="container">
+  <div class="row"  style="padding-top: 20px">
+    <div class="col-md-6 col-sm-12">
+      <div class="card text-white" style="background-color: #115389">
+        <img class="card-img-top" src="{% static 'img/software.jpg' %}" alt="Software Competencies">
+        <div class="card-body">
+          <h5 class="card-title">Software Competencies</h5>
+          <p class="card-text">The most awaited information on this website!</p>
+          <a href="#" class="btn btn-primary" style="background-color:#ffffff;color: #115389;font-weight: 700">Find Out!</a>
+        </div>  
+      </div>        
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="card" style="background-color: #c5bfbc">
+        <img class="card-img-top" src="{% static 'img/qualification.jpg' %}" alt="Academic Qualifications">
+        <div class="card-body">
+          <h5 class="card-title">Academic Qualifications</h5>
+          <p class="card-text">My past doesn't really haunt me!</p>
+          <a href="#" class="btn btn-primary"style="background-color:#000000;color: #c5bfbc;font-weight: 700">Find Out!</a>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <div class="row"  style="padding-top: 20px;padding-bottom: 20px">
+    <div class="col-md-6 col-sm-12">
+      <div class="card " style="background-color: #8ad8c6">
+        <img class="card-img-top" src="{% static 'img/achievements.jpg' %}" alt="Academic Achievements">
+        <div class="card-body">
+          <h5 class="card-title">Academic Achievements</h5>
+          <p class="card-text">Ok, I think I can reflect on something special!</p>
+          <a href="#" class="btn btn-primary"style="background-color:#000000;color:#8ad8c6;font-weight: 700">Find Out!</a>
+        </div>  
+      </div>       
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="card" style="background-color:#e2d6bd;">
+        <img class="card-img-top" src="{% static 'img/extra.gif' %}" alt="Extra Curricular Activities">
+        <div class="card-body">
+          <h5 class="card-title">Extra Curricular Activities</h5>
+          <p class="card-text">I'm like Jack who becomes dull if he doesn't play.</p>
+          <a href="#" class="btn btn-primary"style="background-color:#000000;color: #e2d6bd;font-weight: 700">Find Out!</a>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
 <!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title></title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
-<body style="background-color: #999999">
--->	
-
-  <!--Heading-->
-  <!--
-	<div class="jumbotron" style="padding-top: 10px;padding-bottom: 10px;margin-bottom: 0px;">
-    	<h1 style="text-align: center;">Gursahib Singh</h1> 
-    	<p style="text-align: center;">Computer Engineer</p> 
-	</div>
-
-
-	<div class="app-container">
-    <div class="row content-container">
-  -->
-        <!-- <navbar> 
-         {% include 'navbar-top/navbar-top.html' %}
-         </navbar> -->
-    {% block title %}
-      About | Gursahib Singh
-    {% endblock %}    
-    {% block content %}
   <div class="container">
         <div class="row" style="margin-left: 20px;margin-right: 20px;">
           <div class="col-md-12" style="background-color: #d8c3a5;height:250px;">
@@ -129,12 +151,9 @@ of 300+ donors.</td>
               </table>
           </div>
         </div> 
-  </div>	
-  {% endblock %}
-<!-- 
-</body>
-</html>
--->
+  </div>	-->
+  
+
 
 
               
