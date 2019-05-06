@@ -21,6 +21,7 @@
     
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}">   
     
     {% block style %}
     {% endblock %}
@@ -133,10 +134,11 @@
   </footer>
   <!-- Footer -->
 {% block script %}
+{% endblock %}
 {% load static %}
 <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/carousel.js' %}"></script>
 
-{% endblock %}
+
 </body>
 </html>
