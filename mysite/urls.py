@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls import include,url
 
 urlpatterns = [
-    url(r'', include('apps.home.urls')),
+    url(r'codesahib.github.io/GursahibSingh/', include('apps.home.urls')),
 	url(r'^home/', include('apps.home.urls')),
 	url(r'^contact/', include('apps.contact.urls')),
     url(r'^about/', include('apps.about.urls')),
