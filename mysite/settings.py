@@ -25,7 +25,7 @@ SECRET_KEY = 'hk32&4s!%e-k6r(7t=rn9mj5g1rbs_y%&i=j@1cyqse_w@3u+c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gursahibsingh.herokuapp.com']
 
 
 # Application definition
@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -85,8 +86,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #F:\Projects\Website\mysite\static #Production mode,colelctstatic
-STATIC_URL = '/static/'
+
+
+
+
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__)) #F:\Projects\Website\mysite\mysite
 
 
@@ -134,5 +137,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #F:\Projects\Website\mysite\static #Production mode,colelctstatic
 STATIC_URL = '/static/'
