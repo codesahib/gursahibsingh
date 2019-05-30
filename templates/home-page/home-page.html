@@ -40,6 +40,16 @@
   text-decoration: none;
   cursor: pointer;
 }
+@media only screen and (max-width: 767px) {
+  .carousel-inner{
+    height:150px !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .card-img-top{
+    width:450px !important;
+  }
+}
 </style>
 {% endblock %}
 
@@ -55,7 +65,7 @@
   </ul>
 
   <!-- The slideshow --> 
-  <div class="carousel-inner" role="listbox" style=" width:100%; height: 450px !important; ">
+  <div class="carousel-inner" role="listbox" style=" width:100%; height: 450px; ">
     <div class="carousel-item active">
       <img src="{% static 'img/computer.jpg' %}" alt="Computer Engineer" class="img-fluid">
     </div>
@@ -239,6 +249,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  document.getElementById('modelText').innerHTML=""
   $('.carousel-indicators li').css('display','block');
   $('body').css('overflow','');
   $('body').css('position',''); 

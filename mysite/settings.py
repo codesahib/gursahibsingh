@@ -25,7 +25,7 @@ SECRET_KEY = 'hk32&4s!%e-k6r(7t=rn9mj5g1rbs_y%&i=j@1cyqse_w@3u+c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gursahibsingh.herokuapp.com']
+ALLOWED_HOSTS = ['*','gursahibsingh.herokuapp.com','127.0.0.1:8000']
 
 
 # Application definition
