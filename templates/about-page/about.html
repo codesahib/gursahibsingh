@@ -2,6 +2,7 @@
 {% load static from staticfiles %}
 
 {% block title %}
+
   About | Gursahib Singh
 {% endblock %}    
 {% block style %}
@@ -47,10 +48,10 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <h3 style="padding-left: 120px">Download my Resume from here</h3>
-    <button style="margin-left: 20px"><a href="{% static 'pdf/__Resume_GursahibSingh.pdf' %}" download>Download</a></button>
+    <h3 style="margin-left: 15px">Download my Resume from here</h3>
+    <button style="margin-left: 15px"><a href="{% static 'pdf/__Resume_GursahibSingh.pdf' %}" download>Download</a></button>
   </div>
 </div>
 
