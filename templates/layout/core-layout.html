@@ -4,143 +4,108 @@
 <head>
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/icon.png' %}" />
   <title>
-   {% block title %}
-   Welcome
-   {% endblock %}
- </title>
- <style type="text/css">
-  .custom-toggler.navbar-toggler {
-    border-color: #AEFF00;
-  }
-  .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(174, 255, 0,0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-</style>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}
+    Welcome
+    {% endblock %}
+  </title>
+  <style type="text/css">
+    .custom-toggler.navbar-toggler {
+      border-color: #AEFF00;
+    }
+    .custom-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(174, 255, 0,0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+  </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
-{% load staticfiles %}
-<link rel="stylesheet" href="{% static 'css/navbar.css' %}"> 
-<link rel="stylesheet" href="{% static 'css/carousel.css' %}">   
-
-{% block style %}
-{% endblock %}
-
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/carousel.css' %}">   
+  {% block style %}
+  {% endblock %}
 </head>
 
 <body style="background-color: #ffffff">
-
-<div class="container-fluid app-container">
-  <div class="row content-container" >
-
-    <!-- <navbar> -->
-     {% include 'navbar-top/navbar-top.html' %}
-
-     <!-- <main> -->
-
-      {% block content %} 
-
-      {% endblock %}
-      
-      <!-- </main> -->
-
-
+  <div class="container-fluid app-container">
+    <div class="row content-container" >
+      <!-- <navbar> -->
+       {% include 'navbar-top/navbar-top.html' %}
+       <!-- <main> -->
+        {% block content %} 
+        {% endblock %}
+        <!-- </main> -->
     </div>
-
-  </div>
-
-  <!-- Footer -->
-  <footer class="page-footer font-small pt-4" style="background-color: #243D42" >
-
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase" style="color: #AEFF00">Contact</h5>
-          <p style="color: #ffffff">Contact or follow on given platforms. Would love to hear from you all!</p>
-
+    </div>
+      <!-- Footer -->
+      <footer class="page-footer font-small pt-4" style="background-color: #243D42" >
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase" style="color: #AEFF00">Contact</h5>
+            <p style="color: #ffffff">Contact or follow on given platforms. Would love to hear from you all!</p>
+          </div>
+          <!-- Grid column -->
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase" style="color: #AEFF00">Links</h5>
+            <ul class="list-unstyled" style="color: #ffffff">
+              <li>
+                <a class="fa fa-linkedin" href="https://www.linkedin.com/in/gursahib-singh-04849b156/" style="color: #ffffff" target="_blank">   LinkedIn</a>
+              </li>
+              <li>
+                <a class="fa fa-github" href="https://github.com/codesahib" style="color: #ffffff" target="_blank">   GitHub</a>
+              </li>
+              <li>
+                <a class="fa fa-google" style="color: #ffffff">   gursahib.kvm@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <br>
+            <ul class="list-unstyled" style="padding-top: 6px">
+              <li>
+                <a class="fa fa-instagram" href="https://www.instagram.com/gursahib__singh/?hl=en" style="color: #ffffff" target="_blank">   Instagram</a>
+              </li>
+              <li>
+                <a class="fa fa-facebook" href="https://www.facebook.com/GS223" style="color: #ffffff" target="_blank">   Facebook</a>
+              </li>
+              <li>
+                <a class="fa fa-quora" href="https://www.quora.com/profile/GurSahib-Singh-16" style="color: #ffffff" target="_blank">   Quora</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
         </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-          <!-- Links -->
-          <h5 class="text-uppercase" style="color: #AEFF00">Links</h5>
-
-          <ul class="list-unstyled" style="color: #ffffff">
-            <li>
-              <a class="fa fa-linkedin" href="https://www.linkedin.com/in/gursahib-singh-04849b156/" style="color: #ffffff" target="_blank">   LinkedIn</a>
-            </li>
-            <li>
-              <a class="fa fa-github" href="https://github.com/codesahib" style="color: #ffffff" target="_blank">   GitHub</a>
-            </li>
-            <li>
-              <a class="fa fa-google" style="color: #ffffff">   gursahib.kvm@gmail.com</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-
-          <br>
-          <ul class="list-unstyled" style="padding-top: 6px">
-            <li>
-              <a class="fa fa-instagram" href="https://www.instagram.com/gursahib__singh/?hl=en" style="color: #ffffff" target="_blank">   Instagram</a>
-            </li>
-            <li>
-              <a class="fa fa-facebook" href="https://www.facebook.com/GS223" style="color: #ffffff" target="_blank">   Facebook</a>
-            </li>
-            <li>
-              <a class="fa fa-quora" href="https://www.quora.com/profile/GurSahib-Singh-16" style="color: #ffffff" target="_blank">   Quora</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Grid column -->
-
+        <!-- Grid row -->
       </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" style="color: #ffffff">© 2019 Copyright:
-      <a href="http://127.0.0.1:8000/home" style="color: #ffffff" > gursahibsingh.herokuapp.com</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
-  {% block script %}
-  {% endblock %}
-  {% load static %}
-  <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
-  <script type="text/javascript" src="{% static 'js/carousel.js' %}"></script>
-
-
-</body>
-</html>
+      <!-- Footer Links -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3" style="color: #ffffff">© 2019 Copyright:
+        <a href="http://127.0.0.1:8000/home" style="color: #ffffff" > gursahibsingh.herokuapp.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    {% block script %}
+    {% endblock %}
+    {% load static %}
+    <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/carousel.js' %}"></script>
+  </body>
+  </html>
