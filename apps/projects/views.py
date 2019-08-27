@@ -10,5 +10,5 @@ def project_web(request):
 def project_android(request):
     return render(request, 'projects-page/projects-android.html')
 
-def project_engg(request):
-    return render(request, 'projects-page/projects-engg.html')    
+def project_dbms(request):
+    return render(request, 'projects-page/projects-dbms.html')    
