@@ -53,15 +53,17 @@
 </style>
 {% endblock %}
 
-{% block content %}
 
-<div id="demo" class="carousel slide" data-ride="carousel" >
+
+{% block content %}
+<!-- #################### CAROUSEL ########################### -->
+<div id="carousel" class="carousel slide" data-ride="carousel" >
 
   <!-- Indicators -->
   <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
   </ul>
 
   <!-- The slideshow --> 
@@ -78,13 +80,15 @@
   </div>
 
   <!-- Left and right controls --> 
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+  <a class="carousel-control-prev" href="#carousel" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
+  <a class="carousel-control-next" href="#carousel" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
+
+<!-- #################### CARDS ########################### -->
 
 <div id="cardContainer" class="container">
   <div class="row"  style="padding-top: 20px">
@@ -93,7 +97,7 @@
         <img class="card-img-top" src="{% static 'img/datascience.jpg' %}" alt="Data Science">
         <div class="card-body">
           <h5 class="card-title">Why do I like Data Science?</h5>
-          <p class="card-text">Is 'Data Scientist' the 'Sexiest Job of the 21st Century'?</p>
+          <p class="card-text" style="color: black">Is 'Data Scientist' the 'Sexiest Job of the 21st Century'?</p>
           <button id="btnDataScience" class="btn btn-primary" style="background-color:#000000;color: #7FBFFF;font-weight: 700" header="Data Science">Find Out!</button>
         </div>  
       </div>        
@@ -103,7 +107,7 @@
         <img class="card-img-top" src="{% static 'img/web.jpg' %}" alt="Web Development">
         <div class="card-body">
           <h5 class="card-title">Why do I like Web Development?</h5>
-          <p class="card-text">Web Development Career Too Good To Be True In 2019?</p>
+          <p class="card-text" style="color: black">Web Development Career Too Good To Be True In 2019?</p>
           <button id="btnWebDev"  class="btn btn-primary"style="background-color:#000000;color: #dfdfce;font-weight: 700" header="Web Development">Find Out!</button>
         </div>  
       </div>
@@ -115,7 +119,7 @@
         <img class="card-img-top" src="{% static 'img/actuarial.jpg' %}" alt="Actuarial Science">
         <div class="card-body">
           <h5 class="card-title">Why do I like Actuarial Science?</h5>
-          <p class="card-text">Just open card to find know what it is.</p>
+          <p class="card-text" style="color: black">Just open card to find know what it is.</p>
           <button id="btnActuarial"  class="btn btn-primary"style="background-color:#000000;color: #e5eded;font-weight: 700" header="Actuarial Science">Find Out!</button>
         </div>  
       </div>       
@@ -147,7 +151,7 @@
         <img class="card-img-top" src="{% static 'img/finance.jpg' %}" alt="Finance">
         <div class="card-body">
           <h5 class="card-title">Why do I study Finance?</h5>
-          <p class="card-text">Well, even romance without finance is no good.</p>
+          <p class="card-text" style="color: black">Well, even romance without finance is no good.</p>
           <button id="btnFinance"  class="btn btn-primary"style="background-color:#000000;color: #FAF1E8;font-weight: 700" header="Finance">Find Out!</button>
         </div>  
       </div>
@@ -176,8 +180,9 @@
     </div>
   </div>
 </div>
-<div id="myModal" class="modal">
 
+<!-- #################### MODEL ########################### -->
+<div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content" style="background-color:  #243D42;">
   
@@ -190,61 +195,47 @@
       <div class="modal-body" id="modelText">
       </div>
   </div>
-
 </div>
 {% endblock %}
+
+
+
 {% block script %}
 <script type="text/javascript">
+window.onload = myMain; //the entire page and all of its related files and components are loaded before the function listed.
 
-window.onload = myMain;
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
 
 function myMain() {
   document.getElementById("cardContainer").onclick = buton;
 }
 
-var temp;
+//Function to fetch data to be displayed from file
 function buton(e) {
   if (e.target.tagName == 'BUTTON') {
-    //var filename = 'home/'.concat('text',e.target.id,'.txt')
     var filename='text'.concat(e.target.id,'.html');
-    var self=this;
     var contents="";
     document.getElementById('modelHeader').innerHTML=document.getElementById(e.target.id).getAttribute('header');
-    //document.getElementById('modelHeader').innerHTML= header
     $.ajax({
       url: "{% url 'get_ajax1' %}",
       type: 'POST',
       cache: false,
       data: {'filename':filename},
       success:function(result){
-        //document.getElementById('modelHeader').innerHTML= header
         document.getElementById('modelText').innerHTML= result
       }
     });
-    //document.getElementById('modelText').innerHTML = selfcontents
-    var modal = document.getElementById('myModal');
-    modal.style.display = "block"; 
+    modal.style.display = "block";          //Make Model Visible
     $('.carousel-indicators li').css('display','none');
-    $('body').css('overflow','visible');
-    $('body').css('position','absolute'); 
+    $('body').css('overflow','visible');   //Will prevent the body
+    $('body').css('position','absolute'); //behind the modal to not scroll
   }
 }
-
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-//var btn = document.getElementById("btnRead");
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-//btn.onclick = function() {
-  //modal.style.display = "block";
-  //console.log(temp)
-//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
