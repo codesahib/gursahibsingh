@@ -1,21 +1,24 @@
-<nav class="navbar navbar-expand-lg  nav-full w-100" style="background-color:  #243D42;">
-  <a class="navbar-brand" href="http://gursahibsingh.herokuapp.com/home" style="color: #AEFF00;font-size: 18px;font-style: italic;">Gursahib Singh</a>
+{% load static from staticfiles %}
+<nav class="navbar py-0 fixed-top navbar-expand-lg  nav-full w-100 " style="background-color:  rgb(155,155,155,0);">
+  <a class="navbar-brand" href="http://gursahibsingh.herokuapp.com/home" style="color:rgb(255,255,255) ;font-size: 30px;font-family: Chilanka; margin-left: 70px">Gursahib Singh</a>
 
   <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"  >
     <span class="navbar-toggler-icon" ></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto" style="padding-right: 60px">
       <li class="nav-item active">
-        <a class="nav-link" href="http://gursahibsingh.herokuapp.com/about" style="color :#AEFF00">About</a>
+        <a class="nav-link" href="http://gursahibsingh.herokuapp.com/about" style="color :rgb(155,155,155);font-family: Righteous;font-size: 20px">About</a>
       </li>
 
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color :rgb(155,155,155);font-family: Righteous;font-size: 20px"> -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color :#AEFF00">
+        <a class="nav-link" style="color :rgb(155,155,155);font-family: Righteous;font-size: 20px">
           Projects
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:  #243D42;">
+        <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:  #243D42;">
           <li><a class="dropdown-item" href="http://gursahibsingh.herokuapp.com/projects/ml" target="_blank" style="color :#AEFF00">Machine Learning</a></li>
           <li><a class="dropdown-item" href="http://gursahibsingh.herokuapp.com/projects/web" target="_blank" style="color :#AEFF00">Web Development</a></li>
           <li><a class="dropdown-item dropdown-toggle" href="#" style="color :#AEFF00">Others</a>
@@ -24,19 +27,19 @@
               <li><a class="dropdown-item" href="http://gursahibsingh.herokuapp.com/projects/android" style="color :#AEFF00">Android</a></li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color :rgb(155,155,155);font-family: Righteous;font-size: 20px"  href="{% static 'pdf/Resume_GursahibSingh.docx' %}">Resume</a>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto">
-      <!-- <div class="tooltip">
-        <span class="tooltiptext">Not available yet</span> -->
+    <!-- <ul class="navbar-nav ml-auto">
         <form class="form-inline my-2 my-lg-0" title="Feature not available yet">
           <fieldset disabled="disabled" >
             <input class="form-control mr-sm-2 " type="text" placeholder="Search" aria-label="Search" >
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #AEFF00;font-size: 18px" >Search</button>
           </fieldset>
         </form>
-      <!-- </div> -->
-    </ul>
+    </ul> -->
   </div>
 </nav>

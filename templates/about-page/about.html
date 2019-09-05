@@ -6,6 +6,13 @@
 {% endblock %}    
 {% block style %}
 <style type="text/css">
+  .navbar {
+    background-color: rgb(155,155,155) !important;
+    transition: background-color 200ms linear;
+}
+    .navbar .nav-link {
+    color:#fee !important;
+    }
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -52,14 +59,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-  <div class="row">
-    <h3 style="margin-left: 15px">Download my Resume from here</h3>
-    <button style="margin-left: 15px"><a href="{% static 'pdf/Resume_GursahibSingh.docx' %}" download>Download</a></button>
-  </div>
-</div>
 
-<div class="container" id="aboutCardContainer">
+<div class="container" id="aboutCardContainer" style="margin-top: 70px">
   <div class="row"  style="padding-top: 20px">
     <div class="col-md-6 col-sm-12">
       <div class="card text-white" style="background-color: #115389">
