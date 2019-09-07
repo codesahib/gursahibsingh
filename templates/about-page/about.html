@@ -6,18 +6,14 @@
 {% endblock %}    
 {% block style %}
 <style type="text/css">
-  .navbar {
-    background-color: rgb(155,155,155) !important;
-    transition: background-color 200ms linear;
+    body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
-    .navbar .nav-link {
-    color:#ffdcba !important;
-    }
-    .nav-item:hover .nav-link{
-      background-color: #ffdcba;
-      color:rgb(155,155,155) !important; 
-      transition: background-color 300ms linear;
-    }
+  .navbar {
+    background-color: #2e2e2e !important;
+  }
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -55,6 +51,9 @@
     text-decoration: none;
     cursor: pointer;
   }
+  h1,p,h4{
+    color: white;
+  }
   @media only screen and (max-width: 767px) {
     .card-img-top{
       width:450px !important;
@@ -63,9 +62,26 @@
 </style>
 {% endblock %}
 
+{% block banner %}
+<section id="banner" style="width:100%;height:57%;/*background-image: url({% static 'img/banner.png' %}*/background-color: #2e2e2e;background-size: cover;background-position: center;
+  background-repeat: no-repeat;">
+  <h1 class="offset-md-1" style="text-decoration: underline; font-family: Orbitron;margin-top: 50px;">ABOUT</h1>
+  <div class="row" style="margin-top: 0px;">
+    <div class="col-md-5 col-sm-12 offset-md-1" style="border-right: white 1px solid;">
+      <h4 style="text-align: justify;margin-right: 20px;font-family: Chilanka">The gist of the 'About' section is at the home page which defines me as a Computer Engineer, Thinker & Learner. More details follow on right.</h4>
+      <h4 style="text-align: justify;margin-right: 20px;font-family: Chilanka">To know about my current role & internship projects, head over to the <a href="http://gursahibsingh.herokuapp.com/projects" target="_blank" style="color: #ffdcba;font-family: Orbitron">Projects</a> page.</h4>
+    </div>
+    <div  class="col-md-5 col-sm-12" style="border-left: white 1px solid;text-align: justify;">
+      <p style="margin-left: 20px;font-family: Livvic;">I come from Ludhiana, a city that has been my home from infancy till adolescence. Then I moved to Patiala for my graduation. And currently I'm in Noida working as Member Technical Staff at Mentor Graphics. I belong to that category of people who love to question things that we come across on daily basis. I just love exercising my body & mind (this has a much deeper meaning). I don't complicate things and stay away from formalities. More importantly, I'm the same version of me everywhere!</p>
+      <p style="font-size:12px;margin-left: 20px;margin-bottom: 5px;font-family: Livvic; text-align: right">And...I'm single! &#128540;</p>
+    </div>
+  </div>
+  </section>
+{% endblock %}
+
 {% block content %}
 
-<div class="container" id="aboutCardContainer" style="margin-top: 70px">
+<div class="container" id="aboutCardContainer" style="margin-top: 2px;margin-bottom: 2px;background-color: #2e2e2e">
   <div class="row"  style="padding-top: 20px">
     <div class="col-md-6 col-sm-12">
       <div class="card text-white" style="background-color: #115389">
