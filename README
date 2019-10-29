@@ -1,0 +1,20 @@
+STATIC FILES
+--------------------------------------------------------------------
+-> Served from /apps/<>/static
+--------------------------------------------------------------------
+NAVBAR
+--------------------------------------------------------------------
+-> Doesn't require css
+-> Old green color #AEFF00
+-> Disabled search box, expansion of projects. Instead created projects home page.
+--------------------------------------------------------------------
+MODAL
+--------------------------------------------------------------------
+-> Single modal container for all cards.
+-> JavaScript functionality on home-page.html. No separate files
+--------------------------------------------------------------------
+CAROUSEL
+-> Everything in home-page.html. Edit images from there only.
+--------------------------------------------------------------------
+CARDS
+-> Image size : 600x300

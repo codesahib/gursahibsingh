@@ -6,10 +6,14 @@
 {% endblock %}    
 {% block style %}
 <style type="text/css">
-    body, html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
+
+#nav-link_about{
+  background-color: #ffdcba;
+      color:#2e2e2e !important;
+}
+.card{
+  min-height: 350px;
+  max-height: 350px;
 }
   .navbar {
     background-color: #2e2e2e !important;
@@ -63,15 +67,16 @@
 {% endblock %}
 
 {% block banner %}
-<section id="banner" style="width:100%;height:57%;/*background-image: url({% static 'img/banner.png' %}*/background-color: #2e2e2e;background-size: cover;background-position: center;
+<section id="banner" style="width:100%;height:50%;/*background-image: url({% static 'img/banner.png' %}*/background-color: #2e2e2e;background-size: cover;background-position: center;
   background-repeat: no-repeat;">
   <h1 class="offset-md-1" style="text-decoration: underline; font-family: Orbitron;margin-top: 50px;">ABOUT</h1>
   <div class="row" style="margin-top: 0px;">
-    <div class="col-md-5 col-sm-12 offset-md-1" style="border-right: white 1px solid;">
+    <div class="col-md-5 col-sm-12 offset-md-1" style="border-right: white 2px solid;">
       <h4 style="text-align: justify;margin-right: 20px;font-family: Chilanka">The gist of the 'About' section is at the home page which defines me as a Computer Engineer, Thinker & Learner. More details follow on right.</h4>
       <h4 style="text-align: justify;margin-right: 20px;font-family: Chilanka">To know about my current role & internship projects, head over to the <a href="http://gursahibsingh.herokuapp.com/projects" target="_blank" style="color: #ffdcba;font-family: Orbitron">Projects</a> page.</h4>
     </div>
-    <div  class="col-md-5 col-sm-12" style="border-left: white 1px solid;text-align: justify;">
+    
+    <div  class="col-md-5 col-sm-12" style="text-align: justify;">
       <p style="margin-left: 20px;font-family: Livvic;">I come from Ludhiana, a city that has been my home from infancy till adolescence. Then I moved to Patiala for my graduation. And currently I'm in Noida working as Member Technical Staff at Mentor Graphics. I belong to that category of people who love to question things that we come across on daily basis. I just love exercising my body & mind (this has a much deeper meaning). I don't complicate things and stay away from formalities. More importantly, I'm the same version of me everywhere!</p>
       <p style="font-size:12px;margin-left: 20px;margin-bottom: 5px;font-family: Livvic; text-align: right">And...I'm single! &#128540;</p>
     </div>
@@ -81,47 +86,47 @@
 
 {% block content %}
 
-<div class="container" id="aboutCardContainer" style="margin-top: 2px;margin-bottom: 2px;background-color: #2e2e2e">
+<div class="container" id="aboutCardContainer" style="margin-top: 20px;margin-bottom: 20px;background-color: #ababab">
   <div class="row"  style="padding-top: 20px">
-    <div class="col-md-6 col-sm-12">
-      <div class="card text-white" style="background-color: #115389">
+    <div class="col-md-3 col-sm-6 ">
+      <div class="card " style="background-color: #fa625f">
         <img class="card-img-top" src="{% static 'img/software.jpg' %}" alt="Software Competencies">
-        <div class="card-body">
+        <div class="card-body  d-flex flex-column">
           <h5 class="card-title">Software Competencies</h5>
-          <p class="card-text">The most awaited information on this website!</p>
-          <button id="SoftwareCompetencies" class="btn btn-primary" style="background-color:#ffffff;color: #115389;font-weight: 700">Find Out!</button>
+          <p class="card-text" style="color: black">The most awaited information on this website!</p>
+          <button id="SoftwareCompetencies" class="mt-auto btn" style="background-color:#000000;color: #fa625f;font-weight: 700">Find Out!</button>
         </div>  
       </div>        
     </div>
-    <div class="col-md-6 col-sm-12">
-      <div class="card" style="background-color: #c5bfbc">
+    <div class="col-md-3 col-sm-6 ">
+      <div class="card text-white" style="background-color: #49494b">
         <img class="card-img-top" src="{% static 'img/qualification.jpg' %}" alt="Academic Qualifications">
-        <div class="card-body">
+        <div class="card-body  d-flex flex-column">
           <h5 class="card-title">Academic Qualifications</h5>
           <p class="card-text">My past doesn't really haunt me!</p>
-          <button id="AcademicQualifications" class="btn btn-primary"style="background-color:#000000;color: #c5bfbc;font-weight: 700">Find Out!</button>
+          <button id="AcademicQualifications" class="mt-auto btn"style="background-color:#ffffff;color: #49494b;font-weight: 700">Find Out!</button>
         </div>  
       </div>
     </div>
-  </div>
-  <div class="row"  style="padding-top: 20px;padding-bottom: 20px">
-    <div class="col-md-6 col-sm-12">
-      <div class="card " style="background-color: #8ad8c6">
+  <!-- </div> -->
+  <!-- <div class="row"  style="padding-top: 20px;padding-bottom: 20px"> -->
+    <div class="col-md-3 col-sm-6 ">
+      <div class="card " style="background-color: #fa625f">
         <img class="card-img-top" src="{% static 'img/achievements.jpg' %}" alt="Academic Achievements">
-        <div class="card-body">
+        <div class="card-body  d-flex flex-column">
           <h5 class="card-title">Academic Achievements</h5>
-          <p class="card-text">Ok, I think I can reflect on something special!</p>
-          <button id="AcademicAchievements" class="btn btn-primary"style="background-color:#000000;color:#8ad8c6;font-weight: 700">Find Out!</button>
+          <p class="card-text" style="color: black">Ok, I think I can reflect on something special!</p>
+          <button id="AcademicAchievements" class="mt-auto btn"style="background-color:#000000;color:#fa625f;font-weight: 700">Find Out!</button>
         </div>  
       </div>       
     </div>
-    <div class="col-md-6 col-sm-12">
-      <div class="card" style="background-color:#e2d6bd;">
+    <div class="col-md-3 col-sm-6 ">
+      <div class="card text-white" style="background-color:#49494b;">
         <img class="card-img-top" src="{% static 'img/extra.gif' %}" alt="Extra Curricular Activities">
-        <div class="card-body">
+        <div class="card-body  d-flex flex-column">
           <h5 class="card-title">Extra Curricular Activities</h5>
           <p class="card-text">I'm like Jack who becomes dull if he doesn't play.</p>
-          <button id="ExtraCurricular" class="btn btn-primary"style="background-color:#000000;color: #e2d6bd;font-weight: 700">Find Out!</button>
+          <button id="ExtraCurricular" class="mt-auto btn"style="background-color:#ffffff;color: #49494b;font-weight: 700">Find Out!</button>
         </div>  
       </div>
     </div>
