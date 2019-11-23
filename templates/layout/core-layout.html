@@ -185,8 +185,6 @@
           var $nav = $(".navbar");
           var $bg = $("#banner");
           $nav.toggleClass('scrolled', $(this).scrollTop() > $bg.height());
-          console.log($(this).scrollTop())
-          console.log($bg.height())
           if($(this).scrollTop()  > $bg.height()) {
 
         $('.navbar .navbar-brand img').attr('src',"{% static 'img/Logo_red_final.png' %}");
