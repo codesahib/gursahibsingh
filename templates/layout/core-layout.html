@@ -8,9 +8,10 @@
      Welcome
     {% endblock %}
   </title>
+
   <style type="text/css">
     .nav-item:hover .nav-link{
-      background-color: #ffdcba;
+      background-color: #ffdcba; /*orange*/
       color:#2e2e2e !important; 
       transition: background-color 400ms linear;
       font-size: 25px !important;
@@ -32,6 +33,7 @@
     color:#fa625f !important;
     }
 
+
     .navbar.scrolled .nav-link:hover {
     /*color:#fff !important;*/
      background-color: #fa625f;
@@ -39,6 +41,7 @@
       transition: background-color 300ms linear;
     }
 
+    
     .tooltip {
       position: relative;
       display: inline-block;
@@ -107,7 +110,7 @@
     {% include 'navbar-top/navbar-top.html' %}
   
   
-  <div class="container-fluid app-container" style="background-color: #ababab">
+  <div class="container-fluid app-container" style="background-color: #ffffff">
     <div class="row content-container" >
       <!-- <navbar> -->
         
@@ -170,8 +173,8 @@
       </div>
       <!-- Footer Links -->
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-3" style="color: #ffdcba">© 2019 Copyright:
-        <a href="http://127.0.0.1:8000/home" style="color: #ffdcba" > gursahibsingh.herokuapp.com</a>
+      <div class="footer-copyright text-center py-3" style="color: #fa625f">© 2019 Copyright:
+        <a href="http://127.0.0.1:8000/home" style="color: #fa625f" > gursahibsingh.herokuapp.com</a>
       </div>
       <!-- Copyright -->
     </footer>
@@ -182,6 +185,15 @@
           var $nav = $(".navbar");
           var $bg = $("#banner");
           $nav.toggleClass('scrolled', $(this).scrollTop() > $bg.height());
+          console.log($(this).scrollTop())
+          console.log($bg.height())
+          if($(this).scrollTop()  > $bg.height()) {
+
+        $('.navbar .navbar-brand img').attr('src',"{% static 'img/Logo_red_final.png' %}");
+    }
+    else {
+        $('.navbar .navbar-brand img').attr('src',"{% static 'img/Logo (1).png' %}");
+    }
         });
       });
     </script>

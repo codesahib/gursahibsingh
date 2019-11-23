@@ -3,13 +3,20 @@
 
 {% block title %}
   About | Gursahib Singh
-{% endblock %}    
+{% endblock %}  
+
 {% block style %}
 <style type="text/css">
 
 #nav-link_about{
   background-color: #ffdcba;
       color:#2e2e2e !important;
+      transition: background-color 300ms linear;
+}
+.navbar.scrolled #nav-link_about{
+  background-color: #fa625f;
+      color:#2e2e2e !important;
+      transition: background-color 300ms linear;
 }
 .card{
   min-height: 350px;
@@ -86,7 +93,7 @@
 
 {% block content %}
 
-<div class="container" id="aboutCardContainer" style="margin-top: 20px;margin-bottom: 20px;background-color: #ababab">
+<div class="container" id="aboutCardContainer" style="margin-top: 20px;margin-bottom: 20px;background-color: #ffffff">
   <div class="row"  style="padding-top: 20px">
     <div class="col-md-3 col-sm-6 ">
       <div class="card " style="background-color: #fa625f">

@@ -1,13 +1,46 @@
 {% extends "layout/core-layout.html" %}
+{% load static from staticfiles %}
+
+
+    {% block title %}
+      Database Management Project | Gursahib Singh
+    {% endblock %}
+
+    {% block style %}
+    <style type="text/css">
+      .navbar {
+        background-color: #2e2e2e !important;
+      }
+      .navbar .navbar-brand img{
+        content:url("{% static 'img/Logo_red_final.png' %}");
+      }
+      #nav-link_projects{
+  background-color: #fa625f;
+      color:#2e2e2e !important;
+      transition: background-color 300ms linear;
+}
+    .navbar .nav-link {
+    /*color:#fff !important;*/
+    color:#fa625f !important;
+    }
+
+    .navbar .nav-link:hover {
+    /*color:#fff !important;*/
+     background-color: #fa625f;
+      color:#2e2e2e !important; 
+      transition: background-color 300ms linear;
+    }
+    </style>
+    {% endblock %}
 
     {% block content %}
     <div class="container-fluid">
-        <div class="row" style="margin-left: 20px;margin-right: 20px;">
-          <div class="col-md-12" style="background-color: #DDDDDD;border-style: solid">
+        <div class="row" style="margin-left: 60px;margin-right: 20px;">
+          <div class="col-md-12" style="background-color: #ffffff">
             <h1>Database Management Project</h1>
             <h2>Title- Database Management of Online Multiplayer Gaming</h2>
             <h2>Introduction</h2>
-            <h6></h6>
+            <h6> This idea of creating a database for online gaming seemed to be fresh and intereseting given that there were too many elements to access.</h6>
             <h2>Methodology</h2>
             <ul>
               <li>
@@ -22,16 +55,16 @@
             </ul>
             
             <h2>Components</h2>
-              <h5>A typical multiplayer game consists of various features and the events that occur by the interaction of such features</h5>
+              <h5>A typical multiplayer game consists of various features and the events that occur by the interaction of such features. Some of the concepts used:-</h5>
             <ul>
               <li>
-                <h5>Triggers were used to</h5>
+                <h5>Triggers</h5>
               </li>
               <li>
-                <h5>Cursors were used to</h5>
+                <h5>Cursors</h5>
               </li>
               <li>
-                <h5>Procedures/Functions were used to</h5>
+                <h5>Procedures/Functions</h5>
               </li>
             </ul>
 

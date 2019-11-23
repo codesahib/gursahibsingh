@@ -1,9 +1,42 @@
 {% extends "layout/core-layout.html" %}
+{% load static from staticfiles %}
+
+
+    {% block title %}
+      Web Development Project | Gursahib Singh
+    {% endblock %}
+
+    {% block style %}
+    <style type="text/css">
+      .navbar {
+        background-color: #2e2e2e !important;
+      }
+      .navbar .navbar-brand img{
+        content:url("{% static 'img/Logo_red_final.png' %}");
+      }
+      #nav-link_projects{
+  background-color: #fa625f;
+      color:#2e2e2e !important;
+      transition: background-color 300ms linear;
+}
+    .navbar .nav-link {
+    /*color:#fff !important;*/
+    color:#fa625f !important;
+    }
+
+    .navbar .nav-link:hover {
+    /*color:#fff !important;*/
+     background-color: #fa625f;
+      color:#2e2e2e !important; 
+      transition: background-color 300ms linear;
+    }
+    </style>
+    {% endblock %}
 
     {% block content %}
     <div class="container-fluid">
-        <div class="row" style="margin-left: 20px;margin-right: 20px;">
-          <div class="col-md-12" style="background-color: #DDDDDD;border-style: solid">
+        <div class="row" style="margin-left: 60px;margin-right: 20px;">
+          <div class="col-md-12" style="background-color: #ffffff">
             <h1>Web Development Project</h1>
             <h2>Title- Personal Website</h2>
             <h2>Introduction</h2>
@@ -31,6 +64,8 @@
               </li>
             </ul>
 
+            <h2>Demo</h2>
+              <h6>You are currently viewing it!</h6>
           </div>
         </div> 
     </div>
