@@ -1,0 +1,150 @@
+{% extends "layout/core-layout.html" %}
+{% load static from staticfiles %}
+
+{% block title %}
+  Blogs | Gursahib Singh
+{% endblock %}  
+
+{% block style %}
+<style type="text/css">
+
+#nav-link_blogs{
+  background-color: #ffdcba;
+      color:#2e2e2e !important;
+      transition: background-color 300ms linear;
+}
+.navbar.scrolled #nav-link_blogs{
+  background-color: #fa625f;
+      color:#2e2e2e !important;
+      transition: background-color 300ms linear;
+}
+.card{
+  min-height: 350px;
+  max-height: 350px;
+}
+  .navbar {
+    background-color: #2e2e2e !important;
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #ffffff;
+    margin-left: auto;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #AEFF00;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  h1,p,h4{
+    color: white;
+  }
+  @media only screen and (max-width: 767px) {
+    .card-img-top{
+      width:450px !important;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block banner %}
+<section id="banner" style="width:100%;height:50%;/*background-image: url({% static 'img/banner.png' %}*/background-color: #2e2e2e;background-size: cover;background-position: center;
+  background-repeat: no-repeat;">
+  <h1 class="offset-md-1" style="text-decoration: underline; font-family: Orbitron;margin-top: 50px;">BLOGS</h1>
+  <div class="row" style="margin-top: 0px;">
+    <div class="col-md-5 col-sm-12 offset-md-1" style="border-right: white 2px solid;">
+      <h4 style="text-align: justify;margin-right: 20px;font-family: Chilanka">This section has to be there considering this is a portfolio website. I'm not a blogger(professionally) but I do like to write on some things.</h4>
+    </div>
+    
+    <div  class="col-md-5 col-sm-12" style="text-align: justify;">
+      <p style="margin-left: 20px;font-family: Livvic;">There are lot of appreciable things that happen around us and with us that we fail to notice. We need to sit back, relax and reflect upon those wonderful moments and writing down is the best way to do so. This section would contain information based and experience based blogs. No-nonsense!</p>
+      
+    </div>
+  </div>
+  </section>
+{% endblock %}
+
+{% block content %}
+<div class="container" id="blogsContainer" style="margin-top: 20px;margin-bottom: 20px;background-color: #ffffff">
+	<h1 style="color: black">THAILAND 2019 :)</h1>
+	<p style="color: black">Hi! This post will cover the basic expenses+itenary+other details about my trip to Thailand in Dec 2019.</p>
+	<p style="color: black;font-weight: bold">DISCALIMER: The details/figures are true as on Dec 2019. They might change in future.</p>
+	<h3>Introduction</h3>
+	<p style="color: black"> It was a fairly less thought-over decision to go for Thailand this winter and I would thank the quickness of the decision as it kept out the unnecesaary doubts and questioning. So it was a backpacking style of travel so my itenary and cost would not really suit family trips. But I'm going to mention the extra amount of cost and an alternative itenary for sure.</p>
+	<h3>Cost</h3>
+	<p style="color: black">The entire trip costed me for around 35k but this might not be true for everyone. I didn't eat Indian food and tried every bit of local Thai food so that helped saving the cost. Also, we didn't take a taxi and just relied on metro, "Baht bus" and our feet. But if you are planning to go with your family, you might have to get Indian food because Thai taste doesn't suit Indian tongue plus you'll obviously be taking taxi for travel as backpacking style of travel is not comfortable with kids.</p>
+	<h3>Accomodation</h3>
+	<h3>Food</h3>
+	<p style="color: black">"FoodLand" for salads.
+	"7 eleven" for on-the-go shakes/drinks/juices.</p>
+	<h6>Indian</h6>
+	<ul>
+		<li>Thali = 170-200 BHT (Filling for 2 people)</li>
+		<li>Combo dishes(rice with rajma/kadi/chhole) = 120-150 BHT (Filling for 2 people)</li>
+		<li>Roti = 15-25 BHT</li>
+		<li>Dry veggies = 150-200 BHT</li>
+		<li>Curry veggies = 200-250 BHT</li>
+	</ul>
+	<h6>Thai</h6>
+	<ul>
+		<li>Pad Thai (fried noodles with seafood) = 50-75 BHT</li>
+		<li>Rice combo(with chicken/beef) = 50-75 BHT</li>
+		<li>Seafood Platter = 150-200 BHT</li>
+		<li>Mango rice = 70-120 BHT</li>
+		<li>Smoothies = 50-70 BHT</li>
+		<li>Pancakes = 40-60 BHT</li>
+	</ul>
+
+	<h3>Local Commute</h3>
+	<h6>Pattaya</h6>
+	<p style="color: black">So Pattaya has this culture of "Baht bus". It is a pickup style truck with a canopy roof, and 2 bench seats in the back for passengers. It's just similar in operation as Rickshaw where you tell the driver you destination and he tells you the price. The most convinient and cheap option as it's easily available. Plus there's no metro in Pattaya so the other options are taxi and bike taxi. </p>
+
+	<h6>Bangkok</h6>
+	<p style="color: black">Metro is there for your rescue. If you're coming from Delhi it'll be cakewalk for you but if not, you might find the number of people at certain stations exceeding the comfortable limit. But keeping this aside, the metro network is well covered and connects all the major spots and markets of city. It also connects the city to airport as well.</p>
+	<p style="color: black">Apart from this, there's always a taxi and another thing called "Tuk-Tuk". So this is basically an auto which went to abroad for higher studies. Simply stating, the look & feel is of an auto-rickshaw with a poweful engine and big silencers that roar loud when it accelarates. It's fancy but expensive.</p>
+	
+	<p style="color:black;font-weight: bold;">A special note about renting a bike. You'll need an international driving permit so as to escape without a fine from the police. Also if you are renting a bike, do make sure you make a video of the bike highlighting all the scars and scratches so that the lender won't bother you afterwards. But you can rent a bike in Koh Larn(coral island) without a permit. We did that!</p>
+
+	<h3>Itenary</h3>
+	<p style="color: black">I'll try to suggest 3 types of itenary which covers almost all kinds of people/groups. </p>
+	<h6>1. Chill</h6>
+	<h6>2. Party</h6>
+	<h6>3. Sightseeing</h6>
+
+	<h3>Tips</h3>
+	<ul>
+		<li>Master Google maps and Google translate skills. These are your primary weapons if you are visiting Thailand where english fluency is a big concern and people are ready to loot you over local commute. Google Maps can help you choose the best option for commute between taxi, metro, walking etc.</li>
+		<li>Get a local sim card. I bought an AIS sim card there. It had the best plan for a week's trip compared to TrueMobile and DTAC. It performed decently well when trying to browse some stuff over video calling. You can get it from the airport after immigration. You don't need international roaming on your exsiting sim.</li>
+		<li>Install "Grab" and "ViaBus" apps. </li>
+	</ul>
+</div>
+{% endblock %}
+{% block script %}
+
+{% endblock %}              
