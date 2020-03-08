@@ -44,15 +44,19 @@
   text-decoration: none;
   cursor: pointer;
 }
-@media only screen and (max-width: 767px) {
+/*@media only screen and (max-width: 767px) {
   .carousel-inner{
     height:150px !important;
   }
-}
-@media only screen and (max-width: 767px) {
-  .card-img-top{
-    width:450px !important;
+}*/
+@media only screen and (max-width: 992px) { /*from 4 to 4*/ 
+
   }
+@media only screen and (max-width: 768px) { /*from 4 to 2 | bigger bottom banner*/ 
+  
+}
+@media only screen and (max-width: 576px) { /*from 2 to 1*/
+
 }
 img {
   position: relative;
@@ -63,15 +67,21 @@ img {
   background-size: auto auto;
 }
 body {
-  background-size: contain;
+  /*background-size: contain;*/
 }
 </style>
 {% endblock %}
 
 {% block banner %}
-<section id="banner" style="padding: 0px; background-size:contain;">
+<header id="banner" style="background-image: url({% static 'img/landing_page_bg.png' %});height: 100vh; background-position: center; background-size: cover;justify-content: center;align-items: center; padding:0 20px;display: flex;flex-direction: column;text-align: center;">
+  <h1 style="color: #ffffff;text-align: center;font-family: Bellota;font-size: 60px;line-height: 1.2"> Sat Sri Akaal</h1>
+  <h1 style="color: #ffffff;text-align: center;font-family: Orbitron;font-size: 80px;margin-top: 40px;line-height: 1.2"> Gusrahib Singh</h1>
+  <h4 style="color: #ffffff;font-family: Orbitron"> COMPUTER ENGINEER | THINKER | LEARNER</h4>
+  <p style="color: #ffffff;font-size: 20px;margin-top: 40px">Currently working as Member Technical Staff at Mentor Graphics, Noida</p>
+  </header>
+  <!-- <section id="banner" style="padding: 0px; background-size: contain;">
 <img src="{% static 'img/landing_page.png' %}" >
-  </section>
+  </section> -->
 {% endblock %}
 {% block content %}
 
@@ -110,8 +120,8 @@ body {
 <!-- #################### CARDS ########################### -->
 
 <div id="cardContainer" class="container" style="margin-top: 2px;margin-bottom: 2px;background-color: #ffffff">
-  <div class="row"  style="padding-top: 20px">
-    <div class="col-md-3 col-sm-6">
+  <div class="row"  style="">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
       <div class="card" style="background-color: #fa625f">
         <img class="card-img-top" src="{% static 'img/datascience.jpg' %}" alt="Data Science">
         <div class="card-body d-flex flex-column">
@@ -121,7 +131,7 @@ body {
         </div>  
       </div>        
     </div>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
       <div class="card  text-white" style="background-color:#49494b">
         <img class="card-img-top" src="{% static 'img/web.jpg' %}" alt="Web Development">
         <div class="card-body d-flex flex-column">
@@ -133,7 +143,7 @@ body {
     </div>
   <!-- </div> -->
   <!-- <div class="row"  style="padding-top: 20px; "> -->
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
       <div class="card" style="background-color:  #fa625f">
         <img class="card-img-top" src="{% static 'img/actuarial.jpg' %}" alt="Actuarial Science">
         <div class="card-body d-flex flex-column ">
@@ -143,7 +153,7 @@ body {
         </div>  
       </div>       
     </div>
-    <div class="col-md-3 col-sm-6 ">
+    <div class="col-md-3 col-sm-6 " style="padding-top: 20px;">
       <div class="card  text-white " style="background-color: #49494b">
         <img class="card-img-top" src="{% static 'img/python.jpg' %}" alt="Python">
         <div class="card-body d-flex flex-column  ">
@@ -154,9 +164,9 @@ body {
       </div>
     </div>
   </div>
-  <div class="row "  style="padding-top: 20px; ">
-    <div class="col-md-3 col-sm-6">
-      <div class="card text-white" style="background-color: #49494b">
+  <div class="row "  style=" ">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
+      <div class="card text-white" style="background-color: #49494b;">
         <img class="card-img-top" src="{% static 'img/gym.jpg' %}" alt="Weight Training">
         <div class="card-body d-flex flex-column ">
           <h5 class="card-title">Why I do Weight Training?</h5>
@@ -165,7 +175,7 @@ body {
         </div>  
       </div>       
     </div>
-    <div class="col-md-3 col-sm-6 ">
+    <div class="col-md-3 col-sm-6 " style="padding-top: 20px;">
       <div class="card" style="background-color: #fa625f">
         <img class="card-img-top" src="{% static 'img/finance.jpg' %}" alt="Finance">
         <div class="card-body d-flex flex-column">
@@ -177,7 +187,7 @@ body {
     </div>
   <!-- </div> -->
   <!-- <div class="row"  style="padding-top: 20px;padding-bottom: 20px"> -->
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
       <div class="card text-white" style="background-color: #49494b">
         <img class="card-img-top" src="{% static 'img/read.jpg' %}" alt="Read">
         <div class="card-body d-flex flex-column">
@@ -187,7 +197,7 @@ body {
         </div>  
       </div>       
     </div>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
       <div class="card" style="background-color:#fa625f;">
         <img class="card-img-top" src="{% static 'img/self.jpg' %}" alt="Self Improvement">
         <div class="card-body d-flex flex-column">
