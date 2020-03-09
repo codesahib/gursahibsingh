@@ -50,15 +50,85 @@
   }
 }*/
 @media only screen and (max-width: 992px) { /*from 4 to 4*/ 
+.card{
+  min-height: 320px;
+  max-height: 320px;
+}
+.card-img-top{
+  width: 100%;
+    height: auto;
+    
+}
+.card-title{
+  font-size: 16px
 
+}
+.card-text{
+   font-size:13px;
+   
+}
 
   }
+  #header_greeting{
+    color: #ffffff;text-align: center;font-family: Bellota;font-size: 60px;line-height: 1.2
+  }
+  #header_name{
+    color: #ffffff;text-align: center;font-family: Orbitron;font-size: 80px;margin-top: 40px;line-height: 1.2
+  }
+  #header_summary{
+    color: #ffffff;font-family: Orbitron
+  }
+  #header_description{
+    color: #ffffff;font-size: 20px;margin-top: 40px
+  }
 @media only screen and (max-width: 768px) { /*from 4 to 2 | bigger bottom banner*/ 
-  
+#header_greeting{
+    font-size: 50px;margin-top:40px;line-height: 1.2
+  }
+  #header_name{
+    font-size: 60px;margin-top: 30px;line-height: 1.2
+  }
+  #header_summary{
+    color: #ffffff;font-family: Orbitron
+  }
+  #header_description{
+    font-size: 20px;margin-top: 40px
+  }
 }
 @media only screen and (max-width: 576px) { /*from 2 to 1*/
+  #header_greeting{
+    font-size: 40px;margin-top:40px;line-height: 1.2
+  }
+  #header_name{
+    font-size: 50px;margin-top: 30px;line-height: 1.2
+  }
+  #header_summary{
+    color: #ffffff;font-family: Orbitron
+  }
+  #header_description{
+    font-size: 15px;margin-top: 40px
+  }
+  }
+
+.card{
+  min-height: 300px;
+  max-height: 300px;
+}
+.card-img-top{
+  width: 100%;
+    height: 50%;
+    
+}
+.card-title{
+  font-size: 16px
 
 }
+.card-text{
+   font-size:13px;
+   
+}
+}
+
 img {
   position: relative;
   top: 0;
@@ -75,10 +145,10 @@ body {
 
 {% block banner %}
 <header id="banner" style="background-image: url({% static 'img/landing_page_bg.png' %});height: 100vh; background-position: center; background-size: cover;justify-content: center;align-items: center; padding:0 20px;display: flex;flex-direction: column;text-align: center;">
-  <h1 style="color: #ffffff;text-align: center;font-family: Bellota;font-size: 60px;line-height: 1.2"> Sat Sri Akaal</h1>
-  <h1 style="color: #ffffff;text-align: center;font-family: Orbitron;font-size: 80px;margin-top: 40px;line-height: 1.2"> Gusrahib Singh</h1>
-  <h4 style="color: #ffffff;font-family: Orbitron"> COMPUTER ENGINEER | THINKER | LEARNER</h4>
-  <p style="color: #ffffff;font-size: 20px;margin-top: 40px">Currently working as Member Technical Staff at Mentor Graphics, Noida</p>
+  <h1 id="header_greeting" > Sat Sri Akaal</h1>
+  <h1 id="header_name"> Gusrahib Singh</h1>
+  <h4 id="header_summary"> COMPUTER ENGINEER | THINKER | LEARNER</h4>
+  <p id="header_description">Currently working as Member Technical Staff at Mentor Graphics, Noida</p>
   </header>
   <!-- <section id="banner" style="padding: 0px; background-size: contain;">
 <img src="{% static 'img/landing_page.png' %}" >
