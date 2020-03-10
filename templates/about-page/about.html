@@ -8,68 +8,61 @@
 {% block style %}
 <style type="text/css">
 
-#nav-link_about{
-  background-color: #ffdcba;
-      color:#2e2e2e !important;
-      transition: background-color 300ms linear;
-}
-.navbar.scrolled #nav-link_about{
-  background-color: #fa625f;
-      color:#2e2e2e !important;
-      transition: background-color 300ms linear;
-}
-.card{
-  min-height: 350px;
-  max-height: 350px;
-}
-  .navbar {
-    background-color: #2e2e2e !important;
-  }
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%;
-  }
-
-  /* The Close Button */
-  .close {
-    color: #ffffff;
-    margin-left: auto;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: #AEFF00;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  h1,p,h4{
-    color: white;
-  }
-  @media only screen and (max-width: 767px) {
-    .card-img-top{
-      width:450px !important;
+    #nav-link_about{
+        background-color: #ffdcba;
+        color:#2e2e2e !important;
+        transition: background-color 300ms linear;
     }
-  }
+    .navbar.scrolled #nav-link_about{
+        background-color: #fa625f;
+        color:#2e2e2e !important;
+        transition: background-color 300ms linear;
+    }
+
+    .navbar {
+        background-color: #2e2e2e !important;
+    }
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #ffffff;
+        margin-left: auto;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #AEFF00;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    h1,p,h4{
+        color: white;
+    }
+ 
 </style>
 {% endblock %}
 
@@ -94,8 +87,8 @@
 {% block content %}
 
 <div class="container" id="aboutCardContainer" style="margin-top: 20px;margin-bottom: 20px;background-color: #ffffff">
-  <div class="row"  style="padding-top: 20px">
-    <div class="col-md-3 col-sm-6 ">
+  <div class="row">
+    <div class="col-md-3 col-sm-6 "  style="padding-top: 20px">
       <div class="card " style="background-color: #fa625f">
         <img class="card-img-top" src="{% static 'img/software.jpg' %}" alt="Software Competencies">
         <div class="card-body  d-flex flex-column">
@@ -105,7 +98,7 @@
         </div>  
       </div>        
     </div>
-    <div class="col-md-3 col-sm-6 ">
+    <div class="col-md-3 col-sm-6 "  style="padding-top: 20px">
       <div class="card text-white" style="background-color: #49494b">
         <img class="card-img-top" src="{% static 'img/qualification.jpg' %}" alt="Academic Qualifications">
         <div class="card-body  d-flex flex-column">
@@ -117,7 +110,7 @@
     </div>
   <!-- </div> -->
   <!-- <div class="row"  style="padding-top: 20px;padding-bottom: 20px"> -->
-    <div class="col-md-3 col-sm-6 ">
+    <div class="col-md-3 col-sm-6 "  style="padding-top: 20px">
       <div class="card " style="background-color: #fa625f">
         <img class="card-img-top" src="{% static 'img/achievements.jpg' %}" alt="Academic Achievements">
         <div class="card-body  d-flex flex-column">
@@ -127,7 +120,7 @@
         </div>  
       </div>       
     </div>
-    <div class="col-md-3 col-sm-6 ">
+    <div class="col-md-3 col-sm-6 "  style="padding-top: 20px">
       <div class="card text-white" style="background-color:#49494b;">
         <img class="card-img-top" src="{% static 'img/extra.gif' %}" alt="Extra Curricular Activities">
         <div class="card-body  d-flex flex-column">

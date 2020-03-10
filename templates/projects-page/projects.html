@@ -6,32 +6,25 @@
 {% endblock %}    
 {% block style %}
 <style type="text/css">
-  .card{
-  min-height: 350px;
-  max-height: 350px;
-}
-#nav-link_projects{
-  background-color: #ffdcba;
-      color:#2e2e2e !important;
-      transition: background-color 300ms linear;
-}
-.navbar.scrolled #nav-link_projects{
-  background-color: #fa625f;
-      color:#2e2e2e !important;
-      transition: background-color 300ms linear;
-}
 
-.navbar {
-    background-color: #2e2e2e !important;
-  }
-  h1,p,h4{
-    color: white;
-  }
-  @media only screen and (max-width: 767px) {
-    .card-img-top{
-      width:450px !important;
+    #nav-link_projects{
+        background-color: #ffdcba;
+        color:#2e2e2e !important;
+        transition: background-color 300ms linear;
     }
-  }
+    .navbar.scrolled #nav-link_projects{
+        background-color: #fa625f;
+        color:#2e2e2e !important;
+        transition: background-color 300ms linear;
+    }
+
+    .navbar {
+        background-color: #2e2e2e !important;
+      }
+    h1,p,h4{
+        color: white;
+    }
+  
 </style>
 {% endblock %}
 {% block banner %}
@@ -53,8 +46,8 @@
 {% block content %}
 
 <div class="container" id="projectCardContainer" style="margin-top: 20px;margin-bottom: 20px;background-color: #ffffff">
-  <div class="row"  style="padding-top: 20px">
-    <div class="col-md-3 col-sm-6">
+  <div class="row">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px">
       <div class="card" style="background-color: #fa625f">
         <img class="card-img-top" src="{% static 'img/web.jpg' %}" alt="Web Development">
         <div class="card-body  d-flex flex-column">
@@ -64,7 +57,7 @@
         </div>  
       </div>        
     </div>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px">
       <div class="card text-white" style="background-color:#49494b">
         <img class="card-img-top" src="{% static 'img/ml.jpg' %}" alt="Machine Learning">
         <div class="card-body  d-flex flex-column">
@@ -76,7 +69,7 @@
     </div>
   <!-- </div> -->
   <!-- <div class="row"  style="padding-top: 20px;padding-bottom: 20px"> -->
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px">
       <div class="card " style="background-color: #fa625f">
         <img class="card-img-top" src="{% static 'img/android.jpg' %}" alt="Android">
         <div class="card-body  d-flex flex-column">
@@ -86,7 +79,7 @@
         </div>  
       </div>       
     </div>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6" style="padding-top: 20px">
       <div class="card text-white" style="background-color:#49494b;">
         <img class="card-img-top" src="{% static 'img/dbms.jpg' %}" alt="Database Management">
         <div class="card-body  d-flex flex-column">

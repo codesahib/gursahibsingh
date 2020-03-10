@@ -2,125 +2,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/icon.png' %}" />
-  <title>
-    {% block title %}
-     Welcome
-    {% endblock %}
-  </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/icon.png' %}" />
+    <title>
+        {% block title %}
+            Welcome
+        {% endblock %}
+    </title>
 
-  <style type="text/css">
-    .nav-item:hover .nav-link{
-      background-color: #ffdcba; /*orange*/
-      color:#2e2e2e !important; 
-      transition: background-color 400ms linear;
-      font-size: 25px !important;
-    }
-    .custom-toggler.navbar-toggler {
-      border-color: #ffdcba;
-    }
-    
-    .custom-toggler .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 221, 186)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
+    <style type="text/css">
+        .nav-item:hover .nav-link{
+            background-color: #ffdcba; /*orange*/
+            color:#2e2e2e !important; 
+            transition: background-color 400ms linear;
+            font-size: 25px !important;
+        }
+        .custom-toggler.navbar-toggler {
+            border-color: #ffdcba;
+        }
+        
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 221, 186)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
 
-    .navbar.scrolled {
-    background-color: #2e2e2e !important;
-    transition: background-color 300ms linear;
-}
-    .navbar.scrolled .nav-link {
-    /*color:#fff !important;*/
-    color:#fa625f !important;
-    }
+        .navbar.scrolled {
+            background-color: #2e2e2e !important;
+            transition: background-color 300ms linear;
+        }
+        .navbar.scrolled .nav-link {
+            color:#fa625f !important;
+        }
 
 
-    .navbar.scrolled .nav-link:hover {
-    /*color:#fff !important;*/
-     background-color: #fa625f;
-      color:#2e2e2e !important; 
-      transition: background-color 300ms linear;
-    }
+        .navbar.scrolled .nav-link:hover {
+            background-color: #fa625f;
+            color:#2e2e2e !important; 
+            transition: background-color 300ms linear;
+        }
 
-    
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      border-bottom: 1px dotted black;
-    }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
 
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 5px 0;
-      position: absolute;
-      z-index: 1;
-      bottom: 125%;
-      left: 50%;
-      margin-left: -60px;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
-    .tooltip .tooltiptext::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #555 transparent transparent transparent;
-    }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
 
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        .card-title{
+            font-size: 16px
+        }
+        .card-text{
+            font-size:12px;
+        }
+        .card{
+            min-height: 300px;
+            max-height: 300px;
+        }
+        .card-img-top{
+            width: 100%;
+            height: 50%;   
+        }
+        #header_greeting{
+            color: #ffffff;text-align: center;font-family: Bellota;font-size: 60px;line-height: 1.2
+        }
+        #header_name{
+            color: #ffffff;text-align: center;font-family: Orbitron;font-size: 80px;margin-top: 40px;line-height: 1.2
+        }
+        #header_summary{
+            color: #ffffff;font-family: Orbitron
+        }
+        #header_description{
+            color: #ffffff;font-size: 20px;margin-top: 40px
+        }
+        img {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-size: auto auto;
+        }
+        body {
+          
+        }
+
+        @media only screen and (max-width: 992px) { /*from 4 to 4*/ 
+            .card{
+                min-height: 320px;
+                max-height: 320px;
+            }
+            .card-img-top{
+                width: 100%;
+                height: 100% ;   
+            }
+        }
+        @media only screen and (max-width: 768px) { /*from 4 to 2 | bigger bottom banner*/ 
+            #header_greeting{
+                font-size: 50px;margin-top:40px;line-height: 1.2
+            }
+            #header_name{
+                font-size: 60px;margin-top: 30px;line-height: 1.2
+            }
+            #header_summary{
+                color: #ffffff;font-family: Orbitron
+            }
+            #header_description{
+                font-size: 20px;margin-top: 40px
+            }
+        }
+        @media only screen and (max-width: 576px) { /*from 2 to 1*/
+            #header_greeting{
+            font-size: 40px;margin-top:40px;line-height: 1.2
+            }
+            #header_name{
+            font-size: 50px;margin-top: 30px;line-height: 1.2
+            }
+            #header_summary{
+            color: #ffffff;font-family: Orbitron
+            }
+            #header_description{
+            font-size: 15px;margin-top: 40px
+            }
+            .card-img-top{
+                width: 100%;
+                height: 20vh !important; 
+            }
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Chilanka|Bellota|Livvic|Acme|Orbitron:500" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Chilanka|Bellota|Livvic|Acme|Orbitron:500" >
 
-  {% load staticfiles %}
-  <!-- <link rel="stylesheet" href="{% static 'css/navbar.css' %}">  -->
-  <link rel="stylesheet" href="{% static 'css/carousel.css' %}">   
-  {% block style %}
-  {% endblock %}
+    {% load staticfiles %}
+    <!-- <link rel="stylesheet" href="{% static 'css/navbar.css' %}">  -->
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}">   
+    {% block style %}
+    {% endblock %}
 </head>
 
 <body>
   
-  {% block banner %}
-  {% endblock %}
+    {% block banner %}
+    {% endblock %}
   
   
     {% include 'navbar-top/navbar-top.html' %}
   
   
-  <div class="container-fluid app-container" style="background-color: #ffffff">
-    <div class="row content-container" >
-      <!-- <navbar> -->
-        
-
+    <div class="container-fluid app-container" style="background-color: #ffffff">
+        <div class="row content-container" >
+        <!-- <navbar> -->
 
         <!-- <main> -->
         {% block content %} 
         {% endblock %}
         <!-- </main> -->
-    </div>
+        </div>
     </div>
       <!-- Footer -->
       <footer class="page-footer font-small pt-4" style="background-color: #2e2e2e" >
