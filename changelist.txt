@@ -1,1 +1,2 @@
 2020-09-17: Adding this file to track changes
+2020-09-17: Created a new branch and renamed old 'master' as legacy
