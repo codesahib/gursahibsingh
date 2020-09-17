@@ -2,6 +2,19 @@
 {% load static from staticfiles %}
 {% block style %}
 <style type="text/css">
+    #header_greeting{
+        color: #ffffff;text-align: center;font-family: Bellota;font-size: 60px;line-height: 1.2
+    }
+    #header_name{
+        color: #ffffff;text-align: center;font-family: Orbitron;font-size: 80px;margin-top: 40px;line-height: 1.2
+    }
+    #header_summary{
+        color: #ffffff;font-family: Orbitron
+    }
+    #header_description{
+        color: #ffffff;font-size: 20px;margin-top: 40px
+    }
+    
     .modal {
         display: none;
         position: fixed;
@@ -44,49 +57,19 @@
 {% endblock %}
 
 {% block banner %}
-<header id="banner" style="background-image: url({% static 'img/landing_page_bg.png' %});height: 100vh; background-position: center; background-size: cover;justify-content: center;align-items: center; padding:0 20px;display: flex;flex-direction: column;text-align: center;">
-  <h1 id="header_greeting" > Sat Sri Akaal</h1>
-  <h1 id="header_name"> Gusrahib Singh</h1>
-  <h4 id="header_summary"> COMPUTER ENGINEER | THINKER | LEARNER</h4>
-  <p id="header_description">Currently working as Member Technical Staff at Mentor Graphics, Noida</p>
-  </header>
+<header id="banner" style="color:black">
+    <h1 id="header_greeting" > Sat Sri Akaal</h1>
+    <h1 id="header_name"> Gursahib Singh</h1>
+    <h4 id="header_summary"> COMPUTER ENGINEER | THINKER | LEARNER</h4>
+    <p id="header_description">Currently working as Member Technical Staff at Mentor Graphics, Noida</p>
+</header>
   <!-- <section id="banner" style="padding: 0px; background-size: contain;">
 <img src="{% static 'img/landing_page.png' %}" >
   </section> -->
 {% endblock %}
 {% block content %}
 
-<!-- #################### CAROUSEL ########################### -->
-<!-- <div id="carousel" class="carousel slide" data-ride="carousel" >
 
-  Indicators
-  <ul class="carousel-indicators">
-    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
-  </ul>
-
-  The slideshow 
-  <div class="carousel-inner" role="listbox" style=" width:100%; height: 450px; ">
-    <div class="carousel-item active">
-      <img src="{% static 'img/today.jpg' %}" alt="Computer Engineer" class="img-fluid">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/Code.jpg' %}" alt="impossible" class="img-fluid" >
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/dream.jpg' %}" alt="Dream" class="img-fluid">
-    </div>
-  </div>
-
-  Left and right controls 
-  <a class="carousel-control-prev" href="#carousel" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#carousel" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div> -->
 
 <!-- #################### CARDS ########################### -->
 

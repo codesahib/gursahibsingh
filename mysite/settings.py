@@ -94,9 +94,7 @@ DATABASES = {
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__)) #F:\Projects\Website\mysite\mysite
 
 
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'), #F:\Projects\Website\mysite\mysite\static
- )
+
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -138,6 +136,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #F:\Projects\Website\mysite\static #Production mode,collectstatic
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Enable STATIC_ROOT when in production only.
+# This will collect all static files from STATICFILES_DIRS(all apps) and put them into one place STATIC_ROOT(mysite/static)
+# Use command 'py manage.py collectstatic' 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+#------------------------------------------------------
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] #F:\Projects\Website\mysite\mysite\static)
