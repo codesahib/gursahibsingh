@@ -10,6 +10,13 @@
     </title>
 
     <style type="text/css">
+     
+        #navbar_name{
+            font-family: Kaushan Script;
+            position: relative;
+            top:0; right: 0;left:0;
+        }
+
         .nav-item:hover .nav-link{
             background-color: #ffdcba; /*orange*/
             color:#2e2e2e !important; 
@@ -25,7 +32,7 @@
         }
 
         .navbar.scrolled {
-            background-color: #2e2e2e !important;
+            /*background-color: #2e2e2e !important;*/
             transition: background-color 300ms linear;
         }
         .navbar.scrolled .nav-link {
@@ -175,7 +182,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Chilanka|Bellota|Livvic|Acme|Orbitron:500" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Chilanka|Bellota|Livvic|Acme|Orbitron:500|Kaushan+Script" >
 
     {% load staticfiles %}
     <!-- <link rel="stylesheet" href="{% static 'css/navbar.css' %}">  -->
@@ -186,9 +193,12 @@
 
 <body>
  
-    <div class="container app-container" style="">  
+    
+    <div id="navbar_container" class="container app-container justify-content-between align-items-center fixed-top" style="background: #eeeeee;">
+        <h1 id="navbar_name">Gursahib Singh</h1>  
         {% include 'navbar-top/navbar-top.html' %}
     </div>
+    
 
     <div class="container app-container" style="">  
         {% block banner %}
@@ -250,19 +260,26 @@
     <script type="text/javascript">
         var colors;
         $.getJSON("{% static "initialize.json" %}", function(colors) {
-            document.getElementById("footer").style.backgroundColor = colors.bg_color;
+            document.getElementById("footer").style.color = colors.bg_color;
+            var nl = document.getElementsByClassName("nav-link");
+            for(var i=0;i<nl.length;i++){
+                nl[i].style.backgroundColor = colors.bg_color;
+            }
         });
 
         $(function () {
             $(document).scroll(function () {
                 var $nav = $(".navbar");
                     var $bg = $("#banner");
-                    $nav.toggleClass('scrolled', $(this).scrollTop() > $bg.height());
-                    if($(this).scrollTop()  > $bg.height()) {
-                        $('.navbar .navbar-brand img').attr('src',"{% static 'img/Logo_red_final.png' %}");
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > 150);
+                    if($(this).scrollTop()  > 150) {
+                        
+                        $('.navbar').addClass('fixed-top')
+                        $('#navbar_container').removeClass('fixed-top')
                     }
                     else {
-                        $('.navbar .navbar-brand img').attr('src',"{% static 'img/Logo (1).png' %}");
+                        $('.navbar').removeClass('fixed-top')
+                        $('#navbar_container').addClass('fixed-top')
                     }
             });
         });
