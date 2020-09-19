@@ -1,5 +1,5 @@
 {% load static from staticfiles %}
-<nav class="navbar py-0 navbar-expand-lg  nav-full w-100" style="background-color:  rgb(155,155,155,0);">
+<nav class="navbar py-0 navbar-expand-lg  nav-full w-100" style="background-color:  #ffffff;margin-bottom: 20px">
   <!-- <a class="navbar-brand py-0" href="http://gursahibsingh.herokuapp.com/home" style="color:rgb(255,255,255) ;font-size: 30px;font-family: Chilanka; margin-left: 40px"><img src="{% static 'img/Logo (1).png' %}" alt=""></a> -->
     <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"  >
         <span class="navbar-toggler-icon" ></span>
@@ -7,24 +7,23 @@
 
     <div class="container" style="">
         <div class="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
-
             <ul class="navbar-nav mx-auto text-md-center text-left" style="">
                 <li class="nav-item" style="margin-right: 10px">
-                    <a id="nav-link_about" class="nav-link" href="/about" target="_blank"  style="color :#ffdcba;font-family: Orbitron;font-size: 20px">About</a>
+                    <a id="nav-link_about" class="nav-link" href="/about" target="_blank" style="">About</a>
                 </li>
 
                 <li class="nav-item" style="margin-left: 10px;margin-right: 10px;">
-                    <a class="nav-link" id="nav-link_projects" href="/projects" target="_blank" style="color :#ffdcba;font-family: Orbitron;font-size: 20px">Projects
+                    <a class="nav-link" id="nav-link_projects" href="/projects" target="_blank" style="">Projects
                     </a>
                 </li>
                 
                 <li class="nav-item" style="margin-left: 10px;margin-right: 10px;">
-                    <a class="nav-link" id="nav-link_blogs" href="/blogs" target="_blank" style="color :#ffdcba;font-family: Orbitron;font-size: 20px">Blogs
+                    <a class="nav-link" id="nav-link_blogs" href="/blogs" target="_blank" style="">Blogs
                     </a>
                 </li>
 
                 <li class="nav-item" style="margin-left: 10px">
-                    <a class="nav-link" style="color :#ffdcba;font-family: Orbitron;font-size: 20px;"  href="{% static 'pdf/Resume_GursahibSingh.docx' %}">Resume</a>
+                    <a class="nav-link" style=""  href="{% static 'pdf/Resume_GursahibSingh.docx' %}">Resume</a>
                 </li>
             </ul>
         </div>

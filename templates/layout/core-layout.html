@@ -11,17 +11,26 @@
 
     <style type="text/css">
      
+        .headings{
+        text-align: center;font-family: Orbitron;
+        margin-top: 30px;margin-bottom: 30px;
+        }
+
         #navbar_name{
             font-family: Kaushan Script;
             position: relative;
             top:0; right: 0;left:0;
         }
 
+        .nav-link {
+            font-family: Orbitron;font-size: 25px;
+            font-weight: bold;
+        }
+
         .nav-item:hover .nav-link{
-            background-color: #ffdcba; /*orange*/
-            color:#2e2e2e !important; 
-            transition: background-color 400ms linear;
-            font-size: 25px !important;
+            background-color: rgba(251, 144, 57,0.3); /*orange*/ 
+            transition: background-color 300ms linear;
+            font-size: 30px !important;
         }
         .custom-toggler.navbar-toggler {
             border-color: #ffdcba;
@@ -34,18 +43,8 @@
         .navbar.scrolled {
             /*background-color: #2e2e2e !important;*/
             transition: background-color 300ms linear;
+            box-shadow: 0 14px 14px -14px rgba(0,0,0,.2);
         }
-        .navbar.scrolled .nav-link {
-            color:#fa625f !important;
-        }
-
-
-        .navbar.scrolled .nav-link:hover {
-            background-color: #fa625f;
-            color:#2e2e2e !important; 
-            transition: background-color 300ms linear;
-        }
-
         
         .tooltip {
             position: relative;
@@ -194,7 +193,7 @@
 <body>
  
     
-    <div id="navbar_container" class="container app-container justify-content-between align-items-center fixed-top" style="background: #eeeeee;">
+    <div id="navbar_container" class="container app-container justify-content-between align-items-center fixed-top" style="background-color: #ffffff">
         <h1 id="navbar_name">Gursahib Singh</h1>  
         {% include 'navbar-top/navbar-top.html' %}
     </div>
@@ -217,42 +216,38 @@
 
 
       <!-- Footer -->
-    <footer class="page-footer font-small pt-4" id="footer" style="margin-top: 50px">
+    <footer class="page-footer font-small pt-4" id="footer" style="margin-top: 50px;background-color: #1F3044;">
         <div class="container text-center text-md-left" style="">
-            <h5 class="text-uppercase" style="color: #fa625f;font-family: Orbitron;font-size: 30px;text-align: center;">CONTACT</h5>
-            <div class="row" style="background-color: #000000">
-                <div class="col-md-6 mb-md-0 mb-6" style="align-items: right">
-                    <ul class="list-unstyled" style="color: #ffffff">
-                        <li>
-                            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/gursahib-singh-04849b156/" style="color: #ffffff" target="_blank">   LinkedIn</a>
-                        </li>
-                        <li>
-                            <a class="fa fa-github" href="https://github.com/codesahib" style="color: #ffffff" target="_blank">   GitHub</a>
-                        </li>
-                        <li>
-                            <a class="fa fa-google" style="color: #ffffff">   gursahib.kvm@gmail.com</a>
-                        </li>
-                    </ul>
+            <h1 class="text-uppercase" style="color: #ffffff">CONTACT</h1>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <a class="fa fa-google" style="color: #ffffff;font-size: 30px">   gursahib.kvm@gmail.com</a>
                 </div>
-                
-                <div class="col-md-6 mb-md-0 mb-6">
-                    <ul class="list-unstyled" style="padding-top: 6px">
-                        <li>
-                            <a class="fa fa-instagram" href="https://www.instagram.com/gursahib__singh/?hl=en" style="color: #ffffff" target="_blank">   Instagram</a>
+                <div class="row justify-content-center" style="margin-top: 10px">
+                    <ul class="" style="list-style-type: none;padding: 0;display: inline">
+                        <li style="float: left;padding-right: 10px;font-size: 30px">
+                            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/gursahib-singh-04849b156/" style="color: #ffffff" target="_blank"></a>
                         </li>
-                        <li>
-                            <a class="fa fa-facebook" href="https://www.facebook.com/GS223" style="color: #ffffff" target="_blank">   Facebook</a>
+                        <li style="float: left;padding-right: 10px;padding-left: 10px;font-size: 30px">
+                            <a class="fa fa-github" href="https://github.com/codesahib" style="color: #ffffff" target="_blank"></a>
                         </li>
-                        <li>
-                            <a class="fa fa-quora" href="https://www.quora.com/profile/GurSahib-Singh-16" style="color: #ffffff" target="_blank">   Quora</a>
+
+                        <li style="float: left;padding-right: 10px;padding-left: 10px;font-size: 30px">
+                            <a class="fa fa-instagram" href="https://www.instagram.com/gursahib__singh/?hl=en" style="color: #ffffff" target="_blank"></a>
+                        </li>
+                        <li style="float: left;padding-right: 10px;padding-left: 10px;font-size: 30px">
+                            <a class="fa fa-facebook fa-align-left" href="https://www.facebook.com/GS223" style="color: #ffffff" target="_blank"></a>
+                        </li>
+                        <li style="float: left;padding-left: 10px;font-size: 30px">
+                            <a class="fa fa-quora" href="https://www.quora.com/profile/GurSahib-Singh-16" style="color: #ffffff" target="_blank"></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
       
-        <div class="footer-copyright text-center py-3" style="color: #fa625f">© 2020 Copyright:
-            <a href="http://127.0.0.1:8000/home" style="color: #fa625f" > gursahibsingh.herokuapp.com</a>
+        <div class="footer-copyright text-center py-3" style="color: #fa625f;">© 2020 Copyright:
+            <a href="/home" style="color: #fa625f" > gursahibsingh.herokuapp.com</a>
         </div>
     </footer>
     <!-- Footer -->
@@ -261,9 +256,11 @@
         var colors;
         $.getJSON("{% static "initialize.json" %}", function(colors) {
             document.getElementById("footer").style.color = colors.bg_color;
+            document.getElementById("navbar_name").style.color = colors.bg_color;
+
             var nl = document.getElementsByClassName("nav-link");
             for(var i=0;i<nl.length;i++){
-                nl[i].style.backgroundColor = colors.bg_color;
+                nl[i].style.color = colors.fr_color2;
             }
         });
 
@@ -272,6 +269,7 @@
                 var $nav = $(".navbar");
                     var $bg = $("#banner");
                     $nav.toggleClass('scrolled', $(this).scrollTop() > 150);
+
                     if($(this).scrollTop()  > 150) {
                         
                         $('.navbar').addClass('fixed-top')
@@ -280,6 +278,7 @@
                     else {
                         $('.navbar').removeClass('fixed-top')
                         $('#navbar_container').addClass('fixed-top')
+                        $('.navbar_container').css('zindex','1030')
                     }
             });
         });

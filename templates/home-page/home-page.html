@@ -7,11 +7,6 @@
         margin-top: 160px;margin-bottom: 30px;
     }
 
-    #headings{
-        text-align: center;font-family: Orbitron;
-        margin-top: 30px;margin-bottom: 30px;
-    }
-
     .content_text, .content_image{
         height:300px;
     }
@@ -86,7 +81,7 @@
 
 
 {% block content %}
-<h1 id="headings">About</h1>
+<h1 class="headings">About</h1>
 <div id="" class="container app-container" style="background-color: #eeeeee;height:300px">
 
     <div class="row" style="">
@@ -99,7 +94,7 @@
     </div>
 </div>
 
-<h1 id="headings">Projects</h1>
+<h1 class="headings">Projects</h1>
 <div id="" class="container app-container" style="background-color: #eeeeee;height:300px">
 
     <div class="row">
@@ -112,7 +107,7 @@
     </div>
 </div>
 
-<h1 id="headings">Pillars of Strength</h1>
+<h1 class="headings">Pillars of Strength</h1>
 <!-- #################### CARDS ########################### -->
 <div id="cardContainer" class="container" style="margin-top: 2px;margin-bottom: 2px;background-color: #ffffff">
 
@@ -162,7 +157,7 @@
   </div>
 </div>
 
-<h1 id="headings">Blogs</h1>
+<h1 class="headings">Blogs</h1>
 <div id="" class="container app-container" style="background-color: #eeeeee;height:300px">
 
     <div class="row">
@@ -200,6 +195,7 @@
     var colors;
     $.getJSON("{% static "initialize.json" %}", function(colors) {
         document.getElementById("banner").style.backgroundColor = colors.bg_color;
+
         var ct = document.getElementsByClassName("content_text");
         for(var i=0;i<ct.length;i++){
             ct[i].style.backgroundColor = colors.fr_color1;
@@ -208,6 +204,11 @@
         var ci = document.getElementsByClassName("content_image");
         for(var i=0;i<ci.length;i++){
             ci[i].style.backgroundColor = colors.fr_color2;
+        }
+
+        var h = document.getElementsByClassName("headings");
+        for(var i=0;i<h.length;i++){
+            h[i].style.color = colors.bg_color;
         }
     });
 
