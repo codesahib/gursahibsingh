@@ -8,23 +8,21 @@
 {% block style %}
 <style type="text/css">
 
-#nav-link_blogs{
-  background-color: #ffdcba;
-      color:#2e2e2e !important;
-      transition: background-color 300ms linear;
-}
-.navbar.scrolled #nav-link_blogs{
-  background-color: #fa625f;
-      color:#2e2e2e !important;
-      transition: background-color 300ms linear;
-}
-.card{
-  min-height: 350px;
-  max-height: 350px;
-}
-  .navbar {
-    background-color: #2e2e2e !important;
-  }
+    #banner{
+        height:300px;
+        margin-top: 160px;margin-bottom: 30px;
+    }
+
+    #nav-link_blogs{
+        background-color: #ffdcba;
+        transition: background-color 300ms linear;
+    }
+
+    .card{
+      min-height: 350px;
+      max-height: 350px;
+    }
+
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -74,20 +72,16 @@
 {% endblock %}
 
 {% block banner %}
-<section id="banner" style="width:100%;height:50%;/*background-image: url({% static 'img/banner.png' %}*/background-color: #2e2e2e;background-size: cover;background-position: center;
-  background-repeat: no-repeat;">
-  <h1 class="offset-md-1" style="text-decoration: underline; font-family: Orbitron;margin-top: 50px;">BLOGS</h1>
-  <div class="row" style="margin-top: 0px;">
-    <div class="banner_column_left col-md-5 col-sm-12 offset-md-1" style="">
-      <h4 style="font-family: Chilanka">This section has to be there considering this is a portfolio website. I'm not a blogger(professionally) but I do like to write on some things.</h4>
+<section id="banner" style="">
+    <h1 class="headings" style="">BLOGS</h1>
+     
+    <div class="container mt-2" style="">   
+        <h4 style="font-family: Livvic;text-align: justify;">This section has to be there considering this is a portfolio website. I'm not a blogger(professionally) but I do like to write on some things.</h4>
+
+        <h4 style="font-family: Livvic;text-align: justify;">There are lot of appreciable things that happen around us and with us that we fail to notice. We need to sit back, relax and reflect upon those wonderful moments and writing down is the best way to do so. This section would contain information based and experience based blogs. No-nonsense!</h4>
     </div>
-    
-    <div  class="banner_column_right col-md-5 col-sm-12" style="">
-      <p style="font-family: Livvic;">There are lot of appreciable things that happen around us and with us that we fail to notice. We need to sit back, relax and reflect upon those wonderful moments and writing down is the best way to do so. This section would contain information based and experience based blogs. No-nonsense!</p>
       
-    </div>
-  </div>
-  </section>
+</section>
 {% endblock %}
 
 {% block content %}
@@ -146,5 +140,10 @@
 </div>
 {% endblock %}
 {% block script %}
-
+<script type="text/javascript">
+    var colors;
+    $.getJSON("{% static "initialize.json" %}", function(colors) {
+        document.getElementById("banner").style.backgroundColor = colors.bg_color;
+    });
+</script>
 {% endblock %}              

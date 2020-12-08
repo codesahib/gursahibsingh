@@ -194,18 +194,18 @@
  
     
     <div id="navbar_container" class="container app-container justify-content-between align-items-center fixed-top" style="background-color: #ffffff">
-        <h1 id="navbar_name">Gursahib Singh</h1>  
+        <h1 id="navbar_name" style="text-align: center;">Gursahib Singh</h1>  
         {% include 'navbar-top/navbar-top.html' %}
     </div>
     
 
-    <div class="container app-container" style="">  
+    <div id="banner container" class="container app-container" style="">  
         {% block banner %}
         {% endblock %}
     </div>
   
   
-    <div class="container app-container" style="background-color: #ffffff">
+    <div id="content_container" class="container app-container" style="background-color: #ffffff;">
         
         <!-- <main> -->
         {% block content %} 
@@ -216,12 +216,12 @@
 
 
       <!-- Footer -->
-    <footer class="page-footer font-small pt-4" id="footer" style="margin-top: 50px;background-color: #1F3044;">
-        <div class="container text-center text-md-left" style="">
-            <h1 class="text-uppercase" style="color: #ffffff">CONTACT</h1>
+    <footer class="page-footer font-small pt-4" id="footer" style="background-color: #1F3044;">
+        <div class="container text-center text-md-left" style="color:#ffffff">
+            <h1 class="text-uppercase" style="text-align: center;font-family: Orbitron;letter-spacing: 5px; margin-bottom: 30px">CONTACT</h1>
             <div class="container">
                 <div class="row justify-content-center">
-                    <a class="fa fa-google" style="color: #ffffff;font-size: 30px">   gursahib.kvm@gmail.com</a>
+                    <a class="fa fa-google" style="font-size: 30px">   gursahib.kvm@gmail.com</a>
                 </div>
                 <div class="row justify-content-center" style="margin-top: 10px">
                     <ul class="" style="list-style-type: none;padding: 0;display: inline">
@@ -264,7 +264,12 @@
             }
         });
 
+        $('.text-uppercase.headings').css('color','#ffffff')
+
         $(function () {
+            var footer_height = document.getElementById('footer').offsetHeight;
+            $('#content_container').css('margin-bottom',footer_height+100)
+          
             $(document).scroll(function () {
                 var $nav = $(".navbar");
                     var $bg = $("#banner");
