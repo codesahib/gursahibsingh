@@ -14,47 +14,10 @@
     }
 
     #nav-link_about{
-        background-color: rgba(251, 144, 57,0.3);
+        background-color: rgba(251, 144, 57,0.7);
         transition: background-color 300ms linear;
     }
     
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 90%;
-    }
-
-    /* The Close Button */
-    .close {
-        color: #ffffff;
-        margin-left: auto;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #AEFF00;
-        text-decoration: none;
-        cursor: pointer;
-    }
     h1,p,h4{
         color: white;
     }
@@ -67,7 +30,7 @@
 
     <h1 class="headings" style="">ABOUT</h1>
     <div class="container mt-2" style="">
-        <h4 style="font-family: Livvic;text-align: justify;">Words can come close to defining a person but cannot define entirely. I come from Ludhiana, a city that has been my home from infancy till adolescence. Then I moved to Patiala for my undergraduation from Thapar Institute of Engineering and Technology. Currently I'm working as Member Technical Staff in an EDA domain MNC. To know about my current role & internship projects, head over to the <a href="/projects" target="_blank" style="color: #ffdcba;font-family: Orbitron">Projects</a> page.</h4>    
+        <h4 style="font-family: Livvic;text-align: justify;">Words can come close to defining a person but cannot define entirely. I come from Ludhiana, a city that has been my home from infancy till adolescence. Then I moved to Patiala for my undergraduation from Thapar Institute of Engineering and Technology. Currently I'm working as Senior Member of Technical Staff in an EDA domain MNC. To know about my current role & internship projects, head over to the <a href="/projects" target="_blank" style="color: #FB9039;font-family: Orbitron">Projects</a> page.</h4>    
     </div>
 
 </section>
@@ -84,7 +47,6 @@
             <div class="card-body  d-flex flex-column">
               <h5 class="card-title">Software Competencies</h5>
               <p class="card-text" style="color: black">The most awaited information on this website!</p>
-              <button id="SoftwareCompetencies" class="mt-auto btn" style="background-color:#000000;color: #fa625f;font-weight: 700">Find Out!</button>
             </div>  
           </div>        
         </div>
@@ -95,7 +57,6 @@
             <div class="card-body  d-flex flex-column">
               <h5 class="card-title">Academic Qualifications</h5>
               <p class="card-text">My past doesn't really haunt me!</p>
-              <button id="AcademicQualifications" class="mt-auto btn"style="background-color:#ffffff;color: #49494b;font-weight: 700">Find Out!</button>
             </div>  
           </div>
         </div>
@@ -106,7 +67,6 @@
             <div class="card-body  d-flex flex-column">
               <h5 class="card-title">Academic Achievements</h5>
               <p class="card-text" style="color: black">Ok, I think I can reflect on something special!</p>
-              <button id="AcademicAchievements" class="mt-auto btn"style="background-color:#000000;color:#fa625f;font-weight: 700">Find Out!</button>
             </div>  
           </div>       
         </div>
@@ -117,7 +77,6 @@
             <div class="card-body  d-flex flex-column">
               <h5 class="card-title">Extra Curricular Activities</h5>
               <p class="card-text">I'm like Jack who becomes dull if he doesn't play.</p>
-              <button id="ExtraCurricular" class="mt-auto btn"style="background-color:#ffffff;color: #49494b;font-weight: 700">Find Out!</button>
             </div>  
           </div>
         </div>
@@ -125,89 +84,24 @@
     </div><!-- row -->
 </div>
 
-<div id="aboutModal" class="modal" >
-  <!-- Modal content -->
-    <div class="modal-content" style="background-color:  #243D42;">
-        <span id="closeBtn"class="close justify-content-end">&times;</span>
-        <div id="modelText"></div>
-    </div>
-</div>
 {% endblock %}
 
 {% block script %}
 <script type="text/javascript">
-
     var colors;
-        $.getJSON("{% static "initialize.json" %}", function(colors) {
-            document.getElementById("banner").style.backgroundColor = colors.bg_color;
+    $.getJSON("{% static "initialize.json" %}", function(colors) {
+        document.getElementById("banner").style.backgroundColor = colors.bg_color;
 
-            var ct = document.getElementsByClassName("content_text");
-            for(var i=0;i<ct.length;i++){
-                ct[i].style.backgroundColor = colors.fr_color1;
-            }
-            
-            var ci = document.getElementsByClassName("content_image");
-            for(var i=0;i<ci.length;i++){
-                ci[i].style.backgroundColor = colors.fr_color2;
-            }
-
-        });
-
-    window.onload = myMain;
-
-    function myMain() {
-      document.getElementById("aboutCardContainer").onclick = buton;
-    }
-
-    var temp;
-    function buton(e) {
-      if (e.target.tagName == 'BUTTON') {
-        //var filename = 'home/'.concat('text',e.target.id,'.txt')
-        var filename='text'.concat(e.target.id,'.html')
-        var self=this
-        var contents=""
+        var ct = document.getElementsByClassName("content_text");
+        for(var i=0;i<ct.length;i++){
+            ct[i].style.backgroundColor = colors.fr_color1;
+        }
         
-        $.ajax({
-          url: "{% url 'get_ajax' %}",
-          type: 'POST',
-          cache: false,
-          data: {'filename':filename},
-          success:function(result){
-            // console.log(result);
-            document.getElementById('modelText').innerHTML= result;
-            // result=""
-          }
-        });
-        //document.getElementById('modelText').innerHTML = selfcontents
-        var modal = document.getElementById('aboutModal');
-        modal.style.display = "block";  
-      }
-    }
+        var ci = document.getElementsByClassName("content_image");
+        for(var i=0;i<ci.length;i++){
+            ci[i].style.backgroundColor = colors.fr_color2;
+        }
+    });
 
-    // Get the modal
-    var modal = document.getElementById('aboutModal');
-
-    // Get the button that opens the modal
-    //var btn = document.getElementById("btnRead");
-
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementById("closeBtn");
-
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      document.getElementById('modelText').innerHTML=""
-      modal.style.display = "none";
-    }
-
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-      
-    }
 </script>
 {% endblock %}              
