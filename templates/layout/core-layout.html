@@ -45,46 +45,6 @@
             transition: background-color 300ms linear;
             box-shadow: 0 14px 14px -14px rgba(0,0,0,.2);
         }
-        
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted black;
-        }
-
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 120px;
-            background-color: #555;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -60px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #555 transparent transparent transparent;
-        }
-
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
-
 
         .card-title{
             text-align: center;
@@ -193,32 +153,25 @@
     {% endblock %}
 </head>
 
-<body>
- 
-    
-    <div id="navbar_container" class="container app-container justify-content-between align-items-center fixed-top" style="background-color: #ffffff">
+<body>   
+    <div id="navbar_container" class="container app-container justify-content-between align-items-center fixed-top" style="">
         <h1 id="navbar_name" style="text-align: center;">Gursahib Singh</h1>  
         {% include 'navbar-top/navbar-top.html' %}
     </div>
     
-
     <div id="banner container" class="container app-container" style="">  
         {% block banner %}
         {% endblock %}
     </div>
   
-  
     <div id="content_container" class="container app-container" style="background-color: #ffffff;">
-        
         <!-- <main> -->
         {% block content %} 
         {% endblock %}
         <!-- </main> -->
-        
     </div>
 
-
-      <!-- Footer -->
+    <!-- Footer -->
     <footer class="page-footer font-small pt-4" id="footer" style="background-color: #1F3044;">
         <div class="container text-center text-md-left" style="color:#ffffff">
             <h1 class="text-uppercase" style="text-align: center;font-family: Orbitron;letter-spacing: 5px; margin-bottom: 30px">CONTACT</h1>
@@ -275,19 +228,18 @@
           
             $(document).scroll(function () {
                 var $nav = $(".navbar");
-                    var $bg = $("#banner");
-                    $nav.toggleClass('scrolled', $(this).scrollTop() > 150);
+                var $bg = $("#banner");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > 150);
 
-                    if($(this).scrollTop()  > 150) {
-                        
-                        $('.navbar').addClass('fixed-top')
-                        $('#navbar_container').removeClass('fixed-top')
-                    }
-                    else {
-                        $('.navbar').removeClass('fixed-top')
-                        $('#navbar_container').addClass('fixed-top')
-                        $('.navbar_container').css('zindex','1030')
-                    }
+                if($(this).scrollTop()  > 150) {
+                    $('.navbar').addClass('fixed-top')
+                    $('#navbar_container').removeClass('fixed-top')
+                }
+                else {
+                    $('.navbar').removeClass('fixed-top')
+                    $('#navbar_container').addClass('fixed-top')
+                    $('#navbar_container').css('zindex','1030')
+                }
             });
         });
     </script>
@@ -295,6 +247,5 @@
     {% endblock %}
     {% load static %}
     <!-- <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script> -->
-    
   </body>
   </html>
