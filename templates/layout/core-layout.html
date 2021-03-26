@@ -176,10 +176,10 @@
         <div class="container text-center text-md-left" style="color:#ffffff">
             <h1 class="text-uppercase" style="text-align: center;font-family: Orbitron;letter-spacing: 5px; margin-bottom: 30px">CONTACT</h1>
             <div class="container">
-                <div class="row justify-content-center">
-                    <a class="fa fa-google" style="font-size: 30px">   gursahib.kvm@gmail.com</a>
+                <div class="d-flex justify-content-center">
+                    <a class="fa fa-google" style="font-size: 30px;">   gursahib.kvm@gmail.com</a>
                 </div>
-                <div class="row justify-content-center" style="margin-top: 10px">
+                <div class="d-flex justify-content-center" style="margin-top: 10px">
                     <ul class="" style="list-style-type: none;padding: 0;display: inline">
                         <li style="float: left;padding-right: 10px;font-size: 30px">
                             <a class="fa fa-linkedin" href="https://www.linkedin.com/in/gursahib-singh-04849b156/" style="color: #ffffff" target="_blank"></a>
@@ -224,7 +224,7 @@
 
         $(function () {
             var footer_height = document.getElementById('footer').offsetHeight;
-            $('#content_container').css('margin-bottom',footer_height+100)
+            $('#content_container').css('margin-bottom',footer_height - 100)
           
             $(document).scroll(function () {
                 var $nav = $(".navbar");

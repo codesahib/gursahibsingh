@@ -39,6 +39,9 @@
         width: 90%;
     }
 
+    #model-span {
+        color: #ffffff;
+    }
     /* The Close Button */
     .close {
         color: #ffffff;
@@ -171,13 +174,21 @@
             var contents=""
 
             $.ajax({
-              url: "{% url 'get_ajax' %}",
-              type: 'POST',
-              cache: false,
-              data: {'filename':filename},
-              success:function(result){
-                document.getElementById('modelText').innerHTML= result;
-              }
+                url: "{% url 'get_ajax' %}",
+                type: 'POST',
+                cache: false,
+                data: {'filename':filename},
+                success:function(result){
+                    document.getElementById('modelText').innerHTML= result;
+                    var colors;
+                    $.getJSON("{% static "initialize.json" %}", function(colors) {
+                        document.getElementById("modal_title").style.color = colors.fr_color1;
+                        var ms = document.getElementsByClassName("modal_span")
+                        for(var i=0;i<ms.length;i++){
+                            ms[i].style.color = colors.fr_color1;
+                        }
+                    });
+                }
             });
 
             modal.style.display = "block";
