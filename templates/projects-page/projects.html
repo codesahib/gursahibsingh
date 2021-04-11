@@ -11,8 +11,8 @@
     }
 
     .accordion-item {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
     }
 
     .accordion-header button, .accordion-body{
@@ -20,13 +20,22 @@
     }
 
     #banner{
-        height:250px;
-        margin-top: 160px;margin-bottom: 30px;
+        /*height:250px;*/
+        margin-top: 10rem;margin-bottom: 1.875rem;
+        flex-direction: column;
     }
 
     #nav-link_projects{
         background-color: rgba(251, 144, 57,0.7);
         transition: background-color 300ms linear;
+    }
+
+    .content_image{
+        background-color: var(--accent-clr);
+    }
+
+    .accordion-item{
+        background-color: var(--primary-clr);
     }
 
     h1,p,h4{
@@ -38,8 +47,8 @@
 
 {% block banner %}
 <section id="banner" style="">
-    <h1 class="" style="text-align: center;font-family: Orbitron;margin-top: 30px;margin-bottom: 30px;">PROJECTS</h1>
-    <div class="container mt-2" style="">
+    <h1 class="headings" style="">PROJECTS</h1>
+    <div class="container mt-2" style="background-color: var(--accent-clr); padding: var(--para-padding)">
         <h4 style="font-family: Livvic;text-align: justify;"> I've tried doing projects in many seemingly intereseting fields. The range of areas that I've worked upon are Web Development, Machine Learning, App Development(very basic), and Scripting.</h4>
         <h4 style="font-family: Livvic;text-align: justify;"> I plan to work more on the Cloud and Automation tools that will eventually help stand in sync with the changing world</h4>    
     </div>
@@ -52,58 +61,14 @@
 
 <h1 class="headings" style="">CURRENT ROLE</h1>
 <div class="col-md-12 col-sm-12 content_image">
-    <p style="font-family: Livvic;font-size: 22px;text-align: justify;">Currently I'm in the infrastructure team and my responsibilities include <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Release, Regressions & Build </span>of one of our products. Apart from this, I handle the existing <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">infrastructure</span> and also provide <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">automation</span>. The work typically revolves around developing scripts in <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Shell, Perl & Python </span>on a <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Linux</span> based environment and using <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Perforce</span> to take care of versioning.</p>
+    <p style="font-family: Livvic;font-size: 1.375rem;text-align: justify;">Currently I'm in the infrastructure team and my responsibilities include <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Release, Regressions & Build </span>of one of our products. Apart from this, I handle the existing <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">infrastructure</span> and also provide <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">automation</span>. The work typically revolves around developing scripts in <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Shell, Perl & Python </span>on a <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Linux</span> based environment and using <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Perforce</span> to take care of versioning.</p>
 </div>  
 
 <h1 class="headings" style="">INTERNSHIP</h1>
 <div class="col-md-12 col-sm-12 content_image">
-    <p style="font-family: Livvic;font-size: 22px;text-align: justify;">I did my internship from Mentor Graphics. My responsibility was to enhance the department's website and also introduce some new features. I learnt <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Django, Shell & Perl scripting, JavaScript, VueJs(Front-end Framework)</span>. Apart from enhancing the existing web apps, I was given a project to develop a new app whose function would be to display the data graphically using tables and charts. I learnt <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">D3.js(JavaScript library)</span> to create beautiful graphics. </p>
-    <p style="margin-top: 5px;font-family: Livvic;font-size: 13px">*No demo is available as the website is hosted on company's intranet and the data is confidential.</p>
+    <p style="font-family: Livvic;font-size: 1.375rem;text-align: justify;">I did my internship from Mentor Graphics. My responsibility was to enhance the department's website and also introduce some new features. I learnt <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Django, Shell & Perl scripting, JavaScript, VueJs(Front-end Framework)</span>. Apart from enhancing the existing web apps, I was given a project to develop a new app whose function would be to display the data graphically using tables and charts. I learnt <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">D3.js(JavaScript library)</span> to create beautiful graphics. </p>
+    <p style="margin-top: 0.3125rem;font-family: Livvic;font-size: 0.8125rem">*No demo is available as the website is hosted on company's intranet and the data is confidential.</p>
 </div>
-
-<!-- <div class="container" id="projectCardContainer" style="margin-top: 20px;margin-bottom: 20px;background-color: #ffffff">
-    <div class="row">
-        <div class="col-md-3 col-sm-6" style="padding-top: 20px">
-            <div class="card content_text">
-              <img class="card-img-top" src="{% static 'img/web.jpg' %}" alt="Web Development">
-              <div class="card-body  d-flex flex-column">
-                <h5 class="card-title">Web Development</h5>
-                <p class="card-text" style="color: black">A handy skill to maximise visibility</p>
-              </div>  
-            </div>        
-        </div>
-
-        <div class="col-md-3 col-sm-6" style="padding-top: 20px">
-            <div class="card text-white content_image" >
-              <img class="card-img-top" src="{% static 'img/ml.jpg' %}" alt="Machine Learning">
-              <div class="card-body  d-flex flex-column">
-                <h5 class="card-title">Machine Learning</h5>
-                <p class="card-text">Because this is the most hyped skill of all</p>
-              </div>  
-            </div>
-        </div>
-      
-        <div class="col-md-3 col-sm-6" style="padding-top: 20px">
-            <div class="card content_text">
-              <img class="card-img-top" src="{% static 'img/android.jpg' %}" alt="Android">
-              <div class="card-body  d-flex flex-column">
-                <h5 class="card-title">Android</h5>
-                <p class="card-text" style="color: black">Like websites, apps can be handy too</p>
-              </div>  
-            </div>       
-        </div>
-        
-        <div class="col-md-3 col-sm-6" style="padding-top: 20px">
-            <div class="card text-white content_image">
-              <img class="card-img-top" src="{% static 'img/dbms.jpg' %}" alt="Database Management">
-              <div class="card-body  d-flex flex-column">
-                <h5 class="card-title">Database Management</h5>
-                <p class="card-text">Because one should look for behind the scenes action as well</p>
-              </div>  
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <h1 class="headings" style="">ACADEMIC PROJECTS</h1>
 <div class="accordion accordion-flush" id="AcademicProjectsAccordian">
@@ -214,35 +179,5 @@
 {% endblock %}
 {% block script %}
 <script type="text/javascript">
-    var colors;
-    $.getJSON("{% static "initialize.json" %}", function(colors) {
-        document.getElementById("banner").style.backgroundColor = colors.bg_color;
-
-        var h = document.getElementsByClassName("headings");
-        for(var i=0;i<h.length;i++){
-            h[i].style.color = colors.bg_color;
-        }
-
-        var ct = document.getElementsByClassName("content_text");
-        for(var i=0;i<ct.length;i++){
-            ct[i].style.backgroundColor = colors.fr_color1;
-        }
-        
-        var ci = document.getElementsByClassName("content_image");
-        for(var i=0;i<ci.length;i++){
-            ci[i].style.backgroundColor = colors.fr_color2;
-        }
-
-        var ah = document.getElementsByClassName("accordion-header");
-        for(var i=0;i<ah.length;i++){
-            ah[i].style.backgroundColor = colors.bg_color;
-        }
-
-        var ab = document.getElementsByClassName("accordion-body");
-        for(var i=0;i<ab.length;i++){
-            ab[i].style.backgroundColor = colors.fr_color2;
-        }
-
-    });
 </script>
 {% endblock %}              

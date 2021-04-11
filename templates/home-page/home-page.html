@@ -2,26 +2,33 @@
 {% load static from staticfiles %}
 {% block style %}
 <style type="text/css">
+
     #banner{
-        height:1px;
-        margin-top: 160px;margin-bottom: 30px;
+        height:0.0625rem;
+        margin-top: 10rem;margin-bottom: 1.875rem;
+        background-color: var(--primary-clr);
+    }
+
+    .content_image{
+        flex: 0 1.5 30%;
+    }
+
+    .content_text{
+        background-color: var(--accent-clr);
+        flex: 0 1 70%;
     }
 
     .content_text, .content_image{
-        height:200px;
+        min-height:12.5rem;
+        display: flex;
     }
 
-    #header_greeting{
-        color: #000000;text-align: center;font-family: Bellota;font-size: 60px;line-height: 1.2
-    }
-    #header_name{
-        color: #000000;text-align: center;font-family: Orbitron;font-size: 80px;margin-top: 40px;line-height: 1.2
-    }
-    #header_summary{
-        color: #000000;font-family: Orbitron
-    }
-    #header_description{
-        color: #000000;font-size: 20px;margin-top: 40px
+    .content-para{
+        font-family: Livvic;
+        font-size: 1.5rem;
+        text-align: justify;
+        margin: auto;
+        padding: var(--para-padding);
     }
 
 </style>
@@ -40,87 +47,69 @@
 {% endblock %}
 
 {% block content %}
-<div id="" class="container app-container" style="margin-top: 30px;margin-bottom:50px;">
-    <div class="row">
-        <div id="" class="col-md-4 col-sm-4 content_image" style="display: flex">
-            <h1 class="headings">ABOUT</h1>     
-        </div>
-        <div id="" class="col-md-8 col-sm-8 content_text" style="display: flex">
-            <p style="font-family: Livvic;font-size: 25px;text-align: justify;margin: auto"> I belong to that category of people who love to question things that we come across on daily basis. I just love exercising my body & mind (this has a much deeper meaning). I don't complicate things and stay away from formalities. More importantly, I'm the same version of me everywhere!</p>
-        </div>
+<section style="">
+    <div id="" class="content_image" style="">
+        <h1 class="headings">ABOUT</h1>     
     </div>
-</div>
+    <div id="" class="content_text">
+        <p class="content-para"> I belong to that category of people who love to question things that we come across on daily basis. I just love exercising my body & mind (this has a much deeper meaning). I don't complicate things and stay away from formalities. More importantly, I'm the same version of me everywhere!</p>
+    </div>
+</section>
 
-<div id="" class="container app-container" style="margin-top: 30px;margin-bottom:50px;display: flex">
-    <div class="row">
-        <div id="" class="col-md-8 col-sm-8 content_text" style="display: flex">
-            <p style="font-family: Livvic;font-size: 25px;text-align: justify;margin: auto"> My interests in different areas have led me to do a variety of projects. I've completed various projects during my academics and professional career. More information regarding them can be found under 'Projects' tab.</p>
-        </div>
-        <div id="" class="col-md-4 col-sm-4 content_image" style="display: flex">
-            <h1 class="headings">Projects</h1>
-        </div>
-        
+<section style="">
+    <div id="" class="content_text">
+        <p class="content-para" style=""> My interests in different areas have led me to do a variety of projects. I've completed various projects during my academics and professional career. More information regarding them can be found under 'Projects' tab.</p>
     </div>
-</div>
+    <div id="" class="content_image" style="">
+        <h1 class="headings">Projects</h1>
+    </div>
+</section>
 
 <h1 class="headings">Pillars of Strength</h1>
 <!-- #################### CARDS ########################### -->
-<div id="cardContainer" class="container" style="margin-top: 2px;background-color: #ffffff">
-
-  <div class="row"  style=" ">
-    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
-      <div class="card text-white content_image">
+<section id="cardContainer" class="" style="justify-content: space-between; flex-wrap: wrap"> 
+    <div class="my-card">
         <img class="card-img-top" src="{% static 'img/gym.jpg' %}" alt="Weight Training">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title" style="">Exercise</h5>
-          <p class="card-text">There is a strong reason for why is everyone crazy about fitness.</p>
-        </div>  
-      </div>       
-    </div>
-    <div class="col-md-3 col-sm-6 " style="padding-top: 20px;">
-      <div class="card content_text">
+        <div class="card-body   d-flex flex-column">
+            <h5 class="card-title" style="">Exercise</h5>
+            <p class="card-text">There is a strong reason for why everyone is crazy about fitness.</p>
+        </div>
+    </div>       
+
+    <div class="my-card">
         <img class="card-img-top" src="{% static 'img/finance.jpg' %}" alt="Finance">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Games/Music/Movies</h5>
-          <p class="card-text" style="color: black">I too have the most common hobbies.</p>
-        </div>  
-      </div>
+        <div class="card-body   d-flex flex-column">
+            <h5 class="card-title">Games/Music/Movies</h5>
+            <p class="card-text" style="color: black">I too have the most common hobbies.</p>
+        </div>
     </div>
-  <!-- </div> -->
-  <!-- <div class="row"  style="padding-top: 20px;padding-bottom: 20px"> -->
-    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
-      <div class="card text-white content_image">
+
+    <div class="my-card">
         <img class="card-img-top" src="{% static 'img/read.jpg' %}" alt="Read">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Reading</h5>
-          <p class="card-text">They say books are a man's best friend. They are absolutely right!</p>
+        <div class="card-body   d-flex flex-column">
+            <h5 class="card-title">Reading</h5>
+            <p class="card-text">They say books are a man's best friend. They are absolutely right!</p>
         </div>  
-      </div>       
-    </div>
-    <div class="col-md-3 col-sm-6" style="padding-top: 20px;">
-      <div class="card content_text">
+    </div>       
+
+    <div class="my-card">
         <img class="card-img-top" src="{% static 'img/self.jpg' %}" alt="Self Improvement">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Self Improvement</h5>
-          <p class="card-text">Kyunki, sabse zyada time ham khud ke saath hi rehte hain.</p>
+        <div class="card-body   d-flex flex-column">
+            <h5 class="card-title">Self Improvement</h5>
+            <p class="card-text">Kyunki, sabse zyada time ham khud ke saath hi rehte hain.</p>
         </div>  
-      </div>
     </div>
-  </div>
-</div>
+   
+</section>
 
-
-<div id="" class="container app-container" style="margin-top: 80px;margin-bottom:50px;">
-    <div class="row">
-        <div id="" class="col-md-4 col-sm-4 content_image" style="display: flex">
-            <h1 class="headings">Blogs</h1>
-        </div>
-        <div id="" class="col-md-8 col-sm-8 content_text" style="display: flex">
-            <p style="font-family: Livvic;font-size: 25px;text-align: justify;margin: auto"> I'm not a professional blog writer but I do like to express my experiences. My first blog describes the experiences from my Thailand trip which can be used as a guide for a better vacation time.</p>
-        </div>
-        
+<section>
+    <div id="" class="content_image" style="">
+        <h1 class="headings">Blogs</h1>
     </div>
-</div>
+    <div id="" class="content_text" style="">
+        <p class="content-para"> I'm not a professional blog writer but I do like to express my experiences. My first blog describes the experiences from my Thailand trip which can be used as a guide for a better vacation time.</p>
+    </div>
+</section>
 
 {% endblock %}
 
@@ -128,25 +117,5 @@
 
 {% block script %}
 <script type="text/javascript">
-    var colors;
-    $.getJSON("{% static "initialize.json" %}", function(colors) {
-        document.getElementById("banner").style.backgroundColor = colors.bg_color;
-
-        var ct = document.getElementsByClassName("content_text");
-        for(var i=0;i<ct.length;i++){
-            ct[i].style.backgroundColor = colors.fr_color1;
-        }
-        
-        var ci = document.getElementsByClassName("content_image");
-        for(var i=0;i<ci.length;i++){
-            ci[i].style.backgroundColor = colors.fr_color2;
-        }
-
-        var h = document.getElementsByClassName("headings");
-        for(var i=0;i<h.length;i++){
-            h[i].style.color = colors.bg_color;
-        }
-    });
-
 </script>
 {% endblock %}

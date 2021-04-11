@@ -5,32 +5,53 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/icon.png' %}" />
     <title>
         {% block title %}
-            Welcome
+            Home | Gursahib Singh
         {% endblock %}
     </title>
 
     <style type="text/css">
-     
+        :root {
+            --primary-clr: #1F3044;
+            --secondary-clr: #FB9039;
+            --accent-clr: #646C79;
+
+            --para-padding: 1rem;
+        }
+
+        html{
+            font-size: 100%;
+        }
+
+        section{
+            display: flex !important;
+            margin-top: 0.625rem;
+            margin-bottom: 0.625rem;
+        }
+
         .headings{
-        text-align: center;font-family: Orbitron;
-        margin:auto;
+            color: var(--primary-clr);
+            text-align: center;
+            font-family: Orbitron;
+            margin: auto;
+            font-size: 1.5rem;
         }
 
         #navbar_name{
             font-family: Kaushan Script;
             position: relative;
             top:0; right: 0;left:0;
+            color: var(--primary-clr);
         }
 
         .nav-link {
-            font-family: Orbitron;font-size: 25px;
+            font-family: Orbitron;font-size: 1.5625rem;
             font-weight: bold;
         }
 
         .nav-item:hover .nav-link{
-            background-color: rgba(251, 144, 57,0.7); /*orange*/ 
+            background-color: var(--secondary-clr); 
             transition: background-color 300ms linear;
-            font-size: 30px !important;
+            font-size: 1.875rem !important;
         }
         .custom-toggler.navbar-toggler {
             border-color: #FB9039;
@@ -43,44 +64,50 @@
         .navbar.scrolled {
             /*background-color: #2e2e2e !important;*/
             transition: background-color 300ms linear;
-            box-shadow: 0 14px 14px -14px rgba(0,0,0,.2);
+            box-shadow: 0 0.875rem 0.875rem -0.875rem rgba(0,0,0,.2);
         }
 
+        /*For Cards*/
+    
+        .my-card{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 20%;
+            border: 0.0625rem solid rgba(0,0,0,.125);
+            background-clip: border-box;
+        }
+
+        .card-body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-text{
+            font-size: 1rem;
+            text-align: justify;
+        }
         .card-title{
             text-align: center;
         }
-        .card-text{
-            font-size: 17px;
-            text-align: justify;
-        }
-        .card{
-            min-height: 350px;
-            max-height: 350px;
-        }
+      
         .card-img-top{
             width: 100%;
-            height: 50%;   
+            height: 30%;   
         }
         
-        .banner_column_right{
-            border-left: white 1px solid;text-align: justify;
-        }
-        .banner_column_left{
-            border-right: white 1px solid;text-align: justify;
-        }
-        img {
+    /*    img {
             position: relative;
             top: 0;
             left: 0;
             height: 100%;
             width: 100%;
             background-size: auto auto;
-        }
-        body {
-          
-        }
-
+        }*/
+    
         @media only screen and (max-width: 992px) { /*from 4 to 4*/ 
+            html{
+                font-size: 80%;
+            }
             .card{
                 min-height: 320px;
                 max-height: 320px;
@@ -90,46 +117,33 @@
                 height: 100% ;   
             }
         }
+
         @media only screen and (max-width: 768px) { /*from 4 to 2 | bigger bottom banner*/ 
-            #header_greeting{
-                font-size: 50px;margin-top:40px;line-height: 1.2
+            .my-card{
+                flex-basis: 50%;
             }
-            #header_name{
-                font-size: 60px;margin-top: 30px;line-height: 1.2
-            }
-            #header_summary{
-                color: #ffffff;font-family: Orbitron
-            }
-            #header_description{
-                font-size: 20px;margin-top: 40px
-            }
-            .banner_column_right{
-                border-left: none;
-                border-top: white 1px solid;
-            }
-            .banner_column_left{
-                border-right: none;
-                border-bottom: white 1px solid;
+
+            html{
+                font-size: 60%;
             }
         }
+
         @media only screen and (max-width: 576px) { /*from 2 to 1*/
-            #header_greeting{
-            font-size: 40px;margin-top:40px;line-height: 1.2
+            .my-card{
+                flex-basis: 100%;
             }
-            #header_name{
-            font-size: 50px;margin-top: 30px;line-height: 1.2
+
+            html{
+                font-size: 40%;
             }
-            #header_summary{
-            color: #ffffff;font-family: Orbitron
-            }
-            #header_description{
-            font-size: 15px;margin-top: 40px
-            }
+
             .card-img-top{
                 width: 100%;
                 height: 20vh !important; 
             }
         }
+
+}
     </style>
 
     <meta charset="utf-8">
@@ -174,27 +188,27 @@
     <!-- Footer -->
     <footer class="page-footer font-small pt-4" id="footer" style="background-color: #1F3044;">
         <div class="container text-center text-md-left" style="color:#ffffff">
-            <h1 class="text-uppercase" style="text-align: center;font-family: Orbitron;letter-spacing: 5px; margin-bottom: 30px">CONTACT</h1>
+            <h1 class="text-uppercase" style="text-align: center;font-family: Orbitron;letter-spacing: 0.3125rem; margin-bottom: 1.875rem">CONTACT</h1>
             <div class="container">
                 <div class="d-flex justify-content-center">
-                    <a class="fa fa-google" style="font-size: 30px;">   gursahib.kvm@gmail.com</a>
+                    <a class="fa fa-google" style="font-size: 1.875rem;">   gursahib.kvm@gmail.com</a>
                 </div>
-                <div class="d-flex justify-content-center" style="margin-top: 10px">
+                <div class="d-flex justify-content-center" style="margin-top: 0.625rem">
                     <ul class="" style="list-style-type: none;padding: 0;display: inline">
-                        <li style="float: left;padding-right: 10px;font-size: 30px">
+                        <li style="float: left;padding-right: 0.625rem;font-size: 1.875rem">
                             <a class="fa fa-linkedin" href="https://www.linkedin.com/in/gursahib-singh-04849b156/" style="color: #ffffff" target="_blank"></a>
                         </li>
-                        <li style="float: left;padding-right: 10px;padding-left: 10px;font-size: 30px">
+                        <li style="float: left;padding-right: 0.625rem;padding-left: 0.625rem;font-size: 1.875rem">
                             <a class="fa fa-github" href="https://github.com/codesahib" style="color: #ffffff" target="_blank"></a>
                         </li>
 
-                        <li style="float: left;padding-right: 10px;padding-left: 10px;font-size: 30px">
+                        <li style="float: left;padding-right: 0.625rem;padding-left: 0.625rem;font-size: 1.875rem">
                             <a class="fa fa-instagram" href="https://www.instagram.com/gursahib__singh/?hl=en" style="color: #ffffff" target="_blank"></a>
                         </li>
-                        <li style="float: left;padding-right: 10px;padding-left: 10px;font-size: 30px">
+                        <li style="float: left;padding-right: 0.625rem;padding-left: 0.625rem;font-size: 1.875rem">
                             <a class="fa fa-facebook fa-align-left" href="https://www.facebook.com/GS223" style="color: #ffffff" target="_blank"></a>
                         </li>
-                        <li style="float: left;padding-left: 10px;font-size: 30px">
+                        <li style="float: left;padding-left: 0.625rem;font-size: 1.875rem">
                             <a class="fa fa-quora" href="https://www.quora.com/profile/GurSahib-Singh-16" style="color: #ffffff" target="_blank"></a>
                         </li>
                     </ul>
@@ -202,23 +216,17 @@
             </div>
         </div>
       
-        <div class="footer-copyright text-center py-3" style="color: #FB9039;">© 2020 Copyright:
+        <div class="footer-copyright text-center py-3" style="color: #FB9039;">© 2021 Copyright:
             <a href="/home" style="color: #FB9039" > gursahibsingh.herokuapp.com</a>
         </div>
     </footer>
     <!-- Footer -->
 
     <script type="text/javascript">
-        var colors;
-        $.getJSON("{% static "initialize.json" %}", function(colors) {
-            document.getElementById("footer").style.color = colors.bg_color;
-            document.getElementById("navbar_name").style.color = colors.bg_color;
-
-            var nl = document.getElementsByClassName("nav-link");
-            for(var i=0;i<nl.length;i++){
-                nl[i].style.color = colors.fr_color2;
-            }
-        });
+        // var colors;
+        // $.getJSON("{% static "initialize.json" %}", function(colors) {
+        //     document.getElementById("footer").style.color = colors.bg_color;
+        // });
 
         $('.text-uppercase.headings').css('color','#ffffff')
 

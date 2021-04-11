@@ -9,8 +9,9 @@
 <style type="text/css">
 
    #banner{
-        height:250px;
-        margin-top: 160px;margin-bottom: 30px;
+        /*height:15.625rem;*/
+        margin-top: 10rem;margin-bottom: 1.875rem;
+        flex-direction: column;
     }
 
     #nav-link_about{
@@ -22,7 +23,7 @@
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1030; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
+        padding-top: 6.25rem; /* Location of the box */
         left: 0;
         top: 0;
         width: 100%; /* Full width */
@@ -34,8 +35,8 @@
     /* Modal Content */
     #modal-content {
         margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
+        padding: 1.25rem;
+        border: 0.0625rem solid #888;
         width: 90%;
     }
 
@@ -46,7 +47,7 @@
     .close {
         color: #ffffff;
         margin-left: auto;
-        font-size: 28px;
+        font-size: 1.75rem;
         font-weight: bold;
     }
 
@@ -56,7 +57,7 @@
         text-decoration: none;
         cursor: pointer;
     }
-    h1,p,h4{
+    h1,h4{
         color: white;
     }
 
@@ -71,65 +72,55 @@
 
 {% block banner %}
 <section id="banner" style="">
-
     <h1 class="headings" style="">ABOUT</h1>
-    <div class="container mt-2" style="">
+    <div class="container mt-2" style="background-color: var(--accent-clr); padding: var(--para-padding)">
         <h4 style="font-family: Livvic;text-align: justify;">Words can come close to defining a person but cannot define entirely. I come from Ludhiana, a city that has been my home from infancy till adolescence. Then I moved to Patiala for my undergraduation from Thapar Institute of Engineering and Technology. Currently I'm working as Senior Member Technical Staff in an EDA domain MNC. To know about my current role & internship projects, head over to the <a href="/projects" target="_blank" style="color: #ffdcba;font-family: Orbitron">Projects</a> page.</h4>    
     </div>
-
 </section>
 {% endblock %}
 
 {% block content %}
 
-<div class="container" id="aboutCardContainer" style="margin-top: 20px;margin-bottom: 20px;">
-    <div class="row">
-        <div class="col-md-3 col-sm-6 "  style="padding-top: 20px">
-          <div class="card content_text">
-            <img class="card-img-top" src="{% static 'img/software.jpg' %}" alt="Software Competencies">
-            <div class="card-body  d-flex flex-column">
-              <h5 class="card-title">Software Competencies</h5>
-              <p class="card-text" style="color: black">The most awaited information on this website!</p>
-              <button id="SoftwareCompetencies" class="mt-auto btn" style="">Find Out!</button>
-            </div>  
-          </div>        
-        </div>
+<section class="container" id="aboutCardContainer" style="justify-content: space-between; flex-wrap: wrap">
+    
+      <div class="my-card">
+        <img class="card-img-top" src="{% static 'img/software.jpg' %}" alt="Software Competencies">
+        <div class="card-body  d-flex flex-column">
+          <h5 class="card-title">Software Competencies</h5>
+          <p class="card-text" style="color: black">The most awaited information on this website!</p>
+          <button id="SoftwareCompetencies" class="mt-auto btn" style="">Find Out!</button>
+        </div>  
+      </div>        
+   
+      <div class="my-card" style="">
+        <img class="card-img-top" src="{% static 'img/qualification.jpg' %}" alt="Academic Qualifications">
+        <div class="card-body  d-flex flex-column">
+          <h5 class="card-title">Academic Qualifications</h5>
+          <p class="card-text">My past doesn't really haunt me!</p>
+          <button id="AcademicQualifications" class="mt-auto btn"style="">Find Out!</button>
+        </div>  
+      </div>
+  
+      <div class="my-card" style="">
+        <img class="card-img-top" src="{% static 'img/achievements.jpg' %}" alt="Academic Achievements">
+        <div class="card-body  d-flex flex-column">
+          <h5 class="card-title">Academic Achievements</h5>
+          <p class="card-text" style="color: black">Ok, I think I can reflect on something special!</p>
+          <button id="AcademicAchievements" class="mt-auto btn"style="">Find Out!</button>
+        </div>  
+      </div>       
+   
+      <div class="my-card" style="">
+        <img class="card-img-top" src="{% static 'img/extra.gif' %}" alt="Extra Curricular Activities">
+        <div class="card-body  d-flex flex-column">
+          <h5 class="card-title">Extra Curricular Activities</h5>
+          <p class="card-text">I'm like Jack who becomes dull if he doesn't play.</p>
+          <button id="ExtraCurricular" class="mt-auto btn"style="">Find Out!</button>
+        </div>  
+      </div>
 
-        <div class="col-md-3 col-sm-6 "  style="padding-top: 20px">
-          <div class="card text-white content_image" style="">
-            <img class="card-img-top" src="{% static 'img/qualification.jpg' %}" alt="Academic Qualifications">
-            <div class="card-body  d-flex flex-column">
-              <h5 class="card-title">Academic Qualifications</h5>
-              <p class="card-text">My past doesn't really haunt me!</p>
-              <button id="AcademicQualifications" class="mt-auto btn"style="">Find Out!</button>
-            </div>  
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 "  style="padding-top: 20px">
-          <div class="card content_text" style="">
-            <img class="card-img-top" src="{% static 'img/achievements.jpg' %}" alt="Academic Achievements">
-            <div class="card-body  d-flex flex-column">
-              <h5 class="card-title">Academic Achievements</h5>
-              <p class="card-text" style="color: black">Ok, I think I can reflect on something special!</p>
-              <button id="AcademicAchievements" class="mt-auto btn"style="">Find Out!</button>
-            </div>  
-          </div>       
-        </div>
-
-        <div class="col-md-3 col-sm-6 "  style="padding-top: 20px">
-          <div class="card text-white content_image" style="">
-            <img class="card-img-top" src="{% static 'img/extra.gif' %}" alt="Extra Curricular Activities">
-            <div class="card-body  d-flex flex-column">
-              <h5 class="card-title">Extra Curricular Activities</h5>
-              <p class="card-text">I'm like Jack who becomes dull if he doesn't play.</p>
-              <button id="ExtraCurricular" class="mt-auto btn"style="">Find Out!</button>
-            </div>  
-          </div>
-        </div>
-        
-    </div><!-- row -->
-</div>
+   
+</section>
 
 <div id="aboutModal" class="modal" >
   <!-- Modal content -->
@@ -142,22 +133,6 @@
 
 {% block script %}
 <script type="text/javascript">
-    var colors;
-    $.getJSON("{% static "initialize.json" %}", function(colors) {
-        document.getElementById("banner").style.backgroundColor = colors.bg_color;
-        document.getElementById("modal-content").style.backgroundColor = colors.bg_color;
-
-        var ct = document.getElementsByClassName("content_text");
-        for(var i=0;i<ct.length;i++){
-            ct[i].style.backgroundColor = colors.fr_color1;
-        }
-        
-        var ci = document.getElementsByClassName("content_image");
-        for(var i=0;i<ci.length;i++){
-            ci[i].style.backgroundColor = colors.fr_color2;
-        }
-    });
-
     window.onload = myMain;
 
     function myMain() {
@@ -180,14 +155,6 @@
                 data: {'filename':filename},
                 success:function(result){
                     document.getElementById('modelText').innerHTML= result;
-                    var colors;
-                    $.getJSON("{% static "initialize.json" %}", function(colors) {
-                        document.getElementById("modal_title").style.color = colors.fr_color1;
-                        var ms = document.getElementsByClassName("modal_span")
-                        for(var i=0;i<ms.length;i++){
-                            ms[i].style.color = colors.fr_color1;
-                        }
-                    });
                 }
             });
 

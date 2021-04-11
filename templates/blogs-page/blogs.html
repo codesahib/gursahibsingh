@@ -105,9 +105,5 @@
 {% endblock %}
 {% block script %}
 <script type="text/javascript">
-    var colors;
-    $.getJSON("{% static "initialize.json" %}", function(colors) {
-        document.getElementById("banner").style.backgroundColor = colors.bg_color;
-    });
 </script>
 {% endblock %}              
