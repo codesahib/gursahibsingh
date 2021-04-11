@@ -15,25 +15,48 @@
             --secondary-clr: #FB9039;
             --accent-clr: #646C79;
 
-            --para-padding: 1rem;
+            --para-padding: 3rem;
         }
 
         html{
             font-size: 100%;
         }
 
+        body{
+            background-color: #FCFCF5;
+        }
+
         section{
             display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             margin-top: 0.625rem;
             margin-bottom: 0.625rem;
+            margin: 0px;
+        }
+
+        .section-container{
+            display: flex;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vertical-line{
+            height: 10rem;
+            border: 0.25rem solid #D7A339;
+            border-radius: 0.25rem;
         }
 
         .headings{
-            color: var(--primary-clr);
+            /*color: var(--primary-clr);*/
+            color: #D7A339;
             text-align: center;
             font-family: Orbitron;
             margin: auto;
-            font-size: 1.5rem;
+            font-size: 3rem;
+            padding: var(--para-padding);
         }
 
         #navbar_name{
@@ -143,6 +166,21 @@
             }
         }
 
+        @media only screen and (max-width: 576px) { /*from 2 to 1*/
+            .my-card{
+                flex-basis: 100%;
+            }
+
+            html{
+                font-size: 20%;
+            }
+
+            .card-img-top{
+                width: 100%;
+                height: 20vh !important; 
+            }
+        }
+
 }
     </style>
 
@@ -173,12 +211,12 @@
         {% include 'navbar-top/navbar-top.html' %}
     </div>
     
-    <div id="banner container" class="container app-container" style="">  
+    <div id="banner container" class="container app-container" style="background-color: #FCFCF5;">  
         {% block banner %}
         {% endblock %}
     </div>
   
-    <div id="content_container" class="container app-container" style="background-color: #ffffff;">
+    <div id="content_container" class="container-fluid" style="padding: 0px">
         <!-- <main> -->
         {% block content %} 
         {% endblock %}
