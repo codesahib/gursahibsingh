@@ -32,11 +32,11 @@
         padding: var(--para-padding);
     }
     .content-para-light{
-        color: #FCFCF5;
+        color: var(--primary-clr);
     }
 
     .content-para-dark{
-        color: #2F4858;
+        color: var(--secondary-clr);
     }
 
 </style>
@@ -55,39 +55,39 @@
 {% endblock %}
 
 {% block content %}
-<section style="height:31.25rem;background-color: #FCFCF5">
+<section style="background-color: var(--primary-clr)">
     <div class="section-container">
-        <div id="" class="content_image" style="background-color: #FCFCF5">
+        <div id="" class="content_image" style="background-color: var(--primary-clr)">
             <h1 class="headings">ABOUT</h1>     
         </div>
         <!-- <div class="vertical-line"></div> -->
-        <div id="" class="content_text" style="display:inline-block;background-color: #FCFCF5;border-left: 0.25rem solid #D7A339;
+        <div id="" class="content_text" style="display:inline-block;background-color: var(--primary-clr);border-left: 0.25rem solid var(--accent-clr);
             border-radius: 0.25rem;">
             <p class="content-para-dark"> I belong to that category of people who love to question things that we come across on daily basis. I just love exercising my body & mind (this has a much deeper meaning). I don't complicate things and stay away from formalities. More importantly, I'm the same version of me everywhere!</p>
         </div>
     </div>
 </section>
 
-<section style="height:31.5rem;background-color: #2F4858">
+<section style="background-color: var(--secondary-clr)">
     <div class="section-container">
-        <div id="" class="content_text" style="background-color: #2F4858;border-right: 0.25rem solid #D7A339;
+        <div id="" class="content_text" style="background-color: var(--secondary-clr);border-right: 0.25rem solid var(--accent-clr);
             border-radius: 0.25rem;">
             <p class="content-para-light"> My interests in different areas have led me to do a variety of projects. I've completed various projects during my academics and professional career. More information regarding them can be found under 'Projects' tab.</p>
         </div>
         <!-- <div class="vertical-line"></div> -->
-        <div id="" class="content_image" style="background-color: #2F4858">
+        <div id="" class="content_image" style="background-color: var(--secondary-clr)">
             <h1 class="headings">Projects</h1>
         </div>
     </div>
 </section>
 
-<h1 class="headings">Pillars of Strength</h1>
+<h1 class="headings" style="background-color: var(--primary-clr)">Pillars of Strength</h1>
 <!-- #################### CARDS ########################### -->
-<section id="cardContainer" class="" style="height:31.5rem;">
+<section id="cardContainer" class="" style="background-color: var(--primary-clr);">
     <div class="section-container" style="justify-content: space-between;flex-wrap: wrap"> 
         <div class="my-card">
             <img class="card-img-top" src="{% static 'img/gym.jpg' %}" alt="Weight Training">
-            <div class="card-body   d-flex flex-column">
+            <div class="card-body">
                 <h5 class="card-title" style="">Exercise</h5>
                 <p class="card-text">There is a strong reason for why everyone is crazy about fitness.</p>
             </div>
@@ -95,7 +95,7 @@
 
         <div class="my-card">
             <img class="card-img-top" src="{% static 'img/finance.jpg' %}" alt="Finance">
-            <div class="card-body   d-flex flex-column">
+            <div class="card-body">
                 <h5 class="card-title">Games/Music/Movies</h5>
                 <p class="card-text" style="color: black">I too have the most common hobbies.</p>
             </div>
@@ -103,7 +103,7 @@
 
         <div class="my-card">
             <img class="card-img-top" src="{% static 'img/read.jpg' %}" alt="Read">
-            <div class="card-body   d-flex flex-column">
+            <div class="card-body">
                 <h5 class="card-title">Reading</h5>
                 <p class="card-text">They say books are a man's best friend. They are absolutely right!</p>
             </div>  
@@ -111,7 +111,7 @@
 
         <div class="my-card">
             <img class="card-img-top" src="{% static 'img/self.jpg' %}" alt="Self Improvement">
-            <div class="card-body   d-flex flex-column">
+            <div class="card-body">
                 <h5 class="card-title">Self Improvement</h5>
                 <p class="card-text">Kyunki, sabse zyada time ham khud ke saath hi rehte hain.</p>
             </div>  
@@ -119,13 +119,13 @@
     </div>
 </section>
 
-<section style="height:31.5rem;background-color: #2F4858">
+<section style="background-color: var(--secondary-clr)">
     <div class="section-container">
         <div id="" class="content_image" style="">
             <h1 class="headings">Blogs</h1>
         </div>
         <!-- <div class="vertical-line"></div> -->
-        <div id="" class="content_text" style="border-left: 0.25rem solid #D7A339;
+        <div id="" class="content_text" style="border-left: 0.25rem solid var(--accent-clr);
             border-radius: 0.25rem;">
             <p class="content-para-light"> I'm not a professional blog writer but I do like to express my experiences. My first blog describes the experiences from my Thailand trip which can be used as a guide for a better vacation time.</p>
         </div>

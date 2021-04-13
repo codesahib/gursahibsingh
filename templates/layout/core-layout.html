@@ -11,9 +11,9 @@
 
     <style type="text/css">
         :root {
-            --primary-clr: #1F3044;
-            --secondary-clr: #FB9039;
-            --accent-clr: #646C79;
+            --primary-clr: #dddddd;
+            --secondary-clr: #2F4858;
+            --accent-clr: #D7A339;
 
             --para-padding: 3rem;
         }
@@ -34,6 +34,7 @@
             margin-top: 0.625rem;
             margin-bottom: 0.625rem;
             margin: 0px;
+            height: 31.5rem;
         }
 
         .section-container{
@@ -41,6 +42,7 @@
             width: 90%;
             justify-content: center;
             align-items: center;
+            height: 20rem;
         }
 
         .vertical-line{
@@ -63,7 +65,7 @@
             font-family: Kaushan Script;
             position: relative;
             top:0; right: 0;left:0;
-            color: var(--primary-clr);
+            color: var(--secondary-clr);
         }
 
         .nav-link {
@@ -98,6 +100,7 @@
             flex-basis: 20%;
             border: 0.0625rem solid rgba(0,0,0,.125);
             background-clip: border-box;
+            height: 20rem;
         }
 
         .card-body{
@@ -115,7 +118,7 @@
       
         .card-img-top{
             width: 100%;
-            height: 30%;   
+            height: 50%;   
         }
         
     /*    img {
@@ -131,53 +134,86 @@
             html{
                 font-size: 80%;
             }
-            .card{
-                min-height: 320px;
-                max-height: 320px;
-            }
+
             .card-img-top{
                 width: 100%;
-                height: 100% ;   
+                height: 40% ;   
             }
         }
 
         @media only screen and (max-width: 768px) { /*from 4 to 2 | bigger bottom banner*/ 
-            .my-card{
-                flex-basis: 50%;
-            }
-
             html{
                 font-size: 60%;
             }
+
+            .section-container{
+                height: 30rem;
+            }
+
+            .my-card{
+                max-width: 200px;
+            }
+
+            .card-img-top{
+                width: 100%;
+                height: 40% ;   
+            }
+
+            
         }
 
         @media only screen and (max-width: 576px) { /*from 2 to 1*/
-            .my-card{
-                flex-basis: 100%;
-            }
-
             html{
                 font-size: 40%;
             }
 
-            .card-img-top{
-                width: 100%;
-                height: 20vh !important; 
+            #cardContainer{
+                height:40rem;
             }
-        }
+            .section-container{
+                height: 35rem;
+            }
 
-        @media only screen and (max-width: 576px) { /*from 2 to 1*/
+            .section-container > * {
+                margin: 1em 0;
+            }
+
             .my-card{
+                max-height: 15rem;
                 flex-basis: 100%;
             }
 
-            html{
-                font-size: 20%;
+            .card-img-top{
+                width: 100%;
+                height: 50% ;   
+            }
+        }
+
+        @media only screen and (max-width: 444px) { /*from 2 to 1*/
+
+            #cardContainer{
+                height:70rem;
+            }
+            .section-container{
+                height: 65rem;
+                justify-content: center !important;
+            }
+
+            .section-container > * {
+                margin: 0.5em 0;
+            }
+            .my-card{
+                max-height: 10rem;
+                flex-basis: 100%;
+            }
+
+            .card-text{
+                display: none;
             }
 
             .card-img-top{
                 width: 100%;
-                height: 20vh !important; 
+                height: 70% ;   
             }
         }
 
@@ -211,12 +247,12 @@
         {% include 'navbar-top/navbar-top.html' %}
     </div>
     
-    <div id="banner container" class="container app-container" style="background-color: #FCFCF5;">  
+    <div id="banner container" class="container app-container" style="background-color: var(--primary-clr);">  
         {% block banner %}
         {% endblock %}
     </div>
   
-    <div id="content_container" class="container-fluid" style="padding: 0px">
+    <div id="content_container" class="container-fluid" style="padding: 0px;background-color: var(--primary-clr);">
         <!-- <main> -->
         {% block content %} 
         {% endblock %}
@@ -224,7 +260,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer font-small pt-4" id="footer" style="background-color: #1F3044;">
+    <footer class="page-footer font-small pt-4" id="footer" style="background-color: var(--accent-clr);">
         <div class="container text-center text-md-left" style="color:#ffffff">
             <h1 class="text-uppercase" style="text-align: center;font-family: Orbitron;letter-spacing: 0.3125rem; margin-bottom: 1.875rem">CONTACT</h1>
             <div class="container">
@@ -254,8 +290,8 @@
             </div>
         </div>
       
-        <div class="footer-copyright text-center py-3" style="color: #FB9039;">© 2021 Copyright:
-            <a href="/home" style="color: #FB9039" > gursahibsingh.herokuapp.com</a>
+        <div class="footer-copyright text-center py-3" style="color: var(--secondary-clr);">© 2021 Copyright:
+            <a href="/home" style="color: var(--secondary-clr)" > gursahibsingh.herokuapp.com</a>
         </div>
     </footer>
     <!-- Footer -->
@@ -270,7 +306,7 @@
 
         $(function () {
             var footer_height = document.getElementById('footer').offsetHeight;
-            $('#content_container').css('margin-bottom',footer_height - 100)
+            // $('#content_container').css('margin-bottom',footer_height - 100)
           
             $(document).scroll(function () {
                 var $nav = $(".navbar");
