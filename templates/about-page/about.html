@@ -9,9 +9,8 @@
 <style type="text/css">
 
    #banner{
-        /*height:15.625rem;*/
-        margin-top: 10rem;margin-bottom: 1.875rem;
-        flex-direction: column;
+        height: 35rem;
+        justify-content: flex-start;
     }
 
     #nav-link_about{
@@ -42,7 +41,7 @@
     }
 
     #model-span {
-        color: #ffffff;
+        color: var(--secondary-clr);
     }
     /* The Close Button */
     .close {
@@ -58,65 +57,94 @@
         text-decoration: none;
         cursor: pointer;
     }
-    h1,h4{
-        color: white;
-    }
 
     .btn{
-        background-color:#1F3044;
-        color: #FB9039;
+        background-color: var(--secondary-clr);
+        color: var(--accent-clr);
         font-weight: 700;
     }
  
+    @media only screen and (max-width: 576px) {
+        #about-cardContainer{
+            height: 45rem;
+        }
+
+        #about-cardContainer .my-card{
+                max-height: 17.5rem;
+        }
+
+        #about-cardContainer .card-img-top{
+                height: 40% ;   
+        }
+
+    }
+
+    @media only screen and (max-width: 444px) {
+        #about-cardContainer{
+            height: 70rem;
+        }
+
+        #about-cardContainer .my-card{
+                max-height: 12rem;
+        }
+
+        #about-cardContainer .card-img-top{
+                height: 40% ;   
+        }
+
+    }
+
 </style>
 {% endblock %}
 
 {% block banner %}
-<section id="banner" style="">
-    <h1 class="headings" style="">ABOUT</h1>
-    <div class="container mt-2" style="background-color: var(--accent-clr); padding: var(--para-padding)">
-        <h4 style="font-family: Livvic;text-align: justify;">Words can come close to defining a person but cannot define entirely. I come from Ludhiana, a city that has been my home from infancy till adolescence. Then I moved to Patiala for my undergraduation from Thapar Institute of Engineering and Technology. Currently I'm working as Senior Member Technical Staff in an EDA domain MNC. To know about my current role & internship projects, head over to the <a href="/projects" target="_blank" style="color: #ffdcba;font-family: Orbitron">Projects</a> page.</h4>    
+<section id="banner">
+    <div class="section-container" style="flex-direction: column; height: 90%">
+        <h1 class="headings" style="">ABOUT</h1>
+        <div class="content_text light-bg">
+            <p class="content-para-dark">Words can come close to defining a person but cannot define entirely. I come from Ludhiana, a city that has been my home from infancy till adolescence. Then I moved to Patiala for my undergraduation from Thapar Institute of Engineering and Technology. Currently I'm working as Senior Member Technical Staff in an EDA domain MNC. To know about my current role & internship projects, head over to the <a href="/projects" target="_blank" style="color: var(--accent-clr);font-family: var(--font-heading)">Projects</a> page.</p>    
+        </div>
     </div>
 </section>
 {% endblock %}
 
 {% block content %}
 
-<section class="" id="aboutCardContainer" style="background-color: var(--primary-clr);">
-    <div class="section-container" style="justify-content: space-between;flex-wrap: wrap">
+<section id="about-cardContainer" class="cardContainer">
+    <div class="section-container" style="justify-content: space-between; flex-wrap: wrap">
       <div class="my-card">
         <img class="card-img-top" src="{% static 'img/software.jpg' %}" alt="Software Competencies">
-        <div class="card-body  d-flex flex-column">
-          <h5 class="card-title">Software Competencies</h5>
-          <p class="card-text" style="color: black">The most awaited information on this website!</p>
-          <button id="SoftwareCompetencies" class="mt-auto btn" style="">Find Out!</button>
+        <div class="card-body">
+            <h5 class="card-title">Software Competencies</h5>
+            <p class="card-text">The most awaited information on this website!</p>
+            <button id="SoftwareCompetencies" class="btn" style="">Find Out!</button>
         </div>  
       </div>        
    
       <div class="my-card" style="">
         <img class="card-img-top" src="{% static 'img/qualification.jpg' %}" alt="Academic Qualifications">
-        <div class="card-body  d-flex flex-column">
+        <div class="card-body">
           <h5 class="card-title">Academic Qualifications</h5>
           <p class="card-text">My past doesn't really haunt me!</p>
-          <button id="AcademicQualifications" class="mt-auto btn"style="">Find Out!</button>
+          <button id="AcademicQualifications" class="btn"style="">Find Out!</button>
         </div>  
       </div>
   
       <div class="my-card" style="">
         <img class="card-img-top" src="{% static 'img/achievements.jpg' %}" alt="Academic Achievements">
-        <div class="card-body  d-flex flex-column">
+        <div class="card-body">
           <h5 class="card-title">Academic Achievements</h5>
-          <p class="card-text" style="color: black">Ok, I think I can reflect on something special!</p>
-          <button id="AcademicAchievements" class="mt-auto btn"style="">Find Out!</button>
+          <p class="card-text">Ok, I think I can reflect on something special!</p>
+          <button id="AcademicAchievements" class="btn"style="">Find Out!</button>
         </div>  
       </div>       
    
       <div class="my-card" style="">
         <img class="card-img-top" src="{% static 'img/extra.gif' %}" alt="Extra Curricular Activities">
-        <div class="card-body  d-flex flex-column">
+        <div class="card-body">
           <h5 class="card-title">Extra Curricular Activities</h5>
           <p class="card-text">I'm like Jack who becomes dull if he doesn't play.</p>
-          <button id="ExtraCurricular" class="mt-auto btn"style="">Find Out!</button>
+          <button id="ExtraCurricular" class="btn"style="">Find Out!</button>
         </div>  
       </div>
     </div>
@@ -136,7 +164,7 @@
     window.onload = myMain;
 
     function myMain() {
-        document.getElementById("aboutCardContainer").onclick = buton;
+        document.getElementById("about-cardContainer").onclick = buton;
     }
 
     var temp;

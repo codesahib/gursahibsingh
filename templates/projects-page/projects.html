@@ -16,13 +16,11 @@
     }
 
     .accordion-header button, .accordion-body{
-        color: white;
+        color: var(--primary-clr);
     }
 
     #banner{
-        /*height:250px;*/
-        margin-top: 10rem;margin-bottom: 1.875rem;
-        flex-direction: column;
+        height:25rem;
     }
 
     #nav-link_projects{
@@ -30,15 +28,21 @@
         transition: background-color 300ms linear;
     }
 
-    .content_image{
-        background-color: var(--accent-clr);
+    .content-para-dark{
+        flex: 0 1 50%;
     }
 
     .accordion-item{
-        background-color: var(--primary-clr);
+        background-color: var(--secondary-clr);
     }
 
-    h1,p,h4{
+    .text-highlight{
+        font-family: var(--font-highlight);
+        color: var(--accent-clr);
+        text-decoration: bold;
+    }
+
+    h4{
         color: white;
     }
 </style>
@@ -46,11 +50,13 @@
 
 
 {% block banner %}
-<section id="banner" style="">
-    <h1 class="headings" style="">PROJECTS</h1>
-    <div class="container mt-2" style="background-color: var(--accent-clr); padding: var(--para-padding)">
-        <h4 style="font-family: Livvic;text-align: justify;"> I've tried doing projects in many seemingly intereseting fields. The range of areas that I've worked upon are Web Development, Machine Learning, App Development(very basic), and Scripting.</h4>
-        <h4 style="font-family: Livvic;text-align: justify;"> I plan to work more on the Cloud and Automation tools that will eventually help stand in sync with the changing world</h4>    
+<section id="banner">
+    <div class="section-container" style="flex-direction: column; height: 90%">
+        <h1 class="headings" style="">PROJECTS</h1>
+        <div class="content_text light-bg" style="display: flex;">
+            <p class="content-para-dark font-1_5 right-border"> I've tried doing projects in many seemingly intereseting fields. The range of areas that I've worked upon are Web Development, Machine Learning, App Development(very basic), and Scripting.</p>
+            <p class="content-para-dark font-1_5"> I plan to work more on the Cloud and Automation tools that will eventually help stand in sync with the changing world</p>    
+        </div>
     </div>
 </section>
     
@@ -58,17 +64,29 @@
 {% endblock %}
 
 {% block content %}
+<section>
+    <div class="section-container">
+        <div class="content_image light-bg">
+            <h1 class="headings">CURRENT ROLE</h1>     
+        </div>
+        <div class="content_text left-border dark-bg" style="display:inline-block;">
+            <p class="content-para-light">Currently I'm in the infrastructure team and my responsibilities include <span class="text-highlight">Release, Regressions & Build </span>of one of our products. Apart from this, I handle the existing <span class="text-highlight">infrastructure</span> and also provide <span class="text-highlight">automation</span>. The work typically revolves around developing scripts in <span class="text-highlight">Shell, Perl & Python </span>on a <span class="text-highlight">Linux</span> based environment and using <span class="text-highlight">Perforce</span> to take care of versioning.</p>
+        </div>
+    </div>
+</section>
 
-<h1 class="headings" style="">CURRENT ROLE</h1>
-<div class="col-md-12 col-sm-12 content_image">
-    <p style="font-family: Livvic;font-size: 1.375rem;text-align: justify;">Currently I'm in the infrastructure team and my responsibilities include <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Release, Regressions & Build </span>of one of our products. Apart from this, I handle the existing <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">infrastructure</span> and also provide <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">automation</span>. The work typically revolves around developing scripts in <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Shell, Perl & Python </span>on a <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Linux</span> based environment and using <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Perforce</span> to take care of versioning.</p>
-</div>  
+<section class="dark-bg" style="height: 40rem">
+    <div class="section-container">
+        <div class="content_text light-bg right-border" style="display:inline-block;">
+            <p class="content-para-dark">I did my internship from Mentor Graphics. My responsibility was to enhance the department's website and also introduce some new features. I learnt <span class="text-highlight">Django, Shell & Perl scripting, JavaScript, VueJs(Front-end Framework)</span>. Apart from enhancing the existing web apps, I was given a project to develop a new app whose function would be to display the data graphically using tables and charts. I learnt <span class="text-highlight">D3.js(JavaScript library)</span> to create beautiful graphics. </p>
+            <p style="margin-top: 0.4rem;font-family: var(--font-text);font-size: 0.8125rem">*No demo is available as the website is hosted on company's intranet and the data is confidential.</p>
+        </div>
+        <div class="content_image dark-bg">
+            <h1 class="headings">INTERNSHIP</h1>
+        </div>
+    </div>
+</section> 
 
-<h1 class="headings" style="">INTERNSHIP</h1>
-<div class="col-md-12 col-sm-12 content_image">
-    <p style="font-family: Livvic;font-size: 1.375rem;text-align: justify;">I did my internship from Mentor Graphics. My responsibility was to enhance the department's website and also introduce some new features. I learnt <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">Django, Shell & Perl scripting, JavaScript, VueJs(Front-end Framework)</span>. Apart from enhancing the existing web apps, I was given a project to develop a new app whose function would be to display the data graphically using tables and charts. I learnt <span style="font-family: Righteous; color: #FB9039;text-decoration: bold">D3.js(JavaScript library)</span> to create beautiful graphics. </p>
-    <p style="margin-top: 0.3125rem;font-family: Livvic;font-size: 0.8125rem">*No demo is available as the website is hosted on company's intranet and the data is confidential.</p>
-</div>
 
 <h1 class="headings" style="">ACADEMIC PROJECTS</h1>
 <div class="accordion accordion-flush" id="AcademicProjectsAccordian">

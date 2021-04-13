@@ -9,8 +9,7 @@
 <style type="text/css">
 
     #banner{
-        height:300px;
-        margin-top: 160px;margin-bottom: 30px;
+        height:25rem;
     }
 
     #nav-link_blogs{
@@ -18,38 +17,24 @@
         transition: background-color 300ms linear;
     }
 
-    .card{
-      min-height: 350px;
-      max-height: 350px;
-    }
-
-  
-  h1,p,h4{
-    color: white;
-  }
-  @media only screen and (max-width: 767px) {
-    .card-img-top{
-      width:450px !important;
-    }
-  }
 </style>
 {% endblock %}
 
 {% block banner %}
 <section id="banner" style="">
-    <h1 class="headings" style="">BLOGS</h1>
-     
-    <div class="container mt-2" style="">   
-        <h4 style="font-family: Livvic;text-align: justify;">This section has to be there considering this is a portfolio website. I'm not a blogger(professionally) but I do like to write on some things.</h4>
+    <div class="section-container" style="flex-direction: column; height: 90%">
+        <h1 class="headings" style="">BLOGS</h1>
+        <div class="content_text light-bg" style="display: flex; flex-direction: column">   
+            <p class="content-para-dark font-1_5">This section has to be there considering this is a portfolio website. I'm not a blogger(professionally) but I do like to write on some things.</p>
 
-        <h4 style="font-family: Livvic;text-align: justify;">There are lot of appreciable things that happen around us and with us that we fail to notice. We need to sit back, relax and reflect upon those wonderful moments and writing down is the best way to do so. This section would contain information based and experience based blogs. No-nonsense!</h4>
+            <p class="content-para-dark font-1_5">There are lot of appreciable things that happen around us and with us that we fail to notice. We need to sit back, relax and reflect upon those wonderful moments and writing down is the best way to do so. This section would contain information based and experience based blogs. No-nonsense!</p>
+        </div>
     </div>
-      
 </section>
 {% endblock %}
 
 {% block content %}
-<div class="container" id="blogsContainer" style="margin-top: 20px;margin-bottom: 20px;background-color: #ffffff">
+<div class="container" id="blogsContainer" style="margin-top: 1.25rem;margin-bottom: 1.25rem;">
 	<h1 style="color: black">THAILAND 2019 :)</h1>
 	<p style="color: black">Hi! This post will cover the basic expenses+itenary+other details about my trip to Thailand in Dec 2019.</p>
 	<p style="color: black;font-weight: bold">DISCALIMER: The details/figures are true as on Dec 2019. They might change in future.</p>

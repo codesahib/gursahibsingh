@@ -11,11 +11,20 @@
 
     <style type="text/css">
         :root {
-            --primary-clr: #dddddd;
+            --primary-clr: #FCFCF5;
             --secondary-clr: #2F4858;
             --accent-clr: #D7A339;
 
-            --para-padding: 3rem;
+            --para-padding: 2rem;
+            --para-small-padding: 1rem;
+
+            --font-text: Livvic;
+            --font-heading: Orbitron;
+            --font-highlight: Righteous;
+
+            --font-size-small: 1rem;
+            --font-size-1: 1rem;
+            --font-size-1_5: 1.5rem;
         }
 
         html{
@@ -23,7 +32,7 @@
         }
 
         body{
-            background-color: #FCFCF5;
+            background-color: var(--primary-clr);
         }
 
         section{
@@ -45,17 +54,22 @@
             height: 20rem;
         }
 
+        #banner{
+            background-color: var(--secondary-clr);
+            margin-top: 8.0625rem; /*Height of navbar*/
+            /*margin-bottom: 1.875rem;*/
+        }
+
         .vertical-line{
             height: 10rem;
-            border: 0.25rem solid #D7A339;
+            border: 0.25rem solid var(--accent-clr);;
             border-radius: 0.25rem;
         }
 
         .headings{
-            /*color: var(--primary-clr);*/
-            color: #D7A339;
+            color: var(--accent-clr);
             text-align: center;
-            font-family: Orbitron;
+            font-family: var(--font-heading);
             margin: auto;
             font-size: 3rem;
             padding: var(--para-padding);
@@ -68,8 +82,13 @@
             color: var(--secondary-clr);
         }
 
+        .navbar{
+            background-color: var(--accent-clr);
+        }
+
         .nav-link {
-            font-family: Orbitron;font-size: 1.5625rem;
+            font-family: var(--font-heading);
+            font-size: 1.5625rem;
             font-weight: bold;
         }
 
@@ -78,6 +97,7 @@
             transition: background-color 300ms linear;
             font-size: 1.875rem !important;
         }
+
         .custom-toggler.navbar-toggler {
             border-color: #FB9039;
         }
@@ -121,6 +141,37 @@
             height: 50%;   
         }
         
+        .content_image{
+            flex: 0 1.5 25%;
+        }
+
+        .content_text{
+            /*background-color: var(--accent-clr);*/
+            flex: 0 1 75%;
+        }
+
+        .content_text, .content_image{
+            min-height: 12.5rem;
+            display: flex;
+        }
+
+        .right-border{
+            border-right: 0.25rem solid var(--accent-clr);
+            border-radius: 0.25rem;
+        }
+
+        .left-border{
+            border-left: 0.25rem solid var(--accent-clr);
+            border-radius: 0.25rem;
+        }
+
+        .dark-bg{
+            background-color: var(--secondary-clr);
+        }
+
+        .light-bg{
+            background-color: var(--primary-clr);
+        }
     /*    img {
             position: relative;
             top: 0;
@@ -130,6 +181,25 @@
             background-size: auto auto;
         }*/
     
+        .content-para-light, .content-para-dark{
+            font-family: var(--font-text);
+            font-size: 2.0rem;
+            text-align: justify;
+            margin: auto;
+            padding: var(--para-small-padding);
+        }
+        .content-para-light{
+            color: var(--primary-clr);
+        }
+
+        .content-para-dark{
+            color: var(--secondary-clr);
+        }
+
+        .font-1_5{
+            font-size: var(--font-size-1_5);
+        }
+
         @media only screen and (max-width: 992px) { /*from 4 to 4*/ 
             html{
                 font-size: 80%;
@@ -167,14 +237,14 @@
                 font-size: 40%;
             }
 
-            #cardContainer{
+            .cardContainer{
                 height:40rem;
             }
             .section-container{
                 height: 35rem;
             }
 
-            .section-container > * {
+            .cardContainer .section-container > * {
                 margin: 1em 0;
             }
 
@@ -191,7 +261,7 @@
 
         @media only screen and (max-width: 444px) { /*from 2 to 1*/
 
-            #cardContainer{
+            .cardContainer{
                 height:70rem;
             }
             .section-container{
@@ -242,12 +312,12 @@
 </head>
 
 <body>   
-    <div id="navbar_container" class="container app-container justify-content-between align-items-center fixed-top" style="">
+    <div id="navbar_container" class="container-fluid app-container justify-content-between align-items-center fixed-top" style="margin:0px; padding: 0px;background-color: var(--primary-clr);">
         <h1 id="navbar_name" style="text-align: center;">Gursahib Singh</h1>  
         {% include 'navbar-top/navbar-top.html' %}
     </div>
     
-    <div id="banner container" class="container app-container" style="background-color: var(--primary-clr);">  
+    <div id="banner container" class="container-fluid app-container" style="background-color: var(--primary-clr);">  
         {% block banner %}
         {% endblock %}
     </div>
@@ -262,7 +332,7 @@
     <!-- Footer -->
     <footer class="page-footer font-small pt-4" id="footer" style="background-color: var(--accent-clr);">
         <div class="container text-center text-md-left" style="color:#ffffff">
-            <h1 class="text-uppercase" style="text-align: center;font-family: Orbitron;letter-spacing: 0.3125rem; margin-bottom: 1.875rem">CONTACT</h1>
+            <h1 class="text-uppercase" style="text-align: center;font-family: var(--font-heading);letter-spacing: 0.3125rem; margin-bottom: 1.875rem">CONTACT</h1>
             <div class="container">
                 <div class="d-flex justify-content-center">
                     <a class="fa fa-google" style="font-size: 1.875rem;">   gursahib.kvm@gmail.com</a>
@@ -305,12 +375,13 @@
         $('.text-uppercase.headings').css('color','#ffffff')
 
         $(function () {
+            var navbar_height = document.getElementById('navbar_container').offsetHeight;
             var footer_height = document.getElementById('footer').offsetHeight;
+            // $('#banner').css('margin-top',navbar_height);
             // $('#content_container').css('margin-bottom',footer_height - 100)
           
             $(document).scroll(function () {
                 var $nav = $(".navbar");
-                var $bg = $("#banner");
                 $nav.toggleClass('scrolled', $(this).scrollTop() > 150);
 
                 if($(this).scrollTop()  > 150) {
