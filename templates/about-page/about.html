@@ -9,7 +9,7 @@
 <style type="text/css">
 
    #banner{
-        height: 35rem;
+        /*height: 35rem;*/
         justify-content: flex-start;
     }
 
@@ -66,22 +66,22 @@
  
     @media only screen and (max-width: 576px) {
         #about-cardContainer{
-            height: 45rem;
+            /*height: 45rem;*/
         }
 
         #about-cardContainer .my-card{
-                max-height: 17.5rem;
+            max-height: 17.5rem;
         }
 
         #about-cardContainer .card-img-top{
-                height: 40% ;   
+            height: 40% ;   
         }
 
     }
 
     @media only screen and (max-width: 444px) {
         #about-cardContainer{
-            height: 70rem;
+            /*height: 70rem;*/
         }
 
         #about-cardContainer .my-card{
@@ -91,26 +91,25 @@
         #about-cardContainer .card-img-top{
                 height: 40% ;   
         }
-
     }
 
 </style>
 {% endblock %}
 
 {% block banner %}
-<section id="banner">
+<div class="section" id="banner">
     <div class="section-container" style="flex-direction: column; height: 90%">
         <h1 class="headings" style="">ABOUT</h1>
         <div class="content_text light-bg">
             <p class="content-para-dark">Words can come close to defining a person but cannot define entirely. I come from Ludhiana, a city that has been my home from infancy till adolescence. Then I moved to Patiala for my undergraduation from Thapar Institute of Engineering and Technology. Currently I'm working as Senior Member Technical Staff in an EDA domain MNC. To know about my current role & internship projects, head over to the <a href="/projects" target="_blank" style="color: var(--accent-clr);font-family: var(--font-heading)">Projects</a> page.</p>    
         </div>
     </div>
-</section>
+</div>
 {% endblock %}
 
 {% block content %}
 
-<section id="about-cardContainer" class="cardContainer">
+<div class="section" id="about-cardContainer" class="cardContainer">
     <div class="section-container" style="justify-content: space-between; flex-wrap: wrap">
       <div class="my-card">
         <img class="card-img-top" src="{% static 'img/software.jpg' %}" alt="Software Competencies">
@@ -148,7 +147,7 @@
         </div>  
       </div>
     </div>
-</section>
+</div>
 
 <div id="aboutModal" class="modal" >
   <!-- Modal content -->

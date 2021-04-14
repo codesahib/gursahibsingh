@@ -15,8 +15,9 @@
             --secondary-clr: #2F4858;
             --accent-clr: #D7A339;
 
-            --para-padding: 2rem;
-            --para-small-padding: 1rem;
+            --large-padding: 3rem;
+            --medium-padding: 2rem;
+            --small-padding: 1rem;
 
             --font-text: Livvic;
             --font-heading: Orbitron;
@@ -35,23 +36,27 @@
             background-color: var(--primary-clr);
         }
 
-        section{
+        .section{
             display: flex !important;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 0.625rem;
-            margin-bottom: 0.625rem;
-            margin: 0px;
-            height: 31.5rem;
+            /*margin-top: 1rem;
+            margin-bottom: 1rem;*/
+            /*border: 1px solid black;*/
+            /*height: 31.5rem;*/
         }
 
         .section-container{
             display: flex;
-            width: 90%;
-            justify-content: center;
+            width: 95%;
+            /*justify-content: center;*/
             align-items: center;
-            height: 20rem;
+            /*height: 50%;*/
+            padding-left: var(--small-padding);
+            padding-right: var(--small-padding);
+            padding-top: var(--large-padding);
+            padding-bottom: var(--large-padding);
         }
 
         #banner{
@@ -72,7 +77,7 @@
             font-family: var(--font-heading);
             margin: auto;
             font-size: 3rem;
-            padding: var(--para-padding);
+            padding: var(--medium-padding);
         }
 
         #navbar_name{
@@ -142,7 +147,7 @@
         }
         
         .content_image{
-            flex: 0 1.5 25%;
+            flex: 0 3 25%;
         }
 
         .content_text{
@@ -151,8 +156,9 @@
         }
 
         .content_text, .content_image{
-            min-height: 12.5rem;
+            /*min-height: 12.5rem;*/
             display: flex;
+            align-items: center;
         }
 
         .right-border{
@@ -181,18 +187,19 @@
             background-size: auto auto;
         }*/
     
-        .content-para-light, .content-para-dark{
+        .content-para{
             font-family: var(--font-text);
             font-size: 2.0rem;
             text-align: justify;
-            margin: auto;
-            padding: var(--para-small-padding);
+            padding: var(--small-padding);
+            display: inline-block;
+            margin: 0px;
         }
-        .content-para-light{
+        .text-light{
             color: var(--primary-clr);
         }
 
-        .content-para-dark{
+        .text-dark{
             color: var(--secondary-clr);
         }
 
@@ -200,7 +207,7 @@
             font-size: var(--font-size-1_5);
         }
 
-        @media only screen and (max-width: 992px) { /*from 4 to 4*/ 
+        @media only screen and (max-width: 960px) { /*from 4 to 4*/ 
             html{
                 font-size: 80%;
             }
@@ -217,7 +224,7 @@
             }
 
             .section-container{
-                height: 30rem;
+                /*height: 30rem;*/
             }
 
             .my-card{
@@ -232,16 +239,21 @@
             
         }
 
-        @media only screen and (max-width: 576px) { /*from 2 to 1*/
+        @media only screen and (max-width: 620px) { /*from 2 to 1*/
             html{
                 font-size: 40%;
+            }
+
+            .headings{
+                padding: var(--small-padding);
+                font-size: 2rem;
             }
 
             .cardContainer{
                 height:40rem;
             }
             .section-container{
-                height: 35rem;
+                /*height: 35rem;*/
             }
 
             .cardContainer .section-container > * {
@@ -260,12 +272,17 @@
         }
 
         @media only screen and (max-width: 444px) { /*from 2 to 1*/
-
             .cardContainer{
                 height:70rem;
             }
+
+            .headings{
+                padding: var(--small-padding);
+                font-size: 1.5rem;
+            }
+
             .section-container{
-                height: 65rem;
+                /*height: 65rem;*/
                 justify-content: center !important;
             }
 
