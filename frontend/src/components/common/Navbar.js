@@ -7,6 +7,7 @@ import Projects from '../projects/Projects'
 import Blogs from '../blogs/Blogs'
 
 import './Navbar.css'
+import Resume from '../../static/media/Resume_GursahibSingh.pdf'
 
 export default function Navbar() {
     return (
@@ -35,7 +36,7 @@ export default function Navbar() {
                         </li>
 
                         <li className="nav-item" style={{"margin-left": "10px"}}>
-                            <a className="nav-link" href="{% static 'pdf/Resume_GursahibSingh.pdf' %}">Resume</a>
+                            <a className="nav-link" href={Resume}>Resume</a>
                         </li>
                     </ul>
                 </div>
