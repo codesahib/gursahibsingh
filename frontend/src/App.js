@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="App">
-        Gursahib Singh  
+        <p onClick={()=>{window.open("/","_self")}}>Gursahib Singh</p>  
       </div>
       <Navbar/>
       <Footer/>

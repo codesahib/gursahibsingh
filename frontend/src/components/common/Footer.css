@@ -1,7 +1,5 @@
 #footer {
     background-color: var(--accent-clr);
-    position: absolute;
-    bottom: 0;
     width: 100vw;
     height: fit-content;
 }

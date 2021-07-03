@@ -1,8 +1,16 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   color: var(--secondary-clr);
   background-color: var(--primary-clr);
   font-family: Kaushan Script;
   font-size: 2.5rem;
+}
+
+.App p {
+  width: fit-content;
+}
+.App p:hover {
+  cursor: pointer;
 }
 
