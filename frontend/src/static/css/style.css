@@ -1,0 +1,100 @@
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.section-part-large{
+    flex: 0 1 75%;
+}
+
+.section-part-large, .section-part-small{
+    display: flex;
+    align-items: center;
+}
+
+.content-heading{
+    padding: var(--small-padding);
+    font-size: 2rem;
+    color: var(--accent-clr);
+    text-align: center;
+    font-family: var(--font-heading);
+    margin: auto;
+    font-size: 3rem;
+    padding: var(--medium-padding);
+}
+
+.content-para{
+    font-family: var(--font-text);
+    font-size: 2.0rem;
+    text-align: justify;
+    padding: var(--small-padding);
+    display: inline-block;
+    margin: 0px;
+}
+
+.vertical-line{
+    height: 10rem;
+    border: 0.25rem solid var(--accent-clr);;
+    border-radius: 0.25rem;
+}
+
+.right-border{
+    border-right: 0.25rem solid var(--accent-clr);
+    border-radius: 0.25rem;
+}
+
+.left-border{
+    border-left: 0.25rem solid var(--accent-clr);
+    border-radius: 0.25rem;
+}
+
+.text-light{
+    color: var(--primary-clr);
+}
+
+.text-dark{
+    color: var(--secondary-clr);
+}
+
+.dark-bg{
+    background-color: var(--secondary-clr);
+}
+
+.light-bg{
+    background-color: var(--primary-clr);
+}
+
+/*For Cards*/
+    
+.content-card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    border: 0.0625rem solid rgba(0,0,0,.125);
+    background-clip: border-box;
+    height: 20rem;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text{
+    font-size: 1rem;
+    text-align: justify;
+}
+.card-title{
+    text-align: center;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 50%;   
+}
+
+.cardContainer {
+    justify-content: space-around;
+}
