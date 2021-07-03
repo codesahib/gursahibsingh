@@ -1,15 +1,14 @@
 import React from 'react'
 import Navbar from './components/common/Navbar'
-import Footer from './components/common/Footer';
+import Footer from './components/common/Footer'
+import Banner from './components/home/Banner'
 
 import './App.css';
 
 function App() {
   return (
     <>
-      <div className="App">
-        <p onClick={()=>{window.open("/","_self")}}>Gursahib Singh</p>  
-      </div>
+      <Banner/>
       <Navbar/>
       <Footer/>
     </>

@@ -1,7 +1,20 @@
-#footer {
-    background-color: var(--accent-clr);
+footer {
+    background-color: var(--secondary-clr);
+    background-image: linear-gradient(147deg, var(--secondary-clr) 0%, #000000 74%);
     width: 100vw;
     height: fit-content;
+    padding: 0.5rem 0rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--primary-clr);
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: var(--accent-clr);
+    text-decoration: underline;
 }
 
 #contactContainer {
@@ -12,8 +25,9 @@
     text-align: center;
     font-family: var(--font-heading);
     letter-spacing: 0.3125rem;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
+    font-size: 2rem;
 }
 
 #linksContainer {
@@ -22,18 +36,26 @@
     align-items: center;
 }
 
-#emailContainer a {
-    font-size: 1.875rem;
+#emailContainer{
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+    color: var(--primary-clr);
+}
+
+#emailContainer p {
+    margin: 0;
 }
 
 #socialMediaContainer {
     display: flex;
     justify-content: center;
-    margin-top: 0.625rem
 }
 
 ul {
-    list-style-type: none;padding: 0;display: inline;
+    list-style-type: none;
+    padding: 0;
+    display: inline;
+    margin: 0;
 }
 
 li {
@@ -44,10 +66,15 @@ li a {
     color: var(--primary-clr)
 }
 
-.footer_copyright {
-    color: var(--secondary-clr);
+.footer-copyright {
+    margin: 1rem 0;
 }
 
-.footer_copyright a{
-    color: var(--secondary-clr);
+.footer-copyright p{
+    color: var(--primary-clr);
+    margin: 0rem;
+}
+
+.footer-copyright a{
+    color: var(--accent-clr);
 }

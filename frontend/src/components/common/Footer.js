@@ -3,12 +3,12 @@ import './Footer.css'
 
 export default function Footer() {
     return (
-        <footer className="page-footer font-small pt-4" id="footer">
+        <footer className="page-footer font-small">
             <div id="contactContainer" className="container text-center text-md-left">
                 <h1 id="textContact">CONTACT</h1>
                 <div id="linksContainer" className="container">
                     <div id="emailContainer">
-                        <a className="fa fa-google">   gursahib.kvm@gmail.com</a>
+                        <p><a className="fa fa-google" href="mailto:gursahib.kvm@gmail.com"></a>&nbsp;&nbsp;gursahib.kvm@gmail.com</p>
                     </div>
                     <div id="socialMediaContainer">
                         <ul>
@@ -33,8 +33,8 @@ export default function Footer() {
                 </div>
             </div>
         
-            <div className="footer-copyright text-center py-3">© 2021 Copyright:
-                <a href="/home"> gursahibsingh.herokuapp.com</a>
+            <div className="footer-copyright text-center">
+                <p>© 2021 Copyright: <a href="\">gursahibsingh.herokuapp.com</a></p>
             </div>
         </footer>
     )

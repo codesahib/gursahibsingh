@@ -1,26 +1,21 @@
 .navbar {
-    background-color: var(--accent-clr);
+    /* background-color: var(--accent-clr); */
     margin-bottom: 20px;
-}
-
-#navbar_name{
-    font-family: Kaushan Script;
-    position: relative;
-    top:0; right: 0;left:0;
-    color: var(--secondary-clr);
+    box-shadow: 0px 1px 3px gray;
 }
 
 .nav-link {
-    font-family: var(--font-heading);
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 1.5625rem;
-    font-weight: bold;
+    font-weight: 400;
+    color: var(--secondary-clr);
 }
 
 .nav-item:hover .nav-link{
     background-color: var(--secondary-clr);
     color: var(--primary-clr);
     transition: background-color 300ms linear;
-    font-size: 1.875rem !important;
+    font-size: 1.6rem !important;
 }
 
 .custom-toggler.navbar-toggler {

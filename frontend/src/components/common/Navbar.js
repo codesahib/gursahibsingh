@@ -21,9 +21,6 @@ export default function Navbar() {
             <div className="container">
                 <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
                     <ul className="navbar-nav mx-auto text-md-center text-left">
-                        <li className="nav-item" style={{"margin-right": "10px"}}>
-                            <a id="nav-link_about" className="nav-link" href="/about">About</a>
-                        </li>
 
                         <li className="nav-item" style={{"margin-left": "10px","margin-right": "10px"}}>
                             <a className="nav-link" id="nav-link_projects" href="/projects">Projects
