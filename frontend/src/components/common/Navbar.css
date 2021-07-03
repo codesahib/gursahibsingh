@@ -2,6 +2,9 @@
     /* background-color: var(--accent-clr); */
     margin-bottom: 20px;
     box-shadow: 0px 1px 3px gray;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
 }
 
 .nav-link {
