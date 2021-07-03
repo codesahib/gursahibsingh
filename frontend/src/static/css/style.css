@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: fit-content;
+    padding: 10px 0px;
 }
 
 .section-part-large{

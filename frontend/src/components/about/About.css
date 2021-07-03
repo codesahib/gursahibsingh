@@ -1,0 +1,12 @@
+.aboutComponent .section {
+    flex-direction: column;
+}
+
+#textAbout {
+    width: 90%;
+}
+
+#linkProjects {
+    color: var(--accent-clr);
+    font-family: var(--font-heading);   
+}
