@@ -1,0 +1,37 @@
+.navbar {
+    background-color: var(--accent-clr);
+    margin-bottom: 20px;
+}
+
+#navbar_name{
+    font-family: Kaushan Script;
+    position: relative;
+    top:0; right: 0;left:0;
+    color: var(--secondary-clr);
+}
+
+.nav-link {
+    font-family: var(--font-heading);
+    font-size: 1.5625rem;
+    font-weight: bold;
+}
+
+.nav-item:hover .nav-link{
+    background-color: var(--secondary-clr); 
+    transition: background-color 300ms linear;
+    font-size: 1.875rem !important;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: #FB9039;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 221, 186)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar.scrolled {
+    /*background-color: #2e2e2e !important;*/
+    transition: background-color 300ms linear;
+    box-shadow: 0 0.875rem 0.875rem -0.875rem rgba(0,0,0,.2);
+}

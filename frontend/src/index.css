@@ -1,3 +1,21 @@
+:root {
+  --primary-clr: #FCFCF5;
+  --secondary-clr: #2F4858;
+  --accent-clr: #D7A339;
+
+  --large-padding: 3rem;
+  --medium-padding: 2rem;
+  --small-padding: 1rem;
+
+  --font-text: Livvic;
+  --font-heading: Orbitron;
+  --font-highlight: Righteous;
+
+  --font-size-small: 1rem;
+  --font-size-1: 1rem;
+  --font-size-1_5: 1.5rem;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +23,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 100%;
 }
 
 code {
