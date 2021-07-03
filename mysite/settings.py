@@ -60,7 +60,8 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        # 'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR,'frontend/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -145,4 +146,5 @@ USE_TZ = True
 
 #------------------------------------------------------
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] #F:\Projects\Website\mysite\mysite\static)
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] #F:\Projects\Website\mysite\mysite\static)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend/build/static'),]
