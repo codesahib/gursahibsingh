@@ -1,0 +1,21 @@
+#blogsComponent {
+    padding: 3rem
+}
+
+#blogsContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#blogsContainer .card{
+    z-index: -1;
+}
+
+#blogsContainer button{
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    border-radius: 12px;
+    font-family: var(--font-highlight);
+    box-shadow: 0 0 1px 1px var(--accent-clr);
+    text-align: center;
+}
