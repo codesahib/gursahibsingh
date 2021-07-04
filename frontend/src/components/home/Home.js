@@ -1,11 +1,7 @@
 import React from 'react'
+import Timeline from './Timeline'
 
 import '../../static/css/style.css'
-
-import Finance from '../../static/img/finance.jpg'
-import Gym from '../../static/img/gym.jpg'
-import Read from '../../static/img/read.jpg'
-import Self from '../../static/img/self.jpg'
 
 import './Home.css'
 
@@ -21,43 +17,11 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* <div className="section">
-                <h1 className="content-heading">Pillars of Strength</h1>
-                <div className="section-part-large" id="cardContainer">
-                    <div className="content-card">
-                        <img className="card-img-top" src={Gym} alt="Weight Training"></img>
-                        <div className="card-body">
-                            <h5 className="card-title">Exercise</h5>
-                            <p className="card-text">There is a strong reason for why everyone is crazy about fitness.</p>
-                        </div>
-                    </div>       
-
-                    <div className="content-card">
-                        <img className="card-img-top" src={Finance} alt="Finance"></img>
-                        <div className="card-body">
-                            <h5 className="card-title">Games/Music/Movies</h5>
-                            <p className="card-text">I too have the most common hobbies.</p>
-                        </div>
-                    </div>
-
-                    <div className="content-card">
-                        <img className="card-img-top" src={Read} alt="Read"></img>
-                        <div className="card-body">
-                            <h5 className="card-title">Reading</h5>
-                            <p className="card-text">They say books are a man's best friend. They are absolutely right!</p>
-                        </div>  
-                    </div>       
-
-                    <div className="content-card">
-                        <img className="card-img-top" src={Self} alt="Self Improvement"></img>
-                        <div className="card-body">
-                            <h5 className="card-title">Self Improvement</h5>
-                            <p className="card-text">Kyunki, sabse zyada time ham khud ke saath hi rehte hain.</p>
-                        </div>  
-                    </div>
-                </div>
+            <div className="section">
+                <h1 className="content-heading">Academic/Work History</h1>
+                <Timeline/>
             </div>
-             */}
+
             <div className="section">
                 <h1 className="content-heading">Blogs</h1>
                 <div className="section-part-large">

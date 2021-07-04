@@ -1,0 +1,59 @@
+#timelineComponent *{
+    z-index: -1;
+}
+#timelineComponent .card-title {
+    font-size: 0.85rem ;
+}
+
+#timelineComponent .card-sub-title, #timelineComponent .card-description p{
+    font-size: 0.65rem;
+}
+
+#timelineComponent .timeline-item-title {
+    font-size: 0.7rem;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #timelineComponent .card-title {
+        font-size: 1.0rem ;
+    }
+    
+    #timelineComponent .card-sub-title, #timelineComponent .card-description p{
+        font-size: 0.8rem;
+    }
+    
+    #timelineComponent .timeline-item-title {
+        font-size: 0.95rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #timelineComponent .card-title {
+        font-size: 1.15rem ;
+    }
+    
+    #timelineComponent .card-sub-title, #timelineComponent .card-description p{
+        font-size: 0.95rem;
+    }
+    
+    #timelineComponent .timeline-item-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    #timelineComponent .card-title {
+        font-size: 1.3rem ;
+    }
+    
+    #timelineComponent .card-sub-title, #timelineComponent .card-description p{
+        font-size: 1.1rem;
+    }
+    
+    #timelineComponent .timeline-item-title {
+        font-size: 1.25rem;
+    }
+}
