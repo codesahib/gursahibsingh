@@ -6,6 +6,7 @@ import '../../static/css/style.css'
 import './Home.css'
 
 export default function Home() {
+    document.title = "Home | Gursahib Singh"
     return (
         <>
         <div className="homeComponent">
