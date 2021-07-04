@@ -1,0 +1,131 @@
+#projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    box-shadow: 0 0 5px 2px var(--accent-clr);
+    align-items: center;
+    padding: 0.2rem 0 0.5rem;
+    margin: 1rem 0;
+}
+
+.project-title {
+    font-family: var(--font-highlight);
+    color: var(--secondary-clr);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.project-subtitle {
+    font-family: var(--font-text);
+    color: var(--accent-clr);
+    font-size: 0.75rem;
+}
+
+.project-detail *{
+    font-size: 0.75rem;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+
+.button {
+    width: 3.5rem;
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    border-radius: 12px;
+    font-family: var(--font-highlight);
+    font-size: 0.5rem;
+    box-shadow: 0 0 1px 1px var(--accent-clr);
+    text-align: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-clr);
+}
+
+
+
+.horizontal-line {
+    width: 40%
+}
+
+.project .text-highlight {
+
+    font-weight: bold;
+}
+
+.project .content-para {
+    padding: 0.2rem 0.5rem
+}
+
+@media (min-width: 768px) {
+    .button {
+        width: 4rem;
+        font-size: 0.75rem;
+    }
+    .project {
+        width: 80%;
+    }
+    .project-title{
+        font-size: 1.5rem;
+    }
+    .project-subtitle{
+        font-size: 1rem;
+    }
+    .project-detail *{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .button {
+        width: 4.5rem;
+        font-size: 1rem;
+    }
+    .project {
+        width: 80%;
+    }
+    .project-title{
+        font-size: 2rem;
+    }
+    .project-subtitle{
+        font-size: 1.25rem;
+    }
+    .project-detail *{
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .button {
+        width: 5rem;
+        font-size: 1.25rem;
+    }
+    .project {
+        width: 60%;
+    }
+    .project-title{
+        font-size: 2.5rem;
+    }
+    .project-subtitle{
+        font-size: 1.5rem;
+    }
+    .project-detail *{
+        font-size: 1.5rem;
+    }
+}
