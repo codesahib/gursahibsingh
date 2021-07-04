@@ -14,7 +14,7 @@
 
 .section-part-large, .section-part-small{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .content-heading{
@@ -33,7 +33,7 @@
     font-size: 1.5rem;
     text-align: justify;
     padding: var(--small-padding);
-    display: inline-block;
+    display: block;
     margin: 0px;
 }
 
