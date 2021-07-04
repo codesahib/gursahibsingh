@@ -17,7 +17,7 @@
     background-color: var(--secondary-clr);
     color: var(--primary-clr);
     transition: background-color 300ms linear;
-    font-size: 1.6rem !important;
+    font-size: 1.1rem;
 }
 
 .custom-toggler.navbar-toggler {
@@ -32,16 +32,25 @@
     .nav-link {
         font-size: 1.5rem;
     }
+    .nav-item:hover .nav-link {
+        font-size: 1.6rem;
+    }
 }
 
 @media (min-width: 992px) {
     .nav-link {
         font-size: 1.75rem;
     }
+    .nav-item:hover .nav-link {
+        font-size: 1.85rem;
+    }
 }
 
 @media (min-width: 1200px) { 
     .nav-link {
         font-size: 2.25rem;
+    }
+    .nav-item:hover .nav-link {
+        font-size: 2.35rem;
     }
 }
