@@ -3,7 +3,7 @@ import './Footer.css'
 
 export default function Footer() {
     return (
-        <footer className="page-footer font-small">
+        <footer className="page-footer">
             <div id="contactContainer" className="container text-center text-md-left">
                 <h1 id="textContact">CONTACT</h1>
                 <div id="linksContainer" className="container">
