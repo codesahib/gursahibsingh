@@ -2,7 +2,6 @@ import React from 'react'
 import {BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom"
 
 import Home from '../home/Home'
-import About from '../about/About'
 import Projects from '../projects/Projects'
 import Blogs from '../blogs/Blogs'
 
@@ -43,7 +42,6 @@ export default function Navbar() {
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/home" component={Home}/>
-                <Route path="/about" component={About}/>
                 <Route path="/projects" component={Projects}/>
                 <Route path="/blogs" component={Blogs}/>
             </Switch>
