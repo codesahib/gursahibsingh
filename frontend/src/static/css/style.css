@@ -48,6 +48,12 @@
     border-radius: 0.25rem;
 }
 
+.horizontal-line{
+    width: 10rem;
+    height: 1px;
+    background-color: var(--accent-clr);
+}
+
 /* Utilities */
 .right-border{
     border-right: 0.25rem solid var(--accent-clr);

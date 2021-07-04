@@ -64,10 +64,6 @@ footer a:hover{
     font-size: 1rem;
 }
 
-#socialMediaContainer li a {
-    color: var(--primary-clr)
-}
-
 .footer-copyright {
     margin: 1rem 0;
 }
