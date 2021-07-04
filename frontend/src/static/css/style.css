@@ -1,3 +1,4 @@
+/* Sections */
 .section{
     display: flex;
     flex-direction: column;
@@ -18,7 +19,9 @@
     display: flex;
     align-items: flex-start;
 }
+/* ************* */
 
+/* Content */
 .content-heading{
     padding: var(--small-padding);
     color: var(--accent-clr);
@@ -37,6 +40,7 @@
     display: block;
     margin: 0;
 }
+/* ************* */
 
 .vertical-line{
     height: 10rem;
@@ -44,6 +48,7 @@
     border-radius: 0.25rem;
 }
 
+/* Utilities */
 .right-border{
     border-right: 0.25rem solid var(--accent-clr);
     border-radius: 0.25rem;
@@ -62,6 +67,9 @@
     color: var(--secondary-clr);
 }
 
+.text-highlight {
+    color: var(--accent-clr);
+}
 .dark-bg{
     background-color: var(--secondary-clr);
 }
@@ -69,7 +77,7 @@
 .light-bg{
     background-color: var(--primary-clr);
 }
-
+/* ************* */
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap */
 
