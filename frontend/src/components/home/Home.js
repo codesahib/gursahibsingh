@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from './Banner'
 
 import '../../static/css/style.css'
 
@@ -22,7 +21,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="section">
+            {/* <div className="section">
                 <h1 className="content-heading">Pillars of Strength</h1>
                 <div className="section-part-large" id="cardContainer">
                     <div className="content-card">
@@ -58,7 +57,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            
+             */}
             <div className="section">
                 <h1 className="content-heading">Blogs</h1>
                 <div className="section-part-large">
