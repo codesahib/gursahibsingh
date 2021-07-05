@@ -29,12 +29,19 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 221, 186)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+.navbar li {
+    margin: 0 0.3125rem
+}
+
 @media (min-width: 768px) { 
     .nav-link {
         font-size: 1.5rem;
     }
     .nav-item:hover .nav-link {
         font-size: 1.6rem;
+    }
+    .navbar li {
+        margin: 0 0.625rem
     }
 }
 

@@ -1,0 +1,26 @@
+#notFoundComponent{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#notFoundContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+}
+
+#notFoundIntro {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+#notFoundName {
+    font-family: orbitron;
+    font-size: 4rem;
+    text-align: center;
+}
