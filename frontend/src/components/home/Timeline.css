@@ -1,6 +1,7 @@
 #timelineComponent *{
-    z-index: -1;
+    z-index: 0;
 }
+
 #timelineComponent .card-title {
     font-size: 0.85rem ;
 }

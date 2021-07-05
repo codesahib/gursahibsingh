@@ -7,10 +7,6 @@
     flex-wrap: wrap;
 }
 
-#blogsContainer .card{
-    z-index: -1;
-}
-
 #blogsContainer button{
     background-color: var(--secondary-clr);
     color: var(--primary-clr);
