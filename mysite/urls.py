@@ -24,7 +24,8 @@ urlpatterns = [
     path('home/',TemplateView.as_view(template_name="index.html")),
     path('about/',TemplateView.as_view(template_name="index.html")),
     path('projects/',TemplateView.as_view(template_name="index.html")),
-    path('blogs/',TemplateView.as_view(template_name="index.html"))
+    path('blogs/',TemplateView.as_view(template_name="index.html")),
+    path('blogs/<str:name>',TemplateView.as_view(template_name="index.html"))
     # url(r'', include('apps.home.urls')),
 	# url(r'^home/', include('apps.home.urls')),
 	# url(r'^contact/', include('apps.contact.urls')),

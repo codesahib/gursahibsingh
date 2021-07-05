@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-rou
 import Home from '../home/Home'
 import Projects from '../projects/Projects'
 import Blogs from '../blogs/Blogs'
+import BlogPage from '../blogs/BlogPage'
 
 import './Navbar.css'
 import Resume from '../../static/media/Resume_GursahibSingh.pdf'
@@ -40,10 +41,15 @@ export default function Navbar() {
         </nav>
         <Router>
             <Switch>
-                <Route exact path="/" component={Home}/>
+                {/* <Route exact path="/" component={Home}/>
                 <Route path="/home" component={Home}/>
                 <Route path="/projects" component={Projects}/>
-                <Route path="/blogs" component={Blogs}/>
+                <Route path="/blogs" component={Blogs}/> */}
+                <Route exact path="/"><Home/></Route>
+                <Route exact path="/home"><Home/></Route>
+                <Route exact path="/projects"><Projects/></Route>
+                <Route exact path="/blogs"><Blogs/></Route>
+                <Route exact path="/blogs/:blog_name/"><BlogPage/></Route>
             </Switch>
         </Router>
         </>
