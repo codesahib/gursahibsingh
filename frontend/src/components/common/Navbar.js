@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import Home from '../home/Home'
 import Projects from '../projects/Projects'
@@ -10,6 +10,12 @@ import './Navbar.css'
 import Resume from '../../static/media/Resume_GursahibSingh.pdf'
 
 export default function Navbar() {
+    let showHomeLink = true;
+
+    if(window.location.pathname === '/' || window.location.pathname === '/home'){
+        showHomeLink = false;
+    }
+
     return (
         <>
         <nav className="navbar py-0 navbar-expand nav-full">
@@ -21,6 +27,11 @@ export default function Navbar() {
             <div className="container">
                 <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
                     <ul className="navbar-nav mx-auto text-md-center text-left">
+
+                        {showHomeLink && <li className="nav-item" style={{"marginLeft": "10px","marginRight": "10px"}}>
+                            <a className="nav-link" id="nav-link_projects" href="/">Home
+                            </a>
+                        </li>}
 
                         <li className="nav-item" style={{"marginLeft": "10px","marginRight": "10px"}}>
                             <a className="nav-link" id="nav-link_projects" href="/projects">Projects
