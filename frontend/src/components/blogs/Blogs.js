@@ -7,19 +7,24 @@ import './Blogs.css'
 
 export default function Blogs() {
     document.title = "Blogs | Gursahib Singh"
+    
+    const openBlog = (blog_link) => {
+        window.open("blogs/"+blog_link,"_self")
+    }
+    
     return (
         <div id="blogsComponent">
             <div id="blogsContainer">
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Thailand} />
-                <Card.Body>
-                    <Card.Title>Thailand -2019</Card.Title>
-                    <Card.Text>
-                    The complete experience and some useful tips.
-                    </Card.Text>
-                    <Button>Read</Button>
-                </Card.Body>
-            </Card>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={Thailand} />
+                    <Card.Body>
+                        <Card.Title>Thailand -2019</Card.Title>
+                        <Card.Text>
+                        The complete experience and some useful tips.
+                        </Card.Text>
+                        <Button onClick={()=>{openBlog("thailand-2019")}}>Read</Button>
+                    </Card.Body>
+                </Card>
             </div>
             <div id="otherLinksContainer">
                 <h1 className="content-heading">Other Blogs</h1>
