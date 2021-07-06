@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/codesahib/mysite/tree/gh-pages/static/css/main.6c6ca1f3.chunk.css",
-    "main.js": "/codesahib/mysite/tree/gh-pages/static/js/main.24aa4dc3.chunk.js",
-    "main.js.map": "/codesahib/mysite/tree/gh-pages/static/js/main.24aa4dc3.chunk.js.map",
-    "runtime-main.js": "/codesahib/mysite/tree/gh-pages/static/js/runtime-main.e5723186.js",
-    "runtime-main.js.map": "/codesahib/mysite/tree/gh-pages/static/js/runtime-main.e5723186.js.map",
-    "static/js/2.10019cdb.chunk.js": "/codesahib/mysite/tree/gh-pages/static/js/2.10019cdb.chunk.js",
-    "static/js/2.10019cdb.chunk.js.map": "/codesahib/mysite/tree/gh-pages/static/js/2.10019cdb.chunk.js.map",
-    "static/js/3.2842ea3e.chunk.js": "/codesahib/mysite/tree/gh-pages/static/js/3.2842ea3e.chunk.js",
-    "static/js/3.2842ea3e.chunk.js.map": "/codesahib/mysite/tree/gh-pages/static/js/3.2842ea3e.chunk.js.map",
-    "index.html": "/codesahib/mysite/tree/gh-pages/index.html",
-    "static/css/main.6c6ca1f3.chunk.css.map": "/codesahib/mysite/tree/gh-pages/static/css/main.6c6ca1f3.chunk.css.map",
-    "static/js/2.10019cdb.chunk.js.LICENSE.txt": "/codesahib/mysite/tree/gh-pages/static/js/2.10019cdb.chunk.js.LICENSE.txt",
-    "static/media/Resume_GursahibSingh.9045c252.pdf": "/codesahib/mysite/tree/gh-pages/static/media/Resume_GursahibSingh.9045c252.pdf",
-    "static/media/thailand.eb62879b.jpg": "/codesahib/mysite/tree/gh-pages/static/media/thailand.eb62879b.jpg"
+    "main.css": "/codesahib/mysite/tree/master/frontend/static/css/main.6c6ca1f3.chunk.css",
+    "main.js": "/codesahib/mysite/tree/master/frontend/static/js/main.90a48760.chunk.js",
+    "main.js.map": "/codesahib/mysite/tree/master/frontend/static/js/main.90a48760.chunk.js.map",
+    "runtime-main.js": "/codesahib/mysite/tree/master/frontend/static/js/runtime-main.97eebca3.js",
+    "runtime-main.js.map": "/codesahib/mysite/tree/master/frontend/static/js/runtime-main.97eebca3.js.map",
+    "static/js/2.10019cdb.chunk.js": "/codesahib/mysite/tree/master/frontend/static/js/2.10019cdb.chunk.js",
+    "static/js/2.10019cdb.chunk.js.map": "/codesahib/mysite/tree/master/frontend/static/js/2.10019cdb.chunk.js.map",
+    "static/js/3.2842ea3e.chunk.js": "/codesahib/mysite/tree/master/frontend/static/js/3.2842ea3e.chunk.js",
+    "static/js/3.2842ea3e.chunk.js.map": "/codesahib/mysite/tree/master/frontend/static/js/3.2842ea3e.chunk.js.map",
+    "index.html": "/codesahib/mysite/tree/master/frontend/index.html",
+    "static/css/main.6c6ca1f3.chunk.css.map": "/codesahib/mysite/tree/master/frontend/static/css/main.6c6ca1f3.chunk.css.map",
+    "static/js/2.10019cdb.chunk.js.LICENSE.txt": "/codesahib/mysite/tree/master/frontend/static/js/2.10019cdb.chunk.js.LICENSE.txt",
+    "static/media/Resume_GursahibSingh.9045c252.pdf": "/codesahib/mysite/tree/master/frontend/static/media/Resume_GursahibSingh.9045c252.pdf",
+    "static/media/thailand.eb62879b.jpg": "/codesahib/mysite/tree/master/frontend/static/media/thailand.eb62879b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5723186.js",
+    "static/js/runtime-main.97eebca3.js",
     "static/js/2.10019cdb.chunk.js",
     "static/css/main.6c6ca1f3.chunk.css",
-    "static/js/main.24aa4dc3.chunk.js"
+    "static/js/main.90a48760.chunk.js"
   ]
 }
