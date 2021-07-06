@@ -83,6 +83,10 @@
 .light-bg{
     background-color: var(--primary-clr);
 }
+
+.bold {
+    font-weight: bold;
+}
 /* ************* */
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap */
