@@ -1,11 +1,11 @@
-#blogsContainer{
+#blogCardsContainer{
     display: flex;
     flex-wrap: wrap;
     margin: 1rem 0;
     padding: 3rem;
 }
 
-#blogsContainer .blog-button{
+#blogCardsContainer .blog-button{
     width: fit-content;
     padding: 5px 10px;
     background-color: var(--secondary-clr);
@@ -16,6 +16,6 @@
     text-align: center;
 }
 
-#blogsContainer .blog-button:hover{
+#blogCardsContainer .blog-button:hover{
     text-decoration: none;
 }
