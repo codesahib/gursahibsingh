@@ -23,7 +23,7 @@ export default function Projects(props) {
             </div>
             <div id="projectsContainer">
                 <div className="project">
-                    <h2 className="project-title">Personal Website</h2>
+                    <h2 className="project-title">Portfolio Website</h2>
                     <h6 className="project-subtitle">(A Dynamic Resume)</h6>
                     <div className="horizontal-line"></div>
                     <div className="project-detail">
