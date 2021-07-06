@@ -1,5 +1,6 @@
 import { React, useEffect } from 'react'
 import { Card, Button } from 'react-bootstrap' 
+import {Link} from 'react-router-dom'
 
 import Thailand from '../../static/img/thailand.jpg'
 
@@ -14,10 +15,6 @@ export default function Blogs(props) {
 
     document.title = "Blogs | Gursahib Singh"
     
-    const openBlog = (blog_link) => {
-        window.open("blogs/"+blog_link,"_self")
-    }
-    
     return (
         <div id="blogsComponent">
             <div id="blogsContainer">
@@ -28,7 +25,7 @@ export default function Blogs(props) {
                         <Card.Text>
                         The complete experience and some useful tips.
                         </Card.Text>
-                        <Button onClick={()=>{openBlog("thailand-2019")}}>Read</Button>
+                        <Link to="/blogs/thailand">Read</Link>
                     </Card.Body>
                 </Card>
             </div>
