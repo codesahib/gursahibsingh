@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/gursahibsingh/static/css/main.646698ce.chunk.css",
-    "main.js": "/gursahibsingh/static/js/main.6b745f08.chunk.js",
-    "main.js.map": "/gursahibsingh/static/js/main.6b745f08.chunk.js.map",
+    "main.css": "/gursahibsingh/static/css/main.eea335cd.chunk.css",
+    "main.js": "/gursahibsingh/static/js/main.41c2e792.chunk.js",
+    "main.js.map": "/gursahibsingh/static/js/main.41c2e792.chunk.js.map",
     "runtime-main.js": "/gursahibsingh/static/js/runtime-main.427528ae.js",
     "runtime-main.js.map": "/gursahibsingh/static/js/runtime-main.427528ae.js.map",
     "static/js/2.e630ae2e.chunk.js": "/gursahibsingh/static/js/2.e630ae2e.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.2842ea3e.chunk.js": "/gursahibsingh/static/js/3.2842ea3e.chunk.js",
     "static/js/3.2842ea3e.chunk.js.map": "/gursahibsingh/static/js/3.2842ea3e.chunk.js.map",
     "index.html": "/gursahibsingh/index.html",
-    "static/css/main.646698ce.chunk.css.map": "/gursahibsingh/static/css/main.646698ce.chunk.css.map",
+    "static/css/main.eea335cd.chunk.css.map": "/gursahibsingh/static/css/main.eea335cd.chunk.css.map",
     "static/js/2.e630ae2e.chunk.js.LICENSE.txt": "/gursahibsingh/static/js/2.e630ae2e.chunk.js.LICENSE.txt",
     "static/media/Resume_GursahibSingh.9045c252.pdf": "/gursahibsingh/static/media/Resume_GursahibSingh.9045c252.pdf",
     "static/media/thailand.eb62879b.jpg": "/gursahibsingh/static/media/thailand.eb62879b.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.427528ae.js",
     "static/js/2.e630ae2e.chunk.js",
-    "static/css/main.646698ce.chunk.css",
-    "static/js/main.6b745f08.chunk.js"
+    "static/css/main.eea335cd.chunk.css",
+    "static/js/main.41c2e792.chunk.js"
   ]
 }
