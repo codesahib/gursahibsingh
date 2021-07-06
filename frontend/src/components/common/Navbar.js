@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { Switch, Route, Link } from "react-router-dom"
 
 import Home from '../home/Home'
 import Projects from '../projects/Projects'
@@ -9,6 +9,14 @@ import PageNotFound from '../common/PageNotFound'
 
 import './Navbar.css'
 import Resume from '../../static/media/Resume_GursahibSingh.pdf'
+
+{/*
+
+    README
+
+    1. Using '<Link>' instead of '<a>' because it automatically resolves links according to BrowserRouter or HashRouter
+
+*/}
 
 export default function Navbar() {
     let showHomeLink = true;
@@ -30,18 +38,15 @@ export default function Navbar() {
                     <ul className="navbar-nav mx-auto text-md-center text-left">
 
                         {showHomeLink && <li className="nav-item">
-                            <a className="nav-link" id="nav-link_projects" href="/">Home
-                            </a>
+                            <Link className="nav-link" to="/home">Home</Link>
                         </li>}
 
                         <li className="nav-item">
-                            <a className="nav-link" id="nav-link_projects" href="/projects">Projects
-                            </a>
+                            <Link className="nav-link" to="/projects">Projects</Link>
                         </li>
                         
                         <li className="nav-item">
-                            <a className="nav-link" id="nav-link_blogs" href="/blogs">Blogs
-                            </a>
+                            <Link className="nav-link" to="/blogs">Blogs</Link>
                         </li>
 
                         <li className="nav-item">
@@ -51,20 +56,18 @@ export default function Navbar() {
                 </div>
             </div>
         </nav>
-        <Router>
+        {/* Not using BrowserRouter as this is causing problems with gh-pages deployment */}
+        {/* <Router> */}
             <Switch>
-                {/* <Route exact path="/" component={Home}/>
-                <Route path="/home" component={Home}/>
-                <Route path="/projects" component={Projects}/>
-                <Route path="/blogs" component={Blogs}/> */}
+                {/* <Route exact path="/" component={Home}/> */}
                 <Route exact path="/"><Home/></Route>
-                <Route exact path="/home"><Home/></Route>
-                <Route exact path="/projects"><Projects/></Route>
-                <Route exact path="/blogs"><Blogs/></Route>
-                <Route exact path="/blogs/:blog_name/"><BlogPage/></Route>
-                <Route exact path=""><PageNotFound/></Route>
+                <Route path="/home"><Home /></Route>
+                <Route path="/projects"><Projects/></Route>
+                <Route path="/blogs"><Blogs/></Route>
+                <Route path="/blogs/:blog_name/"><BlogPage/></Route>
+                <Route path=""><PageNotFound/></Route>
             </Switch>
-        </Router>
+        {/* </Router> */}
         </>
     )
 }

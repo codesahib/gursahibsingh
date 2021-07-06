@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 import './Footer.css'
 
 export default function Footer() {
@@ -34,7 +36,7 @@ export default function Footer() {
             </div>
         
             <div className="footer-copyright text-center">
-                <p>© 2021 Copyright: <a href="\">gursahibsingh.herokuapp.com</a></p>
+                <p>© 2021 Copyright: <Link to="/home">codesahib.github.io/gursahibsingh</Link></p>
             </div>
         </footer>
     )
