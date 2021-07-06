@@ -1,0 +1,53 @@
+#blogPageComponent {
+    padding: 2rem;
+}
+
+#blogContianer {
+    margin: 1.25rem 0;
+}
+
+.blog-title {
+    padding: var(--small-padding);
+    color: var(--accent-clr);
+    text-align: center;
+    font-family: var(--font-highlight);
+    font-size: 3rem;
+}
+
+.blog-heading {
+    text-align: center;
+    margin: 1rem 0 0.25rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+}
+
+.blog-subheading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25rem;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-clr);
+}
+
+.blog-list-item {
+    font-family: var(--font-text);
+}
+
+.blog-text-highlight {
+    color: var(--accent-clr);
+}
+
+#blogContianer li{
+    font-family: var(--font-text);
+}
+
+.blog-not-available {
+    width: 100%;
+    height: 70vh;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-clr);
+    font-family: orbitron;
+    text-align: center;
+}
