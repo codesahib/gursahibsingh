@@ -1,5 +1,5 @@
 import {React, useState} from 'react'
-import { Switch, Route, Link } from "react-router-dom"
+import { Switch, Route, Link, Redirect } from "react-router-dom"
 
 import Home from '../home/Home'
 import Projects from '../projects/Projects'
@@ -57,11 +57,11 @@ export default function Navbar(props) {
             <Switch>
                 {/* <Route exact path="/" component={Home}/> */}
                 <Route exact path="/"><Home show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
-                <Route path="/home"><Home show_home_link={setHomeLink} show_banner={props.show_banner} /></Route>
-                <Route path="/projects"><Projects show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
-                <Route path="/blogs"><Blogs show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
-                <Route path="/blogs/:blog_name/"><BlogPage show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
-                <Route path=""><PageNotFound show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
+                <Route exact path="/home"><Redirect to="/"/></Route>
+                <Route exact path="/projects"><Projects show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
+                <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
+                <Route exact path="/blogs/:blog_name"><BlogPage show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
+                <Route><PageNotFound show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
             </Switch>
         {/* </Router> */}
         </>
