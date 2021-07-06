@@ -1,5 +1,5 @@
 import { React, useEffect } from 'react'
-import { Card, Button } from 'react-bootstrap' 
+import { Card } from 'react-bootstrap' 
 import {Link} from 'react-router-dom'
 
 import Thailand from '../../static/img/thailand.jpg'
@@ -17,15 +17,21 @@ export default function Blogs(props) {
     
     return (
         <div id="blogsComponent">
+            <div className="section" style={{backgroundColor: "#4d4855"}}>
+                <h1 className="content-heading">BLOGS</h1>     
+                <div className="section-part-large" style={{backgroundColor: "#FCFCF5"}}>
+                <p className="content-para text-dark">There are lot of appreciable things that happen around us and with us that we fail to notice. We need to sit back, relax and reflect upon those wonderful moments and writing down is the best way to do so. This section would contain information based and experience based blogs. No-nonsense!</p>
+                </div>
+            </div>
             <div id="blogsContainer">
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={Thailand} />
                     <Card.Body>
-                        <Card.Title>Thailand -2019</Card.Title>
+                        <Card.Title>Thailand - 2019</Card.Title>
                         <Card.Text>
                         The complete experience and some useful tips.
                         </Card.Text>
-                        <Link to="/blogs/thailand">Read</Link>
+                        <Link className="blog-button" to="/blogs/thailand">Read</Link>
                     </Card.Body>
                 </Card>
             </div>

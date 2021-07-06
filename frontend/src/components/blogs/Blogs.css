@@ -1,17 +1,21 @@
-#blogsComponent {
-    padding: 3rem
-}
-
 #blogsContainer{
     display: flex;
     flex-wrap: wrap;
+    margin: 1rem 0;
+    padding: 3rem;
 }
 
-#blogsContainer button{
+#blogsContainer .blog-button{
+    width: fit-content;
+    padding: 5px 10px;
     background-color: var(--secondary-clr);
     color: var(--primary-clr);
     border-radius: 12px;
     font-family: var(--font-highlight);
     box-shadow: 0 0 1px 1px var(--accent-clr);
     text-align: center;
+}
+
+#blogsContainer .blog-button:hover{
+    text-decoration: none;
 }
