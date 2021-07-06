@@ -1,4 +1,5 @@
 import {React, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 
 import './Projects.css'
 
@@ -31,7 +32,7 @@ export default function Projects(props) {
                     </div>
                     <div className="button-container">
                         <a className="button" href="https://github.com/codesahib/mysite" target="_blank">GitHub</a>
-                        <a className="button" href="/home" target="_blank">Link</a>
+                        <Link className="button" to="/home" target="_blank">Link</Link>
                     </div>  
                 </div>
                 <div className="project">
