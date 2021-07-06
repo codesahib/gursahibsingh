@@ -5,7 +5,10 @@ import Thailand from '../../static/img/thailand.jpg'
 
 import './Blogs.css'
 
-export default function Blogs() {
+export default function Blogs(props) {
+    props.show_banner(false)
+    props.show_home_link(true)
+
     document.title = "Blogs | Gursahib Singh"
     
     const openBlog = (blog_link) => {

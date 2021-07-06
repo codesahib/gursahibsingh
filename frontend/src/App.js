@@ -7,16 +7,11 @@ import './App.css';
 
 function App() {
 
-  let showBanner = false
-  
-  if(window.location.pathname === '/' || window.location.pathname === '/home'){
-    showBanner = true;
-  }
-
+  const [showBanner, setShowBanner] = useState(false)
   return (
     <>
       {showBanner && <Banner/>}
-      <Navbar/>
+      <Navbar show_banner={setShowBanner}/>
       <Footer/>
     </>
   );

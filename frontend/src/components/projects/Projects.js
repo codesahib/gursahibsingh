@@ -2,8 +2,12 @@ import React from 'react'
 
 import './Projects.css'
 
-export default function Projects() {
+export default function Projects(props) {
+    props.show_banner(false)
+    props.show_home_link(true)
+
     document.title = "Projects | Gursahib Singh"
+    
     return (
         <div id="projectComponent">
             <div className="section" style={{backgroundColor: "#4d4855"}}>

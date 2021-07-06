@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { Switch, Route, Link } from "react-router-dom"
 
 import Home from '../home/Home'
@@ -18,12 +18,8 @@ import Resume from '../../static/media/Resume_GursahibSingh.pdf'
 
 */}
 
-export default function Navbar() {
-    let showHomeLink = true;
-
-    if(window.location.pathname === '/' || window.location.pathname === '/home'){
-        showHomeLink = false;
-    }
+export default function Navbar(props) {
+    const [homeLink, setHomeLink] = useState(true);
 
     return (
         <>
@@ -37,7 +33,7 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
                     <ul className="navbar-nav mx-auto text-md-center text-left">
 
-                        {showHomeLink && <li className="nav-item">
+                        {homeLink && <li className="nav-item">
                             <Link className="nav-link" to="/home">Home</Link>
                         </li>}
 
@@ -60,12 +56,12 @@ export default function Navbar() {
         {/* <Router> */}
             <Switch>
                 {/* <Route exact path="/" component={Home}/> */}
-                <Route exact path="/"><Home/></Route>
-                <Route path="/home"><Home /></Route>
-                <Route path="/projects"><Projects/></Route>
-                <Route path="/blogs"><Blogs/></Route>
-                <Route path="/blogs/:blog_name/"><BlogPage/></Route>
-                <Route path=""><PageNotFound/></Route>
+                <Route exact path="/"><Home show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
+                <Route path="/home"><Home show_home_link={setHomeLink} show_banner={props.show_banner} /></Route>
+                <Route path="/projects"><Projects show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
+                <Route path="/blogs"><Blogs show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
+                <Route path="/blogs/:blog_name/"><BlogPage show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
+                <Route path=""><PageNotFound show_home_link={setHomeLink} show_banner={props.show_banner}/></Route>
             </Switch>
         {/* </Router> */}
         </>

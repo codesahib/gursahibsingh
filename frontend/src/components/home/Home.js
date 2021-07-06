@@ -5,8 +5,12 @@ import '../../static/css/style.css'
 
 import './Home.css'
 
-export default function Home() {
+export default function Home(props) {
+    props.show_banner(true)
+    props.show_home_link(false)
+
     document.title = "Home | Gursahib Singh"
+    
     return (
         <>
         <div className="homeComponent">
