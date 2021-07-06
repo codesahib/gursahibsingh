@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/gursahibsingh/static/css/main.389b20c2.chunk.css",
-    "main.js": "/gursahibsingh/static/js/main.cad404bc.chunk.js",
-    "main.js.map": "/gursahibsingh/static/js/main.cad404bc.chunk.js.map",
-    "runtime-main.js": "/gursahibsingh/static/js/runtime-main.f36629ab.js",
-    "runtime-main.js.map": "/gursahibsingh/static/js/runtime-main.f36629ab.js.map",
-    "static/js/2.7eb3d148.chunk.js": "/gursahibsingh/static/js/2.7eb3d148.chunk.js",
-    "static/js/2.7eb3d148.chunk.js.map": "/gursahibsingh/static/js/2.7eb3d148.chunk.js.map",
-    "static/js/3.dc471867.chunk.js": "/gursahibsingh/static/js/3.dc471867.chunk.js",
-    "static/js/3.dc471867.chunk.js.map": "/gursahibsingh/static/js/3.dc471867.chunk.js.map",
+    "main.css": "/gursahibsingh/static/css/main.646698ce.chunk.css",
+    "main.js": "/gursahibsingh/static/js/main.6b745f08.chunk.js",
+    "main.js.map": "/gursahibsingh/static/js/main.6b745f08.chunk.js.map",
+    "runtime-main.js": "/gursahibsingh/static/js/runtime-main.427528ae.js",
+    "runtime-main.js.map": "/gursahibsingh/static/js/runtime-main.427528ae.js.map",
+    "static/js/2.e630ae2e.chunk.js": "/gursahibsingh/static/js/2.e630ae2e.chunk.js",
+    "static/js/2.e630ae2e.chunk.js.map": "/gursahibsingh/static/js/2.e630ae2e.chunk.js.map",
+    "static/js/3.2842ea3e.chunk.js": "/gursahibsingh/static/js/3.2842ea3e.chunk.js",
+    "static/js/3.2842ea3e.chunk.js.map": "/gursahibsingh/static/js/3.2842ea3e.chunk.js.map",
     "index.html": "/gursahibsingh/index.html",
-    "static/css/main.389b20c2.chunk.css.map": "/gursahibsingh/static/css/main.389b20c2.chunk.css.map",
-    "static/js/2.7eb3d148.chunk.js.LICENSE.txt": "/gursahibsingh/static/js/2.7eb3d148.chunk.js.LICENSE.txt",
+    "static/css/main.646698ce.chunk.css.map": "/gursahibsingh/static/css/main.646698ce.chunk.css.map",
+    "static/js/2.e630ae2e.chunk.js.LICENSE.txt": "/gursahibsingh/static/js/2.e630ae2e.chunk.js.LICENSE.txt",
     "static/media/Resume_GursahibSingh.9045c252.pdf": "/gursahibsingh/static/media/Resume_GursahibSingh.9045c252.pdf",
     "static/media/thailand.eb62879b.jpg": "/gursahibsingh/static/media/thailand.eb62879b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f36629ab.js",
-    "static/js/2.7eb3d148.chunk.js",
-    "static/css/main.389b20c2.chunk.css",
-    "static/js/main.cad404bc.chunk.js"
+    "static/js/runtime-main.427528ae.js",
+    "static/js/2.e630ae2e.chunk.js",
+    "static/css/main.646698ce.chunk.css",
+    "static/js/main.6b745f08.chunk.js"
   ]
 }
