@@ -4,7 +4,7 @@ import './Arrow.css'
 
 export default function Arrow() {
     return (
-        <div class="arrow">
+        <div className="arrow">
                 <span></span>
                 <span></span>
                 <span></span>

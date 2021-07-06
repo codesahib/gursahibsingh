@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useEffect } from 'react'
 import { Card, Button } from 'react-bootstrap' 
 
 import Thailand from '../../static/img/thailand.jpg'
@@ -6,8 +6,11 @@ import Thailand from '../../static/img/thailand.jpg'
 import './Blogs.css'
 
 export default function Blogs(props) {
-    props.show_banner(false)
-    props.show_home_link(true)
+    // To resolve cannot update a component while rendering a different component warning
+    useEffect(()=>{
+        props.show_banner(false)
+        props.show_home_link(true)
+    })
 
     document.title = "Blogs | Gursahib Singh"
     

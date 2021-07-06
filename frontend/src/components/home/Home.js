@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useEffect } from 'react'
 import Timeline from './Timeline'
 
 import '../../static/css/style.css'
@@ -6,9 +6,12 @@ import '../../static/css/style.css'
 import './Home.css'
 
 export default function Home(props) {
-    props.show_banner(true)
-    props.show_home_link(false)
-
+    // To resolve cannot update a component while rendering a different component warning
+    useEffect(()=>{
+        props.show_banner(true)
+        props.show_home_link(false)
+    })
+    
     document.title = "Home | Gursahib Singh"
     
     return (

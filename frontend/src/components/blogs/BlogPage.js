@@ -1,9 +1,12 @@
-import React from 'react'
+import {React, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 
 function BlogPage(props) {
-    props.show_banner(false)
-    props.show_home_link(true)
+    // To resolve cannot update a component while rendering a different component warning
+    useEffect(()=>{
+        props.show_banner(false)
+        props.show_home_link(true)
+    })
     
     console.log(props.match.params.blog_name)
     return (
