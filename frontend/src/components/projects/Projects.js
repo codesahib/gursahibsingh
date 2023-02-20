@@ -17,11 +17,36 @@ export default function Projects(props) {
             <div className="section" style={{backgroundColor: "#4d4855"}}>
                 <h1 className="content-heading">PROJECTS</h1>     
                 <div className="section-part-large" style={{backgroundColor: "#FCFCF5"}}>
-                <p className="content-para text-dark"> I've tried doing projects in many seemingly intereseting fields. The range of areas that I've worked upon are <span className="text-highlight">Web Development, Machine Learning, App Development(very basic), and Scripting.</span></p>
-                <p className="content-para text-dark"> I plan to work more on the <span className="text-highlight">Cloud and Automation</span> tools that will eventually help stand in sync with the changing world</p>
+                <p className="content-para text-dark"> I've tried doing projects in many seemingly intereseting fields. The range of areas that I've worked upon are <span className="text-highlight">Web Development, Machine Learning, App Development(very basic), and Scripting.</span> I plan to work more on the <span className="text-highlight">Cloud and Automation</span> tools that will eventually help stand in sync with the changing world</p>
+                <p className="content-para text-dark">Below is a list of projects that I have done as part of academics or personal projects. I've been part of some useful industry projects whose details are available in my resume.</p>
                 </div>
             </div>
             <div id="projectsContainer">
+                <div className="project">
+                    <h2 className="project-title">Optimal Cryptocurrency Portfolio Selection Using Genetic Algorithm</h2>
+                    <h6 className="project-subtitle">(Machine Learning Research Project)</h6>
+                    <div className="horizontal-line"></div>
+                    <div className="project-detail">
+                        <p className="content-para text-dark"><span className="text-highlight">Motivation: </span>With so many Cryptocurrencies in the market, what to choose?</p>
+                        <p className="content-para text-dark"><span className="text-highlight">Objective: </span>To find the optimal crypto portfolio given various assets using Genetic Algorithm techniques such as Natural Selection, Crossover and Mutation.</p>
+                    </div>
+                    <div className="button-container">
+                        <a className="button" href="https://github.com/codesahib/Optimal-crypto-portfolio.git" target="_blank">GitHub</a>
+                        <a className="button" href="https://youtu.be/hmrj1J-Pwkk" target="_blank">Demo</a>
+                    </div>  
+                </div>
+                <div className="project">
+                    <h2 className="project-title">ShareMyGaddi - Carpool web application</h2>
+                    <h6 className="project-subtitle">(Full Stack Web App)</h6>
+                    <div className="horizontal-line"></div>
+                    <div className="project-detail">
+                        <p className="content-para text-dark"><span className="text-highlight">Motivation: </span>Web Stack Development is tough? Why not try it :)</p>
+                        <p className="content-para text-dark"><span className="text-highlight">Objective: </span>To develop a full-stack carpooling web application using React.js, Node.js, MongoDB and including end-to-end testing using Jest and Cypress.io.</p>
+                    </div>
+                    <div className="button-container">
+                        <a className="button" href="https://github.com/karancode-singh/ShareMyGaddi-carpooling" target="_blank">GitHub</a>
+                    </div>  
+                </div>
                 <div className="project">
                     <h2 className="project-title">Portfolio Website</h2>
                     <h6 className="project-subtitle">(A Dynamic Resume)</h6>
