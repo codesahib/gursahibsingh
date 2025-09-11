@@ -6,7 +6,19 @@ import './Timeline.css'
 export default function Timeline() {
     const items = [
         {
-            title: "2021-Present",
+            title: "2023-Present",
+            cardTitle: "Full time job",
+            cardSubtitle:"Software Developer",
+            cardDetailedText: "Siemens, Kitchener"
+        },
+        {
+            title: "2023",
+            cardTitle: "Full time job",
+            cardSubtitle:"Software Developer",
+            cardDetailedText: "ShyftLabs, Toronto"
+        },
+        {
+            title: "2023",
             cardTitle: "Full time job",
             cardSubtitle:"Full Stack Developer",
             cardDetailedText: "BluekeyAI, Toronto"
@@ -34,25 +46,7 @@ export default function Timeline() {
             cardTitle: "Internship",
             cardSubtitle:"Software Intern",
             cardDetailedText: "Siemens EDA(Mentor Graphics), Noida"
-        },
-        {
-            title: "2015-2019",
-            cardTitle: "Bachelor of Engineering",
-            cardSubtitle:"CGPA: 9.50",
-            cardDetailedText: "Thapar Institute of Engineering and Technology, Patiala"
-        },
-        // {
-        //     title: "2015",
-        //     cardTitle: "Class 12th",
-        //     cardSubtitle:"95.6%",
-        //     cardDetailedText: "Kundan Vidya Mandir, Ludhiana"
-        // },
-        // {
-        //     title: "2013",
-        //     cardTitle: "Class 10th",
-        //     cardSubtitle:"CGPA: 10",
-        //     cardDetailedText: "Kundan Vidya Mandir, Ludhiana"
-        // }
+        }
     ];
 
     const theme={
