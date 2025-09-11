@@ -1,7 +1,13 @@
+# About
+It is a Django app with React frontend. The frontend can be hosted independently.
+ 
 # How to run?
-1. cd frontend
-2. npm install
-3. npm start
+1. `cd frontend`
+2. `npm install`
+3. `npm start`
+
+# Useful commands
+1. Use `npm audit --force` to update versions.
 
 
 # STATIC FILES
