@@ -46,7 +46,7 @@ export default function Navbar(props) {
                         </li> */}
 
                         <li className="nav-item">
-                            <a className="nav-link" href="https://drive.google.com/file/d/1vBBbYYrLXmgqqclmI-YDkj9WbLYcxAN3/view?usp=share_link" target="_blank">Resume</a>
+                            <a className="nav-link" href="https://drive.google.com/file/d/1TYPzjytu579AUJlIfc9pQvaj5VjxAGAS/view?usp=drive_link" target="_blank">Resume</a>
                         </li>
                     </ul>
                 </div>
