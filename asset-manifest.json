@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gursahibsingh/static/css/main.a87466a5.css",
-    "main.js": "/gursahibsingh/static/js/main.2ea5729b.js",
-    "static/js/764.b4c11d9d.chunk.js": "/gursahibsingh/static/js/764.b4c11d9d.chunk.js",
+    "main.css": "/gursahibsingh/static/css/main.f9c0a728.css",
+    "main.js": "/gursahibsingh/static/js/main.debf6d58.js",
+    "static/js/453.3635c158.chunk.js": "/gursahibsingh/static/js/453.3635c158.chunk.js",
     "static/media/thailand.jpg": "/gursahibsingh/static/media/thailand.eb62879b06e1403da66b.jpg",
     "static/media/Resume_GursahibSingh.pdf": "/gursahibsingh/static/media/Resume_GursahibSingh.1b82dc00c556d0ab91c0.pdf",
     "index.html": "/gursahibsingh/index.html",
-    "main.a87466a5.css.map": "/gursahibsingh/static/css/main.a87466a5.css.map",
-    "main.2ea5729b.js.map": "/gursahibsingh/static/js/main.2ea5729b.js.map",
-    "764.b4c11d9d.chunk.js.map": "/gursahibsingh/static/js/764.b4c11d9d.chunk.js.map"
+    "main.f9c0a728.css.map": "/gursahibsingh/static/css/main.f9c0a728.css.map",
+    "main.debf6d58.js.map": "/gursahibsingh/static/js/main.debf6d58.js.map",
+    "453.3635c158.chunk.js.map": "/gursahibsingh/static/js/453.3635c158.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a87466a5.css",
-    "static/js/main.2ea5729b.js"
+    "static/css/main.f9c0a728.css",
+    "static/js/main.debf6d58.js"
   ]
 }
