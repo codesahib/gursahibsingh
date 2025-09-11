@@ -41,9 +41,9 @@ export default function Navbar(props) {
                             <Link className="nav-link" to="/projects">Projects</Link>
                         </li>
                         
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link" to="/blogs">Blogs</Link>
-                        </li>
+                        </li> */}
 
                         <li className="nav-item">
                             <a className="nav-link" href="https://drive.google.com/file/d/1vBBbYYrLXmgqqclmI-YDkj9WbLYcxAN3/view?usp=share_link" target="_blank">Resume</a>

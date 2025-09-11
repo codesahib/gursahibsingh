@@ -30,12 +30,13 @@ export default function Home(props) {
                 <Timeline/>
             </div>
 
-            <div className="section">
+            {/* Do not include Blogs section*/}
+            {/* <div className="section">
                 <h1 className="content-heading">Blogs</h1>
                 <div className="section-part-large">
                     <p className="content-para text-dark"> I'm not a professional blog writer but I do like to express my experiences. My first blog describes the experiences from my Thailand trip which can be used as a guide for a better vacation time.</p>
                 </div>
-            </div>
+            </div> */}
         </div>
         </>
     )
