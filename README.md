@@ -1,20 +1,28 @@
-STATIC FILES
+# How to run?
+1. cd frontend
+2. npm install
+3. npm start
+
+
+# STATIC FILES
 --------------------------------------------------------------------
 -> Served from /apps/<>/static
 --------------------------------------------------------------------
-NAVBAR
+# NAVBAR
 --------------------------------------------------------------------
 -> Doesn't require css
 -> Old green color #AEFF00
 -> Disabled search box, expansion of projects. Instead created projects home page.
 --------------------------------------------------------------------
-MODAL
+#MODAL
 --------------------------------------------------------------------
 -> Single modal container for all cards.
 -> JavaScript functionality on home-page.html. No separate files
 --------------------------------------------------------------------
-CAROUSEL
+# CAROUSEL
 -> Everything in home-page.html. Edit images from there only.
 --------------------------------------------------------------------
-CARDS
+# CARDS
 -> Image size : 600x300
+
+
