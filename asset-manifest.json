@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gursahibsingh/static/css/main.f9c0a728.css",
-    "main.js": "/gursahibsingh/static/js/main.debf6d58.js",
-    "static/js/453.3635c158.chunk.js": "/gursahibsingh/static/js/453.3635c158.chunk.js",
-    "static/media/thailand.jpg": "/gursahibsingh/static/media/thailand.eb62879b06e1403da66b.jpg",
-    "static/media/Resume_GursahibSingh.pdf": "/gursahibsingh/static/media/Resume_GursahibSingh.1b82dc00c556d0ab91c0.pdf",
-    "index.html": "/gursahibsingh/index.html",
-    "main.f9c0a728.css.map": "/gursahibsingh/static/css/main.f9c0a728.css.map",
-    "main.debf6d58.js.map": "/gursahibsingh/static/js/main.debf6d58.js.map",
-    "453.3635c158.chunk.js.map": "/gursahibsingh/static/js/453.3635c158.chunk.js.map"
+    "main.css": "./static/css/main.f9c0a728.css",
+    "main.js": "./static/js/main.323003df.js",
+    "static/js/453.3635c158.chunk.js": "./static/js/453.3635c158.chunk.js",
+    "static/media/thailand.jpg": "./static/media/thailand.eb62879b06e1403da66b.jpg",
+    "static/media/Resume_GursahibSingh.pdf": "./static/media/Resume_GursahibSingh.1b82dc00c556d0ab91c0.pdf",
+    "index.html": "./index.html",
+    "main.f9c0a728.css.map": "./static/css/main.f9c0a728.css.map",
+    "main.323003df.js.map": "./static/js/main.323003df.js.map",
+    "453.3635c158.chunk.js.map": "./static/js/453.3635c158.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f9c0a728.css",
-    "static/js/main.debf6d58.js"
+    "static/js/main.323003df.js"
   ]
 }
