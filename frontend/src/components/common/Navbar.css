@@ -11,14 +11,13 @@
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    color: var(--secondary-clr);
 }
 
 .nav-item:hover .nav-link{
     background-color: var(--secondary-clr);
-    color: var(--primary-clr);
     transition: background-color 300ms linear;
     font-size: 1.1rem;
+    border-radius: 0.25rem;
 }
 
 .custom-toggler.navbar-toggler {
@@ -32,6 +31,36 @@
 .navbar li {
     margin: 0 0.3125rem
 }
+
+/* Light navbar for home page */
+.navbar-light {
+    background-color: #ffffff; /* white */
+    color: var(--secondary-clr);
+}
+
+.navbar-light .nav-link {
+    color: var(--secondary-clr) !important;
+}
+
+.navbar-light .nav-link:hover {
+    color: var(--accent-clr) !important;
+}
+
+/* Dark navbar for other pages */
+.navbar-dark {
+    background-color: var(--secondary-clr);
+    background-image: linear-gradient(147deg, var(--secondary-clr) 0%, #000000 74%);
+}
+
+.navbar-dark .nav-link {
+    color: var(--primary-clr) !important;
+}
+
+.navbar-dark .nav-link:hover {
+    color: var(--secondary-clr) !important;
+    background-color: var(--accent-clr) !important;
+}
+
 
 @media (min-width: 768px) { 
     .nav-link {

@@ -1,5 +1,5 @@
 import {React, useState} from 'react'
-import { Switch, Route, Link, Redirect } from "react-router-dom"
+import { Switch, Route, Link, Redirect, useLocation } from "react-router-dom"
 
 import Home from '../home/Home'
 import Projects from '../projects/Projects'
@@ -20,10 +20,15 @@ import Resume from '../../static/media/Resume_GursahibSingh.pdf'
 
 export default function Navbar(props) {
     const [homeLink, setHomeLink] = useState(true);
+    const location = useLocation();
+
+    // If on home page, navbar is light; otherwise dark
+    const isHome = location.pathname === '/' || location.pathname === '/home';
+    const navbarClass = isHome ? 'navbar-light' : 'navbar-dark';
 
     return (
         <>
-        <nav className="navbar py-0 navbar-expand nav-full">
+        <nav className={`navbar py-0 navbar-expand nav-full ${navbarClass}`}>
         {/* <a className="navbar-brand py-0" href="http://gursahibsingh.herokuapp.com/home" style="color:rgb(255,255,255) ;font-size: 30px;font-family: Chilanka; marginLeft: 40px"><img src="{% static 'img/Logo (1).png' %}" alt=""></a>  */}
             <button className="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
