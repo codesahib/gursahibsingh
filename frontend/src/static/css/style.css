@@ -24,9 +24,9 @@
 /* Content */
 .content-heading{
     padding: var(--small-padding);
-    color: var(--accent-clr);
+    color: var(--secondary-clr);
     text-align: center;
-    font-family: var(--font-highlight);
+    font-family: var(--font-heading2);
     margin: auto;
     font-size: 2rem;
     padding: var(--medium-padding);
