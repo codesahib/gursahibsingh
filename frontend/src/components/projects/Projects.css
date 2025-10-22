@@ -1,131 +1,127 @@
-#projectsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 0;
-    padding: 1rem 0;
+/* Container & Category */
+.project-category {
+    width: 100%;
+    margin: 2rem 0;
 }
 
-.project {
+.category-title {
+    font-family: var(--font-heading2);
+    color: var(--secondary-clr);
+    margin-left: 10%;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* Card style */
+.project-card {
+    background-color: #ffffff83;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    width: 280px;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    box-shadow: 0 0 5px 2px var(--accent-clr);
-    align-items: center;
-    padding: 0.2rem 0 0.5rem;
-    margin: 1rem 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .project-title {
-    font-family: var(--font-highlight);
-    color: var(--secondary-clr);
-    font-size: 1rem;
+    font-size: 1.25rem;
+    color: #333333;
+    margin-bottom: 0.25rem;
     text-align: center;
 }
 
 .project-subtitle {
-    font-family: var(--font-text);
-    color: var(--accent-clr);
-    font-size: 0.75rem;
-}
-
-.project-detail *{
-    font-size: 0.75rem;
-}
-
-.button-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 0.5rem;
-}
-
-.button {
-    width: 3.5rem;
-    background-color: var(--secondary-clr);
-    color: var(--primary-clr);
-    border-radius: 12px;
-    font-family: var(--font-highlight);
-    font-size: 0.5rem;
-    box-shadow: 0 0 1px 1px var(--accent-clr);
+    font-size: 1rem;
+    color: #666666;
     text-align: center;
+    margin-bottom: 1rem;
 }
-
-.button:hover {
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--primary-clr);
-}
-
-
 
 .horizontal-line {
-    width: 40%
+    width: 40%;
+    height: 2px;
+    background-color: #eee;
+    margin: 0.5rem auto 1rem;
 }
 
-.project .text-highlight {
-
-    font-weight: bold;
+.project-detail .content-para {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
 }
 
-.project .content-para {
-    padding: 0.2rem 0.5rem
+/* Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: auto;
 }
 
+.btn {
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-family: var(--font-highlight);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-github {
+    background-color: var(--secondary-clr);
+    color: #fff;
+}
+
+.btn-github:hover {
+    background-color: #333;
+    color: var(--accent-clr)
+}
+
+.btn-demo {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-demo:hover {
+    background-color: #0056b3;
+    color: #fff
+}
+
+.btn-link {
+    background-color: var(--accent-clr);
+    color:  var(--secondary-clr);
+}
+
+.btn-link:hover {
+    background-color: var(--accent-clr);
+    color:  #fff
+}
+
+/* Responsive */
 @media (min-width: 768px) {
-    .button {
-        width: 4rem;
-        font-size: 0.75rem;
-    }
-    .project {
-        width: 80%;
-    }
-    .project-title{
-        font-size: 1.5rem;
-    }
-    .project-subtitle{
-        font-size: 1rem;
-    }
-    .project-detail *{
-        font-size: 1rem;
+    .project-card {
+        width: 300px;
+        padding: 1.5rem;
     }
 }
 
 @media (min-width: 992px) {
-    .button {
-        width: 4.5rem;
-        font-size: 1rem;
-    }
-    .project {
-        width: 80%;
-    }
-    .project-title{
-        font-size: 2rem;
-    }
-    .project-subtitle{
-        font-size: 1.25rem;
-    }
-    .project-detail *{
-        font-size: 1.25rem;
-    }
-}
-
-@media (min-width: 1200px) { 
-    .button {
-        width: 5rem;
-        font-size: 1.25rem;
-    }
-    .project {
-        width: 60%;
-    }
-    .project-title{
-        font-size: 2.5rem;
-    }
-    .project-subtitle{
-        font-size: 1.5rem;
-    }
-    .project-detail *{
-        font-size: 1.5rem;
+    .project-card {
+        width: 320px;
     }
 }
