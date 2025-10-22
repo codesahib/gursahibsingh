@@ -1,43 +1,58 @@
-import { React, useEffect } from 'react'
-import Timeline from './Timeline'
+import { React, useEffect } from 'react';
+import Timeline from './Timeline';
 
-import '../../static/css/style.css'
-
-import './Home.css'
+import '../../static/css/style.css';
+import './Home.css';
 
 export default function Home(props) {
-    // To resolve cannot update a component while rendering a different component warning
-    useEffect(()=>{
-        props.show_banner(true)
-        props.show_home_link(false)
-    })
-    
-    document.title = "Home | Gursahib Singh"
-    
-    return (
-        <>
-        <div className="homeComponent">
-            <div className="section" style={{backgroundColor: "#4d4855"}}>
-                <h1 className="content-heading">ABOUT</h1>     
-                <div className="section-part-large" style={{backgroundColor: "#FCFCF5"}}>
-                    <p className="content-para text-dark"> I belong to that category of people who love to question things that we come across on daily basis. I just love exercising my body & mind (this has a much deeper meaning). I don't complicate things and stay away from formalities. I come from Ludhiana(India), a city that has been my home from infancy till adolescence. Then I moved to Patiala(India) for my undergraduate degree to finally calling Waterloo as my home.</p>
-                    <p className="content-para text-dark"> I worked as Senior Member Technical Staff at Siemens EDA for more than 2 years. Feeling a need to upgrade my skills, I pursued my Master of Engineering from University of Waterloo. Along with my Masters, I earned a diploma in Business and Entrepreneurship. During my Masters, I did 2 full stack developer internships. Currently, I'm working as a Software Developer at Siemens, Kitchener.</p>
-                </div>
-            </div>
+  useEffect(() => {
+    props.show_banner(true);
+    props.show_home_link(false);
+  }, [props]);
 
-            <div className="section">
-                <h1 className="content-heading">Academic/Work History</h1>
-                <Timeline/>
-            </div>
+  document.title = "Home | Gursahib Singh";
 
-            {/* Do not include Blogs section*/}
-            {/* <div className="section">
-                <h1 className="content-heading">Blogs</h1>
-                <div className="section-part-large">
-                    <p className="content-para text-dark"> I'm not a professional blog writer but I do like to express my experiences. My first blog describes the experiences from my Thailand trip which can be used as a guide for a better vacation time.</p>
-                </div>
-            </div> */}
+  return (
+    <div className="homeComponent">
+
+      {/* About Section */}
+      <div className="section">
+    <h2 className="content-heading">ABOUT</h2>
+    <div className="about-cards">
+        <div className="about-card">
+            <h3>🌍 Life Journey</h3>
+            <p>
+                Born & raised in <strong>Ludhiana</strong>, moved to <strong>Patiala</strong> for undergrad, and finally called <strong>Waterloo</strong> home. Survived childhood, coffee, and Canadian snow.
+            </p>
         </div>
-        </>
-    )
+
+       <div className="about-card">
+            <h3>💻 Work & Skills</h3>
+            <p>Languages? I speak fluent code… and sarcasm 🐍⚡🖖📜</p>
+            <p>Web stuff? I make websites dance and APIs sing ⚛️🚀🐍🎛️🔗</p>
+            <p>Databases? I speak SQL, NoSQL, and slightly dramatic queries 💾🍃🐘</p>
+            <p>Tools & Cloud? I wrestle servers and tame cloud dragons ☁️🐳🔊🔧🐧✉️📝</p>
+            <p>Software Engineering? I write code that even my past self can understand 🏗️🎨🔍📝🤖⚙️🌐</p>
+        </div>
+
+        <div className="about-card">
+            <h3>😎 Personality</h3>
+            <p>
+                Always questioning “how?” and “why?” 🤔 <br />
+                Mental & physical fitness enthusiast 🏋️‍♂️ <br />
+                Loves coding, debugging, breaking stuff, and occasionally fixing it 🔧
+            </p>
+        </div>
+    </div>
+</div>
+
+
+      {/* Academic / Work History */}
+      <div className="section">
+        <h2 className="content-heading">Academic / Work History</h2>
+        <Timeline />
+      </div>
+
+    </div>
+  );
 }
