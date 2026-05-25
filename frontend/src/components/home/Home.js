@@ -10,49 +10,45 @@ export default function Home(props) {
     props.show_home_link(false);
   }, [props]);
 
-  document.title = "Home | Gursahib Singh";
+  document.title = 'Home | Gursahib Singh';
 
   return (
     <div className="homeComponent">
-
-      {/* About Section */}
-      <div className="section">
-    <h2 className="content-heading">ABOUT</h2>
-    <div className="about-cards">
-        <div className="about-card">
-            <h3>🌍 Life Journey</h3>
+      <section className="section home-intro-section">
+        <h2 className="content-heading">About</h2>
+        <p className="home-summary">
+          Software Engineer focused on building reliable products with clean APIs,
+          practical architecture, and strong delivery habits.
+        </p>
+        <div className="about-cards">
+          <article className="about-card">
+            <h3>What I Build</h3>
             <p>
-                Born & raised in <strong>Ludhiana</strong>, moved to <strong>Patiala</strong> for undergrad, and finally called <strong>Waterloo</strong> home. Survived childhood, coffee, and Canadian snow.
+              Full-stack web applications and backend services with emphasis on
+              performance, maintainability, and clear user value.
             </p>
-        </div>
-
-       <div className="about-card">
-            <h3>💻 Work & Skills</h3>
-            <p>Languages? I speak fluent code… and sarcasm 🐍⚡🖖📜</p>
-            <p>Web stuff? I make websites dance and APIs sing ⚛️🚀🐍🎛️🔗</p>
-            <p>Databases? I speak SQL, NoSQL, and slightly dramatic queries 💾🍃🐘</p>
-            <p>Tools & Cloud? I wrestle servers and tame cloud dragons ☁️🐳🔊🔧🐧✉️📝</p>
-            <p>Software Engineering? I write code that even my past self can understand 🏗️🎨🔍📝🤖⚙️🌐</p>
-        </div>
-
-        <div className="about-card">
-            <h3>😎 Personality</h3>
+          </article>
+          <article className="about-card">
+            <h3>How I Work</h3>
             <p>
-                Always questioning “how?” and “why?” 🤔 <br />
-                Mental & physical fitness enthusiast 🏋️‍♂️ <br />
-                Loves coding, debugging, breaking stuff, and occasionally fixing it 🔧
+              I prefer simple designs, thoughtful trade-offs, testable code, and
+              collaborative execution from planning to production.
             </p>
+          </article>
+          <article className="about-card">
+            <h3>Where I Add Value</h3>
+            <p>
+              Turning ambiguous requirements into shippable software while keeping
+              code quality and product experience balanced.
+            </p>
+          </article>
         </div>
-    </div>
-</div>
+      </section>
 
-
-      {/* Academic / Work History */}
-      <div className="section">
-        <h2 className="content-heading">Academic / Work History</h2>
+      <section className="section timeline-section">
+        <h2 className="content-heading">Experience Timeline</h2>
         <Timeline />
-      </div>
-
+      </section>
     </div>
   );
 }

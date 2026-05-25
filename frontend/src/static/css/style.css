@@ -1,130 +1,35 @@
-/* Sections */
-.section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    padding: 0.625rem 0;
+.section {
+  width: 100%;
 }
 
-.section-part-large{
-    flex: 0 1;
-    flex-direction: column;
-    width: 85%;
-
+.content-heading {
+  margin: 0 0 var(--space-3);
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  letter-spacing: -0.01em;
 }
 
-.section-part-large, .section-part-small{
-    display: flex;
-    align-items: flex-start;
-}
-/* ************* */
-
-/* Content */
-.content-heading{
-    padding: var(--small-padding);
-    color: var(--secondary-clr);
-    text-align: center;
-    font-family: var(--font-heading2);
-    margin: auto;
-    font-size: 2rem;
-    padding: var(--medium-padding);
+.content-para {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
 }
 
-.content-para{
-    font-family: var(--font-text);
-    font-size: 1rem;
-    text-align: justify;
-    padding: var(--small-padding);
-    display: block;
-    margin: 0;
-}
-/* ************* */
-
-.vertical-line{
-    height: 10rem;
-    border: 0.25rem solid var(--accent-clr);;
-    border-radius: 0.25rem;
+.horizontal-line,
+.vertical-line,
+.right-border,
+.left-border {
+  display: none;
 }
 
-.horizontal-line{
-    width: 10rem;
-    height: 1px;
-    background-color: var(--accent-clr);
-}
-
-/* Utilities */
-.right-border{
-    border-right: 0.25rem solid var(--accent-clr);
-    border-radius: 0.25rem;
-}
-
-.left-border{
-    border-left: 0.25rem solid var(--accent-clr);
-    border-radius: 0.25rem;
-}
-
-.text-light{
-    color: var(--primary-clr);
-}
-
-.text-dark{
-    color: var(--secondary-clr);
-}
-
-.text-highlight {
-    color: var(--accent-clr);
-}
-.dark-bg{
-    background-color: var(--secondary-clr);
-}
-
-.light-bg{
-    background-color: var(--primary-clr);
-}
-
+.text-light,
+.text-dark,
+.text-highlight,
+.dark-bg,
+.light-bg,
 .bold {
-    font-weight: bold;
-}
-/* ************* */
-/* Extra small devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    .content-para {
-        font-size: 1.25rem;
-    }
-    .section-part-large {
-        flex-direction: row;
-    }
-    .content-heading {
-        font-size: 2.25rem;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    .content-para {
-        font-size: 1.5rem;
-    }
-    .section-part-large{
-        width: 75%;
-    }
-    .content-heading {
-        font-size: 2.5rem;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    .content-heading {
-        font-size: 3rem;
-    }
+  color: inherit;
+  background: none;
+  font-weight: inherit;
 }

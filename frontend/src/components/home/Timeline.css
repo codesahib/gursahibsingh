@@ -1,64 +1,42 @@
-#timelineComponent *{
-    z-index: 0;
+#timelineComponent * {
+  z-index: 0;
+}
+
+#timelineComponent .timeline-main-wrapper {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
 }
 
 #timelineComponent .card-title {
-    font-size: 0.95rem ;
+  font-size: 0.95rem;
 }
 
-#timelineComponent .card-sub-title, #timelineComponent .card-description p{
-    font-size: 0.75rem;
+#timelineComponent .card-sub-title,
+#timelineComponent .card-description p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
 #timelineComponent .timeline-item-title {
-    font-size: 0.7rem;
+  font-size: 0.78rem;
 }
 
-.timeline-card-content{
-    padding: 0 10px
+.timeline-card-content {
+  padding: 0 10px;
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    #timelineComponent .card-title {
-        font-size: 1.1rem ;
-    }
-    
-    #timelineComponent .card-sub-title, #timelineComponent .card-description p{
-        font-size: 0.9rem;
-    }
-    
-    #timelineComponent .timeline-item-title {
-        font-size: 0.95rem;
-    }
-}
+@media (min-width: 768px) {
+  #timelineComponent .card-title {
+    font-size: 1rem;
+  }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    #timelineComponent .card-title {
-        font-size: 1.25rem ;
-    }
-    
-    #timelineComponent .card-sub-title, #timelineComponent .card-description p{
-        font-size: 1.05rem;
-    }
-    
-    #timelineComponent .timeline-item-title {
-        font-size: 1.1rem;
-    }
-}
+  #timelineComponent .card-sub-title,
+  #timelineComponent .card-description p {
+    font-size: 0.9rem;
+  }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    #timelineComponent .card-title {
-        font-size: 1.4rem ;
-    }
-    
-    #timelineComponent .card-sub-title, #timelineComponent .card-description p{
-        font-size: 1.2rem;
-    }
-    
-    #timelineComponent .timeline-item-title {
-        font-size: 1.25rem;
-    }
+  #timelineComponent .timeline-item-title {
+    font-size: 0.85rem;
+  }
 }

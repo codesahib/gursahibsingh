@@ -6,20 +6,26 @@ import './Timeline.css'
 export default function Timeline() {
     const items = [
         {
-            title: "2023-Present",
-            cardTitle: "Full time job",
+            title: "2025-Present",
+            cardTitle: "Full-time Role",
+            cardSubtitle:"Full stack Developer",
+            cardDetailedText: "Brickeye, Toronto"
+        },
+        {
+            title: "2023-2025",
+            cardTitle: "Full-time Role",
             cardSubtitle:"Software Developer",
             cardDetailedText: "Siemens, Kitchener"
         },
         {
             title: "2023",
-            cardTitle: "Full time job",
+            cardTitle: "Full-time Role",
             cardSubtitle:"Software Developer",
             cardDetailedText: "ShyftLabs, Toronto"
         },
         {
             title: "2023",
-            cardTitle: "Full time job",
+            cardTitle: "Full-time Role",
             cardSubtitle:"Full Stack Developer",
             cardDetailedText: "BluekeyAI, Toronto"
         },
@@ -32,32 +38,32 @@ export default function Timeline() {
         {
             title: "2021-2022",
             cardTitle: "Master of Engineering",
-            cardSubtitle:"ECE (Diploma in Business and Entrepreneurship)",
+            cardSubtitle:"ECE + Business and Entrepreneurship Diploma",
             cardDetailedText: "University of Waterloo"
         },
         {
             title: "2019-2021",
-            cardTitle: "Full time job",
+            cardTitle: "Full-time Role",
             cardSubtitle:"Senior Member Technical Staff",
-            cardDetailedText: "Siemens EDA(Mentor Graphics), Noida"
+            cardDetailedText: "Siemens EDA (Mentor Graphics), Noida"
         },
         {
             title: "2019",
             cardTitle: "Internship",
             cardSubtitle:"Software Intern",
-            cardDetailedText: "Siemens EDA(Mentor Graphics), Noida"
+            cardDetailedText: "Siemens EDA (Mentor Graphics), Noida"
         }
     ];
 
     const theme={
-        primary: "#4d4855",
-        secondary: "#C4B993",
-        cardForeColor: "#C4B993"
+        primary: "#0f172a",
+        secondary: "#e2e8f0",
+        cardForeColor: "#0f172a"
     }
 
     return (
         <div id="timelineComponent">
-            <Chrono items={items} mode="VERTICAL_ALTERNATING" theme={theme}  cardHeight={100} useReadMore={false} disableNavOnKey={true} hideControls/>
+            <Chrono items={items} mode="VERTICAL_ALTERNATING" theme={theme} cardHeight={100} useReadMore={false} disableNavOnKey={true} hideControls/>
         </div>
     )
 }

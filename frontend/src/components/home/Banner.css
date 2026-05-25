@@ -1,36 +1,28 @@
-#bannerComponent{
-    height: 100vh;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-/* background-color: #000000;
-background-image: linear-gradient(315deg, #000000 0%, #414141 74%); */
-
-    /* background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%); */
-    background-color: var(--secondary-clr);
-    background-image: linear-gradient(147deg, var(--secondary-clr) 0%, #000000 74%);
-    
+#bannerComponent {
+  width: 100%;
+  padding: 5rem 1rem 3rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-tint) 100%);
+  border-bottom: 1px solid var(--border);
 }
 
 #bannerContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--primary-clr);
+  max-width: var(--container);
+  margin: 0 auto;
+  color: var(--text);
 }
 
 #bannerIntro {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5rem;
+  display: block;
+  font-size: 0.95rem;
+  color: var(--accent-2);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
 }
 
 #bannerName {
-    font-family: orbitron;
-    font-size: 4rem;
-    text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
 }
