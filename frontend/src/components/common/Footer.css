@@ -1,13 +1,13 @@
 .page-footer {
   border-top: 1px solid var(--border);
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   margin-top: var(--space-5);
 }
 
 .footer-main {
   max-width: var(--container);
   margin: 0 auto;
-  padding: var(--space-5) var(--space-3);
+  padding: var(--space-4) var(--space-3);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -18,7 +18,8 @@
 .footer-heading {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  color: var(--accent-2);
 }
 
 .footer-links {
@@ -32,11 +33,19 @@
 .footer-social a {
   color: var(--text-muted);
   text-decoration: none;
+  word-break: break-word;
 }
 
 .footer-social {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-2);
+}
+
+.footer-email:hover,
+.footer-social a:hover,
+.footer-bottom a:hover {
+  color: var(--accent);
 }
 
 .footer-bottom {
@@ -55,18 +64,16 @@
   color: var(--text);
   text-decoration: none;
 }
-.page-footer {
-  border-top: 1px solid var(--border);
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-  margin-top: var(--space-5);
-}
 
-.footer-heading {
-  color: var(--accent-2);
-}
+@media (max-width: 640px) {
+  .footer-main {
+    align-items: flex-start;
+  }
 
-.footer-email:hover,
-.footer-social a:hover,
-.footer-bottom a:hover {
-  color: var(--accent);
+  .footer-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
 }

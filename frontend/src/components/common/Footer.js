@@ -13,11 +13,14 @@ export default function Footer() {
             iamgursahib@gmail.com
           </a>
           <div className="footer-social">
-            <a href="https://www.linkedin.com/in/gursahib-singh-04849b156/" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/singh-gursahib" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
             <a href="https://github.com/codesahib" target="_blank" rel="noopener noreferrer">
               GitHub
+            </a>
+            <a href="https://codesahib.com" target="_blank" rel="noopener noreferrer">
+              Website
             </a>
           </div>
         </div>
@@ -25,7 +28,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>
-          Copyright 2026 • <Link to="/">gursahibsingh</Link>
+          Copyright 2026 | <Link to="/">codesahib.com</Link>
         </p>
       </div>
     </footer>

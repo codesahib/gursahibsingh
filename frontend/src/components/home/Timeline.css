@@ -9,17 +9,17 @@
 }
 
 #timelineComponent .card-title {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 #timelineComponent .card-sub-title,
 #timelineComponent .card-description p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
 }
 
 #timelineComponent .timeline-item-title {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
 }
 
 .timeline-card-content {

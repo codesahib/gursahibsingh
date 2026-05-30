@@ -1,6 +1,6 @@
 #bannerComponent {
   width: 100%;
-  padding: 5rem 1rem 3rem;
+  padding: clamp(3.5rem, 8vw, 5rem) 1rem clamp(2rem, 5vw, 3rem);
   background: linear-gradient(180deg, #ffffff 0%, var(--surface-tint) 100%);
   border-bottom: 1px solid var(--border);
 }
@@ -9,6 +9,7 @@
   max-width: var(--container);
   margin: 0 auto;
   color: var(--text);
+  padding: 0 var(--space-2);
 }
 
 #bannerIntro {
@@ -21,7 +22,7 @@
 
 #bannerName {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-size: clamp(1.8rem, 7vw, 3.25rem);
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin: 0;

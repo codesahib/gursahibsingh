@@ -7,51 +7,51 @@ export default function Timeline() {
     const items = [
         {
             title: "2025-Present",
-            cardTitle: "Full-time Role",
-            cardSubtitle:"Full stack Developer",
-            cardDetailedText: "Brickeye, Toronto"
+            cardTitle: "Brickeye",
+            cardSubtitle:"Full-stack Developer",
+            cardDetailedText: "North York, ON"
         },
         {
             title: "2023-2025",
-            cardTitle: "Full-time Role",
+            cardTitle: "Siemens Canada Limited",
             cardSubtitle:"Software Developer",
-            cardDetailedText: "Siemens, Kitchener"
+            cardDetailedText: "Kitchener, ON"
         },
         {
             title: "2023",
-            cardTitle: "Full-time Role",
+            cardTitle: "ShyftLabs",
             cardSubtitle:"Software Developer",
-            cardDetailedText: "ShyftLabs, Toronto"
+            cardDetailedText: "Toronto, ON"
         },
         {
-            title: "2023",
-            cardTitle: "Full-time Role",
+            title: "2022-2023",
+            cardTitle: "Bluekey AI",
             cardSubtitle:"Full Stack Developer",
-            cardDetailedText: "BluekeyAI, Toronto"
+            cardDetailedText: "Toronto, ON"
         },
         {
             title: "2022",
-            cardTitle: "Internship",
-            cardSubtitle:"Full Stack Developer, UbiLab",
-            cardDetailedText: "University of Waterloo"
+            cardTitle: "UbiLab, University of Waterloo",
+            cardSubtitle:"Full Stack Developer Intern",
+            cardDetailedText: "Waterloo, ON"
         },
         {
             title: "2021-2022",
-            cardTitle: "Master of Engineering",
-            cardSubtitle:"ECE + Business and Entrepreneurship Diploma",
-            cardDetailedText: "University of Waterloo"
+            cardTitle: "University of Waterloo",
+            cardSubtitle:"Master of Engineering, ECE (GPA 90.75%)",
+            cardDetailedText: "Waterloo, ON"
         },
         {
             title: "2019-2021",
-            cardTitle: "Full-time Role",
+            cardTitle: "Siemens EDA (Mentor Graphics)",
             cardSubtitle:"Senior Member Technical Staff",
-            cardDetailedText: "Siemens EDA (Mentor Graphics), Noida"
+            cardDetailedText: "Noida, India"
         },
         {
             title: "2019",
-            cardTitle: "Internship",
+            cardTitle: "Siemens EDA (Mentor Graphics)",
             cardSubtitle:"Software Intern",
-            cardDetailedText: "Siemens EDA (Mentor Graphics), Noida"
+            cardDetailedText: "Noida, India"
         }
     ];
 

@@ -1,5 +1,6 @@
 import { React, useEffect } from 'react';
 import Timeline from './Timeline';
+import SkillConstellation from './SkillConstellation';
 
 import '../../static/css/style.css';
 import './Home.css';
@@ -17,32 +18,37 @@ export default function Home(props) {
       <section className="section home-intro-section">
         <h2 className="content-heading">About</h2>
         <p className="home-summary">
-          Software Engineer focused on building reliable products with clean APIs,
-          practical architecture, and strong delivery habits.
+          Software Engineer with 5+ years of experience across IoT, e-commerce, EdTech,
+          and EDA, building AI-native and data-driven products for enterprise and startup teams.
         </p>
         <div className="about-cards">
           <article className="about-card">
             <h3>What I Build</h3>
             <p>
-              Full-stack web applications and backend services with emphasis on
-              performance, maintainability, and clear user value.
+              Scalable full-stack platforms, domain-driven APIs, event-driven systems,
+              and LLM-powered workflows that solve real business problems.
             </p>
           </article>
           <article className="about-card">
-            <h3>How I Work</h3>
+            <h3>How I Deliver</h3>
             <p>
-              I prefer simple designs, thoughtful trade-offs, testable code, and
-              collaborative execution from planning to production.
+              I combine architecture, testing, and CI/CD discipline to improve throughput,
+              reduce defects, and keep teams shipping with confidence.
             </p>
           </article>
           <article className="about-card">
-            <h3>Where I Add Value</h3>
+            <h3>Leadership and Impact</h3>
             <p>
-              Turning ambiguous requirements into shippable software while keeping
-              code quality and product experience balanced.
+              STAR Award recipient at Siemens, with experience mentoring developers and
+              leading high-impact initiatives from requirement to production.
             </p>
           </article>
         </div>
+      </section>
+
+      <section className="section skills-section">
+        <h2 className="content-heading">Tech Skills</h2>
+        <SkillConstellation />
       </section>
 
       <section className="section timeline-section">

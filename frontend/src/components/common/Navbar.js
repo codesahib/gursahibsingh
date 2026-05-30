@@ -18,12 +18,12 @@ export default function Navbar(props) {
 
     return (
         <>
-        <nav className={`navbar py-0 navbar-expand nav-full ${navbarClass}`}>
-            <button className="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
+        <nav className={`navbar py-0 navbar-expand-md nav-full ${navbarClass}`}>
             <div className="container">
+                <button className="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
                 <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
                     <ul className="navbar-nav mx-auto text-md-center text-left">
 

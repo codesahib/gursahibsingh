@@ -4,62 +4,102 @@ import './Projects.css';
 
 const projectData = [
   {
-    category: 'AI / ML',
+    category: 'AI and Intelligent Systems',
     projects: [
       {
-        title: 'AI-Powered IoT Alert Analysis (PoC)',
-        subtitle: 'Python, LangChain, LLMs, IoT Logs',
+        title: 'AI-Powered IoT Alert Analysis (Siemens PoC)',
+        subtitle: 'LangChain, LLMs, IoT Logs, Kibana',
         objective:
-          'Automated anomaly summaries and root-cause guidance to reduce manual triage effort.',
+          'Built an anomaly summarization and root-cause explanation workflow that reduced diagnostic time by 45%.',
+      },
+      {
+        title: 'Standardized Admission Data Parser (Bluekey AI)',
+        subtitle: 'AWS Services, Parsing Pipelines, EdTech Data',
+        objective:
+          'Reduced manual admission data entry by 80% and supported a 25% increase in user engagement.',
       },
       {
         title: 'Talk-to-My-CSV',
         subtitle: 'Streamlit, LangChain, Ollama, Chroma',
         objective:
-          'Natural language querying over CSV data for faster, code-free analysis.',
+          'Built a natural-language interface to query CSV datasets without writing SQL or code.',
+      },
+      {
+        title: 'Optimal Cryptocurrency Portfolio Selection',
+        subtitle: 'Python, NumPy, Pandas, Genetic Algorithm',
+        objective:
+          'Modeled portfolio optimization using mutation, crossover, and selection strategies.',
+        github: 'https://github.com/codesahib/Optimal-crypto-portfolio.git',
+        demo: 'https://youtu.be/hmrj1J-Pwkk'
+      }
+    ],
+  },
+  {
+    category: 'Platform and Architecture',
+    projects: [
+      {
+        title: 'IoT/SaaS Greenfield Platform Delivery (Brickeye)',
+        subtitle: 'BMAD Workflow, Domain-Driven Design, CI/CD',
+        objective:
+          'Led end-to-end AI-assisted delivery workflow with stronger traceability and higher engineering throughput.',
+      },
+      {
+        title: 'Scalable Alerts and Events Pipeline (Brickeye)',
+        subtitle: 'Kafka, Kafka Streams, Event-Driven Architecture',
+        objective:
+          'Improved throughput and reduced latency for a high-traffic event system powering production alerts.',
+      },
+      {
+        title: 'Google IoT Middleware Integration',
+        subtitle: 'Kafka, GCP, Terraform, UDMI',
+        objective:
+          'Built a reliable Kafka-to-UDMI ingestion pipeline with improved observability and infra automation.',
       },
     ],
   },
   {
-    category: 'Software Engineering',
+    category: 'Product Engineering and Delivery',
     projects: [
       {
-        title: 'Smart Lighting for Microsoft (Corporate)',
-        subtitle: 'Python, MQTT, Docker',
+        title: 'Smart Lighting System for Microsoft',
+        subtitle: 'IoT Telemetry, Secure Provisioning, Real-Time Control',
         objective:
-          'Contributed to a large-scale lighting control platform handling real-time sensor streams.',
+          'Led development for a $9M deployment across 9 buildings with delivery completed in 6 months.',
       },
-      {
-        title: 'IoT Middleware for Google (Corporate)',
-        subtitle: 'Java, Python, GCP, MQTT, REST',
-        objective:
-          'Built middleware to route sensor data reliably between enterprise IoT systems.',
-      },
-    ],
-  },
-  {
-    category: 'Full Stack Applications',
-    projects: [
       {
         title: 'Dynamic Pricing Engine for Petco',
-        subtitle: 'React, Node.js, PostgreSQL, Redux',
+        subtitle: 'React, Node.js, PostgreSQL, GraphQL, Redux',
         objective:
-          'Built a pricing engine for dynamic product pricing with business-rule-driven updates.',
+          'Delivered full-stack pricing automation and improved data processing efficiency by 25%.',
+      },
+      {
+        title: 'Contract and E2E Quality Strategy',
+        subtitle: 'Pact, Playwright, CI Quality Gates',
+        objective:
+          'Introduced automated integration and E2E testing practices that improved release reliability.',
       },
       {
         title: 'ShareMyGaddi',
         subtitle: 'React, Node.js, MongoDB, REST',
         objective:
-          'Developed a full-stack carpooling app with API-driven architecture.',
+          'Developed a full-stack carpooling platform with API-driven architecture and scalable backend modules.',
         github: 'https://github.com/karancode-singh/ShareMyGaddi-carpooling',
+      },
+      {
+        title: 'Project-ToDo',
+        subtitle: 'React, MongoDB',
+        objective:
+          'Built a project-centric to-do web application where each project maintains its own task lifecycle.',
+        github: 'https://github.com/codesahib/Project-ToDo/tree/master/frontend',
+        link: 'https://codesahib.github.io/Project-ToDo/'
       },
       {
         title: 'Portfolio Website',
         subtitle: 'React, Static Deployment',
-        objective: 'Designed and built a personal portfolio focused on clarity and usability.',
+        objective: 'Designed and built a personal portfolio focused on clarity, usability, and professional storytelling.',
         github: 'https://github.com/codesahib/gursahibsingh',
-        link: '/',
-      },
+        link: '/'
+      }
     ],
   },
 ];
@@ -75,8 +115,8 @@ export default function Projects(props) {
   return (
     <div id="projectComponent">
       <header className="projects-header">
-        <h1>Projects</h1>
-        <p>Selected work across AI, software engineering, and full-stack product development.</p>
+        <h1>Selected Work</h1>
+        <p>Experience-backed project highlights aligned with business impact and engineering outcomes.</p>
       </header>
 
       {projectData.map((category) => (
@@ -88,19 +128,19 @@ export default function Projects(props) {
                 <h3 className="project-title">{proj.title}</h3>
                 <p className="project-subtitle">{proj.subtitle}</p>
                 <p className="project-objective">{proj.objective}</p>
-                <div className="button-container">
-                  {proj.github && (
-                    <a className="btn btn-primary" href={proj.github} target="_blank" rel="noopener noreferrer">
-                      GitHub
-                    </a>
-                  )}
-                  {proj.demo && (
-                    <a className="btn btn-secondary" href={proj.demo} target="_blank" rel="noopener noreferrer">
-                      Demo
-                    </a>
-                  )}
-                  {proj.link &&
-                    (proj.link.startsWith('https://') ? (
+                {(proj.github || proj.demo || proj.link) && (
+                  <div className="button-container">
+                    {proj.github && (
+                      <a className="btn btn-primary" href={proj.github} target="_blank" rel="noopener noreferrer">
+                        GitHub
+                      </a>
+                    )}
+                    {proj.demo && (
+                      <a className="btn btn-secondary" href={proj.demo} target="_blank" rel="noopener noreferrer">
+                        Demo
+                      </a>
+                    )}
+                    {proj.link && (proj.link.startsWith('https://') ? (
                       <a className="btn btn-secondary" href={proj.link} target="_blank" rel="noopener noreferrer">
                         Link
                       </a>
@@ -109,7 +149,8 @@ export default function Projects(props) {
                         Link
                       </Link>
                     ))}
-                </div>
+                  </div>
+                )}
               </article>
             ))}
           </div>
