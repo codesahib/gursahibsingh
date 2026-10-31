@@ -71,6 +71,11 @@
     .project-body p { margin:0 0 12px; }
     .project-body .mono { font-size:10px; color:var(--blue); display:block; margin:16px 0 5px; }
     .project-body a { text-decoration:underline; text-underline-offset:4px; }
+    .project-preview { margin:0 0 24px; }
+    .project-preview a { display:block; border:1px solid var(--line); border-radius:7px; overflow:hidden; }
+    .project-preview a:hover { border-color:var(--blue); }
+    .project-preview img { display:block; width:100%; height:auto; }
+    .project-preview figcaption { margin-top:10px; color:var(--muted); font:10px/1.7 var(--mono); }
     .project.featured { border-left:2px solid var(--blue); padding-left:16px; }
     .project.featured .project-name { color:var(--blue); }
     .project.featured .project-body { margin-left:41px; }
