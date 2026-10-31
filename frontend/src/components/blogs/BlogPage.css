@@ -1,53 +1,17 @@
-#blogPageComponent {
-    padding: 2rem;
-}
-
-#blogContianer {
-    margin: 1.25rem 0;
-}
-
-.blog-title {
-    padding: var(--small-padding);
-    color: var(--accent-clr);
-    text-align: center;
-    font-family: var(--font-highlight);
-    font-size: 3rem;
-}
-
-.blog-heading {
-    text-align: center;
-    margin: 1rem 0 0.25rem;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2rem;
-}
-
-.blog-subheading{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.25rem;
-    text-decoration: underline;
-    text-decoration-color: var(--accent-clr);
-}
-
-.blog-list-item {
-    font-family: var(--font-text);
-}
-
-.blog-text-highlight {
-    color: var(--accent-clr);
-}
-
-#blogContianer li{
-    font-family: var(--font-text);
-}
-
-.blog-not-available {
-    width: 100%;
-    height: 70vh;
-    font-size: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary-clr);
-    font-family: orbitron;
-    text-align: center;
-}
+.travel-page { width:min(850px,100%); margin:auto; padding:0 0 35px; }
+.travel-page > .eyebrow { margin:48px 0 20px; }
+.travel-page .archive-note { padding:16px 20px; border-left:3px solid var(--blue); background:color-mix(in srgb,var(--blue) 6%,transparent); font:14px/1.7 Arial,sans-serif; }
+.travel-page .cover { width:100%; height:auto; aspect-ratio:1.9; object-fit:cover; margin:28px 0 0; }
+.travel-page article { font:18px/1.75 Georgia,'Times New Roman',serif; padding:10px 0 40px; }
+.travel-page h1,.travel-page h3,.travel-page h5,.travel-page h6 { font-family:Arial,Helvetica,sans-serif; line-height:1.2; letter-spacing:-.04em; }
+.travel-page h1 { font-size:clamp(40px,8vw,76px); margin:32px 0 24px; }
+.travel-page h3 { font-size:30px; margin:42px 0 16px; }
+.travel-page h5,.travel-page h6 { font-size:20px; margin:24px 0 12px; }
+.travel-page p { margin:0 0 20px; }
+.travel-page ul { padding-left:25px; }
+.travel-page li { margin:10px 0; }
+.travel-page hr { border:0; border-top:1px solid var(--line); margin:30px 0; }
+.travel-page .bold { font-weight:bold; }
+.travel-page .blog-text-highlight,.travel-page a { color:var(--blue); }
+.travel-page .article-back { font:13px var(--mono); }
+@media(max-width:480px) { .travel-page article { font-size:17px; } .travel-page .archive-note { padding:12px 14px; } }

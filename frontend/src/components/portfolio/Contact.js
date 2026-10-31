@@ -1,0 +1,2 @@
+import React from 'react';
+export default function Contact() { return (<section className="contact" id="contact" aria-labelledby="contact-heading"><p className="eyebrow">05 / Keep in touch</p><h2 style={{ margin: 0 }}><a className="contact-heading" id="contact-heading" href="mailto:iamgursahib@gmail.com">Let’s compare notes ↗</a></h2><p>A project, a question, or a simple hello.<br /><a className="text-link" href="mailto:iamgursahib@gmail.com">iamgursahib@gmail.com</a></p></section>); }

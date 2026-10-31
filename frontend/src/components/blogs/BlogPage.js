@@ -1,30 +1,22 @@
-import {React, useEffect } from 'react'
-import { withRouter } from 'react-router-dom'
-
-import './BlogPage.css'
-
-function BlogPage(props) {
-    // To resolve cannot update a component while rendering a different component warning
-    useEffect(()=>{
-        props.show_banner(false)
-        props.show_home_link(true)
-    })
-    
-    const blog_name = props.match.params.blog_name;
-
-    return (
-        <div id="blogPageComponent">
-            {blog_name === "thailand"?
-            <div id="blogContainer">
-                <h1 class="blog-title">THAILAND 2019 :)</h1>
+import React from 'react';
+import SectionLink from '../common/SectionLink';
+import usePageTitle from '../common/usePageTitle';
+import thailand from '../../static/img/thailand.jpg';
+import './BlogPage.css';
+export default function BlogPage() { usePageTitle('Thailand 2019 | Gursahib Singh'); return (<main id="main" className="travel-page">
+<p className="eyebrow">Travel notes / December 2019</p>
+<p className="archive-note">From the archive: these are my original December 2019 trip notes. Prices, transport details, and permit observations describe that trip; they are not current travel guidance.</p>
+<img className="cover" src={thailand} alt="Turquoise water and long-tail boats between limestone cliffs in Thailand" width="1000" height="667" />
+<article>
+<h1 className="blog-title">THAILAND 2019 :)</h1>
                 <p className="content-para">Hi! This post will cover the basic expenses+itenary+other details about my trip to Thailand in Dec 2019.</p>
                 <p className="content-para bold">DISCALIMER: The details or figures are true as on Dec 2019. They might change in future.</p>
-                <hr></hr>
+                <hr />
                 <h3 className="blog-heading">Introduction</h3>
                 <p className="content-para"> It was a fairly less thought-over decision to go for Thailand this winter and I would thank the quickness of the decision as it kept out the unnecesaary doubts and questioning. So it was a backpacking style of travel so my itenary and cost would not really suit family trips. But I'm going to mention the extra amount of cost and an alternative itenary for sure.</p>
                 <h3 className="blog-heading">Cost</h3>
                 <p className="content-para">The entire trip costed me for around 35k but this might not be true for everyone. I didn't eat Indian food and tried every bit of local Thai food so that helped saving the cost. Also, we didn't take a taxi and just relied on metro, "Baht bus" and our feet. But if you are planning to go with your family, you might have to get Indian food because Thai taste doesn't suit Indian tongue plus you'll obviously be taking taxi for travel as backpacking style of travel is not comfortable with kids.</p>
-                {/* <h3 className="blog-heading">Accomodation</h3> */}
+
                 <h3 className="blog-heading">Food</h3>
                 <p className="content-para">"FoodLand" for salads.
                 "7 eleven" for on-the-go shakes/drinks/juices.</p>
@@ -53,7 +45,7 @@ function BlogPage(props) {
                 <h6 className="blog-subheading">Bangkok</h6>
                 <p className="content-para">Metro is there for your rescue. If you're coming from Delhi it'll be cakewalk for you but if not, you might find the number of people at certain stations exceeding the comfortable limit. But keeping this aside, the metro network is well covered and connects all the major spots and markets of city. It also connects the city to airport as well.</p>
                 <p className="content-para">Apart from this, there's always a taxi and another thing called "Tuk-Tuk". So this is basically an auto which went to abroad for higher studies. Simply stating, the look & feel is of an auto-rickshaw with a poweful engine and big silencers that roar loud when it accelarates. It's fancy but expensive.</p>
-                
+
                 <p className="content-para bold">A special note about renting a bike. You'll need an international driving permit so as to escape without a fine from the police. Also if you are renting a bike, do make sure you make a video of the bike highlighting all the scars and scratches so that the lender won't bother you afterwards. But you can rent a bike in Koh Larn(coral island) without a permit. We did that!</p>
 
                 <h3 className="blog-heading">Itenary</h3>
@@ -68,10 +60,6 @@ function BlogPage(props) {
                     <li>Get a local sim card. I bought an <i className="blog-text-highlight">AIS</i> sim card there. It had the best plan for a week's trip compared to <i className="blog-text-highlight">TrueMobile</i> and <i className="blog-text-highlight">DTAC</i>. It performed decently well when trying to browse some stuff over video calling. You can get it from the airport after immigration. You don't need international roaming on your exsiting sim.</li>
                     <li>Install <i className="blog-text-highlight">Grab</i> and <i className="blog-text-highlight">ViaBus</i> apps for commute. </li>
                 </ul>
-            </div>
-            : <div class="blog-not-available">Blog not available</div> }
-        </div>
-    )
-}
 
-export default withRouter(BlogPage)
+</article>
+<p className="article-back"><SectionLink section="notes">← Back to notes</SectionLink></p></main>); }

@@ -1,14 +1,8 @@
-import React from 'react'
-
-import './PageNotFound.css'
+import React from 'react';
+import SectionLink from './SectionLink';
+import usePageTitle from './usePageTitle';
 
 export default function PageNotFound() {
-    return (
-        <div id="notFoundComponent">
-            <div id="notFoundContent">
-                <i id="notFoundIntro">Aww Snap!</i>
-                <h1 id="notFoundName">Page Not Found</h1>
-            </div>
-        </div>
-    )
+  usePageTitle('Page not found | Gursahib Singh');
+  return <main id="main" className="not-found"><p className="eyebrow">404 / A wrong turn</p><h1>Nothing here. Yet.</h1><SectionLink className="text-link">Back to home ↗</SectionLink></main>;
 }

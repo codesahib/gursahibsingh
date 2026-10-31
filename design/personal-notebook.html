@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d201f">
+  <title>Gursahib Singh — a little corner of the internet</title>
+  <meta name="description" content="Gursahib Singh. Software engineer in Waterloo, Canada. Selected work, experiments, and a little life beyond the code.">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="competency.css">
+  <script src="theme.js"></script>
+  <script src="competency.js" defer></script>
+  <style>
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:30px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; }
+    ::selection { background:var(--blue); color:white; }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; cursor:pointer; }
+    a,button,summary { -webkit-tap-highlight-color:transparent; }
+    :focus-visible { outline:3px solid var(--blue); outline-offset:6px; }
+    .wrap { width:min(1440px,calc(100% - 104px)); margin-inline:auto; }
+    .mono,.eyebrow { font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; line-height:1.6; }
+    .eyebrow { margin:0 0 24px; }
+    .muted { color:var(--muted); }
+    .blue { color:var(--blue); }
+    .skip { position:absolute; top:-100px; left:20px; padding:12px; background:var(--paper); z-index:10; }
+    .skip:focus { top:10px; }
+    header { height:95px; display:flex; align-items:center; justify-content:flex-end; border-bottom:1px solid var(--line); gap:24px; }
+    nav { display:flex; gap:30px; align-items:center; font-size:14px; }
+    nav a { position:relative; padding-block:8px; }
+    nav a::after { content:''; position:absolute; bottom:1px; left:0; right:0; height:2px; background:var(--blue); transform:scaleX(0); transform-origin:left; transition:transform .2s; }
+    nav a:hover::after { transform:scaleX(1); }
+    .hello::after { transform:scaleX(1); clip-path:polygon(0 25%,20% 0,40% 55%,60% 15%,80% 65%,100% 30%,100% 100%,0 100%); }
+    .hero { position:relative; display:grid; grid-template-columns:1.45fr 1fr; gap:30px; padding:63px 0 38px; align-items:center; }
+    .hero-intro { position:relative; z-index:1; min-width:0; }
+    .hand-intro { display:inline-block; font-family:var(--hand); color:var(--blue); font-size:21px; transform:rotate(-5deg); margin:0 0 15px 3px; }
+    h1 { font-size:clamp(76px,11.4vw,166px); font-weight:900; letter-spacing:-.085em; line-height:.87; margin:0 0 30px -8px; }
+    h1 span { display:block; }
+    h1 i { font-style:normal; color:var(--blue); display:inline-block; transition:transform .4s; }
+    h1:hover i { transform:translateY(-10px) rotate(15deg); }
+    .intro { max-width:560px; font-family:Georgia,'Times New Roman',serif; font-size:clamp(19px,1.8vw,26px); line-height:1.42; margin:0 0 28px; letter-spacing:-.025em; }
+    .actions { display:flex; flex-wrap:wrap; align-items:center; gap:28px; }
+    .primary { display:inline-flex; align-items:center; justify-content:center; gap:28px; background:var(--blue); color:white; padding:16px 20px; border-radius:5px; font-size:14px; font-weight:600; transition:transform .2s,box-shadow .2s; }
+    .primary:hover { transform:translateY(-3px); box-shadow:0 6px 0 color-mix(in srgb,var(--blue) 18%,transparent); }
+    .text-link { font-size:14px; border-bottom:1px solid var(--line); padding:7px 0; }
+    .text-link:hover { color:var(--blue); border-color:var(--blue); }
+    .desk { height:370px; position:relative; margin:15px 0 0 10px; }
+    .annotation { font-family:var(--hand); font-size:17px; line-height:1.45; }
+    .desk-caption { position:absolute; top:-20px; left:0; transform:rotate(-8deg); }
+    .caption-arrow { position:absolute; top:10px; left:173px; width:75px; height:56px; color:var(--ink); }
+    .notebook { position:absolute; top:48px; left:15px; width:82%; height:270px; background-color:var(--sheet); background-image:radial-gradient(var(--line) .65px,transparent .65px); background-size:15px 15px; box-shadow:2px 9px 18px #20211e12; transform:rotate(-6deg); padding:26px 23px 20px 40px; transition:transform .35s; border:1px solid #20211e0b; }
+    .desk:hover .notebook { transform:rotate(-3deg); }
+    .notebook::before { content:''; position:absolute; left:10px; top:20px; bottom:10px; width:12px; background:radial-gradient(ellipse,var(--paper) 45%,#0002 48%,transparent 60%) 0 0/12px 30px; }
+    .notebook-label { font-family:var(--hand); font-size:17px; margin:0 0 10px; }
+    .thoughts { display:flex; justify-content:space-between; align-items:center; gap:6px; }
+    .thoughts button { font-family:var(--hand); font-size:20px; border:1.5px solid var(--ink); background:transparent; color:var(--ink); width:72px; height:54px; border-radius:49% 45% 48% 42%; transform:rotate(3deg); transition:color .2s,border-color .2s,background .2s; }
+    .thoughts button:nth-of-type(2) { transform:rotate(-6deg); }
+    .thoughts button[aria-pressed="true"] { color:var(--blue); border-color:var(--blue); background:color-mix(in srgb,var(--blue) 5%,transparent); }
+    .thoughts button:hover { color:var(--blue); border-color:var(--blue); }
+    .thought-arrow { font-size:24px; }
+    .loop { display:block; width:90%; height:35px; color:var(--blue); margin:0 auto; }
+    #thought-note { font-family:var(--hand); font-size:16px; margin:0 0 13px; line-height:1.5; }
+    .desk-hint { position:absolute; bottom:-27px; right:8px; font-family:var(--hand); font-size:12px; color:var(--muted); transform:rotate(3deg); }
+    .hero-bottom { display:flex; justify-content:flex-end; gap:15px; align-items:center; padding:33px 0 26px; border-bottom:1px solid var(--line); }
+    .scroll-note { font-family:var(--hand); font-size:14px; }
+    h2 { font-size:clamp(30px,3.45vw,49px); letter-spacing:-.06em; line-height:1.05; margin:0 0 27px; }
+    .work { display:grid; grid-template-columns:1fr 1.45fr; gap:90px; padding:58px 0 64px; border-top:1px solid var(--line); }
+    .work-intro h2 { max-width:320px; }
+    .work-list { min-width:0; }
+    .work .eyebrow,.beyond .eyebrow { margin-bottom:16px; }
+    .projects { border-top:1px solid var(--line); }
+    .project { border-bottom:1px solid var(--line); }
+    .project summary { list-style:none; display:grid; grid-template-columns:25px 1fr 24px; gap:16px; padding:23px 4px 23px 0; align-items:start; cursor:pointer; }
+    summary::-webkit-details-marker { display:none; }
+    .project summary:hover .project-name,.project[open] .project-name { color:var(--blue); }
+    .project-number { font:12px var(--mono); color:var(--muted); padding-top:5px; }
+    .project-name { display:block; font-size:19px; font-weight:600; letter-spacing:-.035em; transition:color .2s; }
+    .project-meta { display:block; margin-top:8px; color:var(--muted); font:11px/1.5 var(--mono); }
+    .project-arrow { display:block; font-size:23px; line-height:1; transition:transform .2s; }
+    .project[open] .project-arrow { transform:rotate(90deg); color:var(--blue); }
+    .project-body { margin:0 30px 23px 41px; max-width:570px; font-size:14px; line-height:1.7; }
+    .project-body p { margin:0 0 12px; }
+    .project-body .mono { font-size:10px; color:var(--blue); display:block; margin:16px 0 5px; }
+    .project-body a { text-decoration:underline; text-underline-offset:4px; }
+    .project.featured { border-left:2px solid var(--blue); padding-left:16px; }
+    .project.featured .project-name { color:var(--blue); }
+    .project.featured .project-body { margin-left:41px; }
+    .work-footnote { font:11px/1.6 var(--mono); color:var(--muted); margin:21px 0 0; }
+    .beyond { display:grid; grid-template-columns:1fr 1.45fr; gap:90px; padding:65px 0; border-top:1px solid var(--line); }
+    .blog-entry { width:min(100%,480px); padding:12px 12px 0; }
+    .beyond-intro { font-family:var(--hand); font-size:23px; line-height:1.5; max-width:290px; transform:rotate(-3deg); margin:21px 0 30px 8px; }
+    .postcard { display:block; position:relative; width:95%; margin:0 auto; padding:11px 11px 17px; background:var(--sheet); transform:rotate(-4deg); box-shadow:0 4px 10px #20211e1a; transition:transform .3s; border:0; color:var(--ink); text-align:left; }
+    .postcard::before { content:''; position:absolute; top:-12px; left:36%; width:83px; height:25px; background:#cfbc8a70; transform:rotate(5deg); }
+    .postcard:hover { transform:rotate(0) translateY(-3px); }
+    .postcard img { display:block; width:100%; height:auto; aspect-ratio:1.7; object-fit:cover; }
+    .postcard > span { display:flex; justify-content:space-between; margin-top:13px; font:17px var(--hand); }
+    .postcard-caption { font:10px/1.6 var(--mono); margin:27px 0 0 8px; color:var(--muted); }
+    .about { border-top:1px solid var(--line); display:grid; grid-template-columns:1fr 1.45fr; gap:90px; padding:65px 0; }
+    .about h2 { max-width:330px; font-size:clamp(38px,4vw,58px); }
+    .about-copy { font-family:Georgia,'Times New Roman',serif; font-size:22px; line-height:1.55; }
+    .about-copy p { margin:0 0 22px; }
+    .about-copy a { color:var(--blue); border-bottom:1px solid var(--blue); }
+    .career { margin-top:35px; font-family:Arial,Helvetica,sans-serif; }
+    .career-row { display:grid; grid-template-columns:98px 1fr; gap:15px; padding:13px 0; border-top:1px solid var(--line); font-size:13px; line-height:1.5; }
+    .career-row time { font:11px/1.8 var(--mono); color:var(--muted); }
+    .career-row strong { display:block; font-size:14px; }
+    .career-row span { color:var(--muted); }
+    .contact { padding:49px 0 42px; border-top:1px solid var(--line); }
+    .contact .eyebrow { margin-bottom:18px; }
+    .contact-heading { display:inline-block; font-weight:800; font-size:clamp(34px,7vw,96px); letter-spacing:-.065em; line-height:1.1; }
+    .contact-heading:hover { color:var(--blue); }
+    .contact p:last-child { color:var(--muted); font-size:15px; line-height:1.6; }
+    footer { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; padding:24px 0; border-top:1px solid var(--line); font:11px var(--mono); }
+    .footer-links { display:flex; gap:22px; align-items:center; }
+    .footer-links a:hover { color:var(--blue); }
+    :root[data-theme="dark"] .primary { color:var(--paper); }
+    :root[data-theme="dark"] .postcard img { filter:saturate(.8); }
+    @keyframes enter { from { opacity:0; transform:translateY(13px); } to { opacity:1; transform:translateY(0); } }
+    .hero-intro { animation:enter .6s ease-out both; }
+    .desk { animation:enter .7s .1s ease-out both; }
+    @media (min-width:1600px) { .hero { padding-top:80px; padding-bottom:55px; } h1 { font-size:178px; } }
+    @media (max-width:1100px) { .wrap { width:calc(100% - 64px); } .hero { gap:10px; } .desk { margin-left:0; height:390px; } .notebook { width:93%; padding-left:32px; padding-right:18px; height:248px; } .notebook-label { font-size:15px; } .thoughts button { width:60px; height:45px; font-size:17px; } #thought-note { font-size:14px; }  .desk-caption { font-size:14px; } .caption-arrow { left:145px; } .work,.beyond { gap:50px; } .about { gap:50px; } }
+    @media (max-width:760px) { .wrap { width:calc(100% - 40px); } header { height:75px; } nav { gap:18px; font-size:12px; } nav a[href="#notes"] { display:none; } .hero { grid-template-columns:1fr; padding-top:40px; gap:30px; } h1 { font-size:clamp(58px,18vw,133px); margin-left:-4px; margin-bottom:24px; } .intro { font-size:21px; max-width:530px; } .hand-intro { font-size:18px; } .desk { width:min(390px,100%); height:300px; margin:15px auto 25px; } .notebook { width:85%; height:240px; top:35px; padding-top:22px; }   .thoughts button { width:64px; height:44px; } .hero-bottom { padding-top:10px; } .scroll-note { font-size:12px; } .work { grid-template-columns:1fr; gap:0; padding:40px 0; } .work-intro h2 { max-width:100%; } h2 { font-size:38px; } .project summary { gap:10px; } .project-name { font-size:18px; } .project-body { margin-left:35px; } .beyond { grid-template-columns:1fr; gap:0; padding:40px 0; } .blog-entry { padding-left:0; } .beyond-intro { max-width:100%; margin:15px 0 32px; font-size:23px; } .postcard { max-width:350px; margin-left:7px; } .postcard-caption { margin-top:25px; } .about { grid-template-columns:1fr; gap:0; padding:40px 0; } .about h2 { max-width:100%; font-size:42px; } .about-copy { font-size:20px; } .contact { padding:35px 0; } footer { align-items:flex-start; } .footer-links { gap:15px; flex-wrap:wrap; } }
+    @media (max-width:400px) { nav { gap:12px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <nav aria-label="Main navigation"><a href="#skills">skills</a><a href="#work">work</a><a href="#about">about</a><a href="#notes">notes</a><a class="hello" href="#contact">say hello ↗</a></nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="name">
+        <div class="hero-intro">
+          <p class="hand-intro">Hey, I’m</p>
+          <h1 id="name"><span>Gursahib</span><span>Singh<i>.</i></span></h1>
+          <p class="intro">Software engineer in Waterloo, Canada. Curious about how things work. Always up for making something useful.</p>
+          <div class="actions"><a class="primary" href="#work">Things I’ve built <span aria-hidden="true">↗</span></a><a class="text-link" href="#about">A little about me ↓</a></div>
+        </div>
+        <div class="desk" aria-label="An interactive peek into how I think">
+          <span class="annotation desk-caption">a peek inside<br>my head</span>
+          <svg class="caption-arrow" viewBox="0 0 80 60" fill="none" aria-hidden="true"><path d="M4 5 Q62 -4 65 44 M55 36 L65 47 L75 35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div class="notebook">
+            <p class="notebook-label">a work in progress. always.</p>
+            <p id="thought-note" aria-live="polite">☑ turn ideas into real things.</p>
+            <div class="thoughts" role="group" aria-label="Explore my approach">
+              <button type="button" aria-pressed="false" data-thought="idea">idea</button><span class="thought-arrow" aria-hidden="true">→</span>
+              <button type="button" aria-pressed="true" data-thought="build">build</button><span class="thought-arrow" aria-hidden="true">→</span>
+              <button type="button" aria-pressed="false" data-thought="learn">learn</button>
+            </div>
+            <svg class="loop" viewBox="0 0 260 35" fill="none" aria-hidden="true"><path d="M241 4 C241 38 22 38 22 5 M15 13 L22 4 L30 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <span class="desk-hint">↑ try the scribbles</span>
+        </div>
+      </section>
+      <div class="hero-bottom"><a class="scroll-note" href="#skills">Scroll for the good stuff ↓</a></div>
+      <section class="competency" id="skills" aria-labelledby="skills-heading">
+        <div class="competency-heading"><div><p class="eyebrow">01 / My engineering atlas</p><h2 id="skills-heading">Follow the connections<span class="blue">.</span></h2></div><p>Different tools, different problems. Here’s how the things I know connect to the things I’ve built.</p></div>
+        <div class="atlas">
+          <div class="atlas-map" role="tablist" aria-label="Explore six areas of technical competency">
+            <svg viewBox="0 0 600 470" preserveAspectRatio="none" aria-hidden="true">
+              <path class="track" data-track="languages" style="--route:var(--route-languages)" d="M300 250 H240 Q220 250 220 230 V150 Q220 115 190 115 H85"/>
+              <path class="track" data-track="web" style="--route:var(--route-web)" d="M300 250 H355 Q380 250 380 225 V150 Q380 115 415 115 H515"/>
+              <path class="track" data-track="data" style="--route:var(--route-data)" d="M300 250 H70"/>
+              <path class="track" data-track="ai" style="--route:var(--route-ai)" d="M300 250 H530"/>
+              <path class="track" data-track="engineering" style="--route:var(--route-engineering)" d="M300 250 H240 Q220 250 220 280 V350 Q220 380 190 380 H85"/>
+              <path class="track" data-track="tools" style="--route:var(--route-tools)" d="M300 250 H355 Q380 250 380 280 V350 Q380 380 415 380 H515"/>
+              <path class="journey" id="atlas-journey" d="M300 250 H70"/>
+            </svg>
+            <button class="route" type="button" id="route-languages" data-route="languages" role="tab" aria-selected="true" aria-controls="atlas-panel"><span>Languages</span><small>01 / express</small></button>
+            <button class="route" type="button" id="route-web" data-route="web" role="tab" aria-selected="false" aria-controls="atlas-panel" tabindex="-1"><span>Web</span><small>02 / interact</small></button>
+            <button class="route" type="button" id="route-data" data-route="data" role="tab" aria-selected="false" aria-controls="atlas-panel" tabindex="-1"><span>Databases</span><small>03 / structure</small></button>
+            <button class="route" type="button" id="route-ai" data-route="ai" role="tab" aria-selected="false" aria-controls="atlas-panel" tabindex="-1"><span>AI</span><small>04 / explore</small></button>
+            <button class="route" type="button" id="route-engineering" data-route="engineering" role="tab" aria-selected="false" aria-controls="atlas-panel" tabindex="-1"><span>Engineering</span><small>05 / reason</small></button>
+            <button class="route" type="button" id="route-tools" data-route="tools" role="tab" aria-selected="false" aria-controls="atlas-panel" tabindex="-1"><span>Tools</span><small>06 / connect</small></button>
+            <div class="atlas-hub" aria-hidden="true"><b>Curiosity.</b><span>the common<br>thread</span></div>
+            <span class="atlas-key" aria-hidden="true">pick a route. see where it leads. ↗</span>
+          </div>
+          <div class="atlas-panel" id="atlas-panel" role="tabpanel" aria-labelledby="route-languages" tabindex="0" aria-live="polite">
+            <p class="eyebrow" id="atlas-route-label">Route 01 / Languages</p><h3 id="atlas-title">A language for the problem.</h3>
+            <p class="atlas-description" id="atlas-description">Python for backend services and application logic. TypeScript and JavaScript for interfaces.</p>
+            <ul class="atlas-skills" id="atlas-skills" aria-label="Skills in this area"><li>Python</li><li>C++</li><li>JavaScript</li><li>TypeScript</li><li>Perl</li><li>Shell</li></ul>
+            <div class="atlas-proof"><span class="mono">Where I’ve put it to work</span><p id="atlas-proof-copy">At Brickeye, I built FastAPI services and an event-driven rules engine in Python, alongside React/TypeScript interfaces. At Siemens Enlighted, I developed containerized edge services and a React/Python interface for real-time device monitoring and control.</p><a id="atlas-proof-link" href="#about">Follow my experience ↗</a></div>
+          </div>
+        </div>
+        <p class="atlas-index"><span>6 routes · one evolving toolkit</span><span>Explore with a click, or focus a route and use arrow keys.</span></p>
+      </section>
+        <section class="work" id="work" aria-labelledby="work-heading">
+          <div class="work-intro"><p class="eyebrow">02 / Things I’ve built</p>
+          <h2 id="work-heading">From work. For fun.</h2></div>
+          <div class="work-list">
+          <div class="projects">
+            <details class="project featured" id="project-terminal" open>
+              <summary><span class="project-number">01</span><span><span class="project-name">Master Control Terminal</span><span class="project-meta">Personal project · FastAPI / React / TypeScript / PostgreSQL</span></span><span class="project-arrow" aria-hidden="true">↗</span></summary>
+              <div class="project-body"><p>I built a personal finance console to bring account activity, contribution room, holdings, and portfolio performance into one place.</p><span class="mono">Under the hood</span><p>Holdings and profit/loss are derived from transactions. The app handles contributions, trades, dividends, transfers, and currency exchanges, with funding checks and protection against selling more units than are held.</p><p>It also tracks RRSP, TFSA, and FHSA contribution room, combines market prices with manual valuations, and includes portfolio history, allocation views, and JSON backup/restore.</p><p><a href="https://github.com/codesahib/Master-Control-Terminal" target="_blank" rel="noopener noreferrer">Explore the project on GitHub ↗</a></p></div>
+            </details>
+            <details class="project" id="project-operations">
+              <summary><span class="project-number">02</span><span><span class="project-name">Operations platform</span><span class="project-meta">At Brickeye · FastAPI / React / PostgreSQL</span></span><span class="project-arrow" aria-hidden="true">↗</span></summary>
+              <div class="project-body"><p>I led the architecture and development of a multi-tenant operations platform, working with the operations team to replace Airtable-based tracking.</p><span class="mono">The interesting part</span><p>Keeping device assignments and settings in sync with ThingsBoard, while supporting 3,200+ managed entities across 500+ organizations. FastAPI, React/TypeScript, PostgreSQL, and Redis connected the pieces.</p><p class="muted">Professional work · source code is private.</p></div>
+            </details>
+            <details class="project" id="project-csv">
+              <summary><span class="project-number">03</span><span><span class="project-name">Talk-to-My-CSV</span><span class="project-meta">Personal project · Streamlit / LangChain / Ollama</span></span><span class="project-arrow" aria-hidden="true">↗</span></summary>
+              <div class="project-body"><p>A natural-language interface for asking questions about CSV datasets, without writing SQL or code.</p><span class="mono">The experiment</span><p>Bringing Streamlit, LangChain, Ollama, and Chroma together to explore a more conversational way to work with data.</p></div>
+            </details>
+            <details class="project" id="project-rules">
+              <summary><span class="project-number">04</span><span><span class="project-name">When telemetry needs to become action</span><span class="project-meta">At Brickeye · Python / PostgreSQL / Event-driven systems</span></span><span class="project-arrow" aria-hidden="true">↗</span></summary>
+              <div class="project-body"><p>I built and deployed a custom rules engine to evaluate device telemetry, generate alarms, and trigger notifications.</p><span class="mono">What kept me thinking</span><p>Reliable execution when things go wrong: transactional outbox patterns, idempotency, retries, dead-letter queues, and advisory locks.</p><p class="muted">Professional work · source code is private.</p></div>
+            </details>
+          </div>
+          <p class="work-footnote">Open a project for the story behind it. More experiments on <a class="blue" href="https://github.com/codesahib" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p>
+          </div>
+        </section>
+      <section class="about" id="about" aria-labelledby="about-heading">
+        <div><p class="eyebrow">03 / A little about me</p><h2 id="about-heading">The longer<br>hello<span class="blue">.</span></h2><a class="text-link" href="../frontend/src/static/media/Resume_GursahibSingh.pdf" target="_blank" rel="noopener">Read my résumé ↗</a></div>
+        <div class="about-copy">
+          <p>I’m Gursahib, a software engineer based in Waterloo. My work has taken me through connected buildings, construction technology, e-commerce, EdTech, and chip-design software.</p>
+          <p>I work across the stack: interfaces people use, APIs behind them, and the systems keeping everything connected. Lately, that also means putting AI to work in development and product workflows.</p>
+          <p>I studied Electrical &amp; Computer Engineering at the University of Waterloo. Away from work, this corner of the internet holds a few <a href="#notes">travel notes</a>, too.</p>
+          <div class="career" aria-label="Selected experience">
+            <div class="career-row"><time>2025 — now</time><div><strong>Brickeye</strong><span>Full-stack Developer</span></div></div>
+            <div class="career-row"><time>2023 — 25</time><div><strong>Siemens Canada</strong><span>Software Developer</span></div></div>
+            <div class="career-row"><time>2023</time><div><strong>ShyftLabs</strong><span>Software Developer</span></div></div>
+            <div class="career-row"><time>2022 — 23</time><div><strong>Bluekey AI</strong><span>Full Stack Developer</span></div></div>
+            <div class="career-row"><time>2019 — 21</time><div><strong>Siemens EDA</strong><span>Senior Member Technical Staff</span></div></div>
+          </div>
+        </div>
+      </section>
+        <section class="beyond" id="notes" aria-labelledby="notes-heading">
+          <div class="blog-intro"><p class="eyebrow">04 / Blog</p><h2 id="notes-heading">Beyond the code<span class="blue">.</span></h2>
+          <p class="beyond-intro">There’s a person<br>behind the commits.</p>
+          </div><div class="blog-entry"><a class="postcard" href="thailand.html"><img src="../frontend/src/static/img/thailand.jpg" alt="Turquoise water, limestone cliffs, and long-tail boats in Thailand" width="1000" height="667" loading="lazy"><span>Notes from Thailand <span aria-hidden="true">↗</span></span></a>
+          <p class="postcard-caption">From the archive · December 2019<br>A backpack, local food, and a lot of walking.</p>
+          </div>
+        </section>
+      <section class="contact" id="contact" aria-labelledby="contact-heading"><p class="eyebrow">05 / Keep in touch</p><h2 style="margin:0"><a class="contact-heading" id="contact-heading" href="mailto:iamgursahib@gmail.com">Let’s compare notes ↗</a></h2><p>A project, a question, or a simple hello.<br><a class="text-link" href="mailto:iamgursahib@gmail.com">iamgursahib@gmail.com</a></p></section>
+    </main>
+    <footer><span>Gursahib Singh © <span id="year">2026</span></span><div class="footer-links"><a href="https://github.com/codesahib" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/singh-gursahib" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><button type="button" class="theme-toggle" id="theme-toggle" data-theme-toggle aria-pressed="true">☀ Light mode</button><a href="#">Back to top ↑</a></div></footer>
+  </div>
+  <script>
+    const thoughts = { idea:'☑ start with a question worth asking.', build:'☑ turn ideas into real things.', learn:'☑ stay curious. then do it again.' };
+    document.querySelectorAll('[data-thought]').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('[data-thought]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        document.getElementById('thought-note').textContent = thoughts[button.dataset.thought];
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

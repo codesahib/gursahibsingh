@@ -1,0 +1,50 @@
+:root {
+  color-scheme: dark;
+  --paper: #1d201f;
+  --ink: #edece4;
+  --muted: #b1b5aa;
+  --blue: #a9b6ff;
+  --line: #484d46;
+  --sheet: #282d28;
+  --soft: #30362f;
+  --route-languages: #c6b7ef;
+  --route-web: #a6c6fb;
+  --route-data: #a4cfaa;
+  --route-ai: #e7bd82;
+  --route-engineering: #e6a9b8;
+  --route-tools: #91cbd1;
+  --mono: Consolas, 'Courier New', monospace;
+  --hand: 'Segoe Print', 'Bradley Hand', cursive;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --paper: #f4f1e9;
+  --ink: #20211e;
+  --muted: #696a63;
+  --blue: #2c4cff;
+  --line: #c8c7bc;
+  --sheet: #faf8f0;
+  --soft: #e9e6dc;
+  --route-languages: #7651b5;
+  --route-web: #285dba;
+  --route-data: #307445;
+  --route-ai: #926013;
+  --route-engineering: #a54264;
+  --route-tools: #15727b;
+}
+
+html { background: var(--paper); color: var(--ink); }
+
+.theme-toggle {
+  font: 11px var(--mono);
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover { border-color: var(--blue); }
+.theme-toggle:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }

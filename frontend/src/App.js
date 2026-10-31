@@ -1,43 +1,35 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from './components/common/Navbar'
-import Footer from './components/common/Footer'
-import Banner from './components/home/Banner'
-import { backendEnabled, buildApiUrl } from './config';
-
+import React from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footer';
+import { ThemeProvider } from './components/common/Theme';
+import Home from './components/home/Home';
+import Projects from './components/projects/Projects';
+import Blogs from './components/blogs/Blogs';
+import BlogPage from './components/blogs/BlogPage';
+import PageNotFound from './components/common/PageNotFound';
 import './App.css';
 
-function App() {
-
-  const [showBanner, setShowBanner] = useState(false)
-  const [apiStatus, setApiStatus] = useState(backendEnabled ? 'checking' : 'static')
-
-  useEffect(() => {
-    if (!backendEnabled) {
-      return;
-    }
-
-    fetch(buildApiUrl('/api/health/'))
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error('health endpoint returned non-200');
-        }
-        return res.json();
-      })
-      .then(() => setApiStatus('connected'))
-      .catch(() => setApiStatus('offline'));
-  }, []);
-
-  useEffect(() => {
-    console.info(`[API] status: ${apiStatus}`);
-  }, [apiStatus]);
-
+export default function App() {
   return (
-    <>
-      {showBanner && <Banner/>}
-      <Navbar show_banner={setShowBanner}/>
-      <Footer/>
-    </>
+    <ThemeProvider>
+      <a className="skip" href="#main" onClick={event => {
+        event.preventDefault();
+        const main = document.getElementById('main');
+        if (main) { main.tabIndex = -1; main.focus(); }
+      }}>Skip to content</a>
+      <div className="wrap">
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/home"><Redirect to="/" /></Route>
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/blogs" component={Blogs} />
+          <Route exact path="/blogs/thailand" component={BlogPage} />
+          <Route component={PageNotFound} />
+        </Switch>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
-
-export default App;
