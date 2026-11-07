@@ -1,9 +1,11 @@
 import React from 'react';
 import ProjectScreenshot from './ProjectScreenshot';
+import EngineeringWork from '../projects/EngineeringWork';
 export default function SelectedWork() { return (<section className="work" id="work" aria-labelledby="work-heading">
           <div className="work-intro"><p className="eyebrow">02 / Things I’ve built</p>
           <h2 id="work-heading">From work. For fun.</h2></div>
           <div className="work-list">
+          <EngineeringWork />
           <div className="projects">
             <details className="project featured" id="project-terminal" open>
               <summary><span className="project-number">01</span><span><span className="project-name">Master Control Terminal</span><span className="project-meta">Personal project · FastAPI / React / TypeScript / PostgreSQL</span></span><span className="project-arrow" aria-hidden="true">↗</span></summary>

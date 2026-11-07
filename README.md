@@ -11,6 +11,15 @@ orders skills, selected projects, about, and blog notes; `/projects`, `/blogs`, 
 `/blogs/thailand` remain available. Theme defaults to dark and saves a visitor's
 light/dark choice across pages.
 
+The selected-work section also includes three synthetic engineering labs, each
+with its own page: `/projects/league-sync`, `/projects/college-import`, and
+`/projects/booking-reliability`. Each page includes original application
+screenshots, before/after evidence, implementation decisions, AI engineering
+context, and scope limits. The source repositories are private; the pages
+provide a contact route for access rather than promising public source or a
+hosted live demo. Screenshot provenance is recorded in
+`frontend/src/static/img/projects/README.md`.
+
 `npm run build` produces the production site for the root of a domain. Configure
 your host to serve `index.html` for application routes so direct article links work.
 For a GitHub Pages repository subpath, build with `PUBLIC_URL=/repository-name`

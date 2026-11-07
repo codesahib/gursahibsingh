@@ -5,6 +5,7 @@ import Footer from './components/common/Footer';
 import { ThemeProvider } from './components/common/Theme';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
+import ProjectCaseStudy from './components/projects/ProjectCaseStudy';
 import Blogs from './components/blogs/Blogs';
 import BlogPage from './components/blogs/BlogPage';
 import PageNotFound from './components/common/PageNotFound';
@@ -24,6 +25,7 @@ export default function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/home"><Redirect to="/" /></Route>
           <Route exact path="/projects" component={Projects} />
+          <Route exact path="/projects/:slug" component={ProjectCaseStudy} />
           <Route exact path="/blogs" component={Blogs} />
           <Route exact path="/blogs/thailand" component={BlogPage} />
           <Route component={PageNotFound} />

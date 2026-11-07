@@ -1,0 +1,126 @@
+import leagueBefore from '../../static/img/projects/league-sync-before.png';
+import leagueAfter from '../../static/img/projects/league-sync-after.png';
+import leagueRecovery from '../../static/img/projects/league-sync-recovery.png';
+import collegeBefore from '../../static/img/projects/college-import-before.png';
+import collegeAfter from '../../static/img/projects/college-import-after.png';
+import collegeReview from '../../static/img/projects/college-import-review.png';
+import bookingBefore from '../../static/img/projects/booking-reliability-before.png';
+import bookingAfter from '../../static/img/projects/booking-reliability-after.png';
+import bookingRecovery from '../../static/img/projects/booking-reliability-recovery.png';
+
+export const engineeringProjects = [
+  {
+    slug: 'league-sync',
+    number: '01',
+    title: 'League Sync',
+    discipline: 'Integration reliability',
+    tagline: 'Two systems. One reliable roster.',
+    summary: 'Replacing a fragile CSV handoff with durable delivery, safe retries, and explicit conflict decisions.',
+    highlight: '10 → 0 roster mismatches',
+    intro: 'I built a Club-to-League integration lab to explore what happens after a registration changes: identity, delivery, replay, and the edits that still need a person.',
+    stack: ['React', 'TypeScript', 'FastAPI', 'SQLite', 'Playwright'],
+    repository: 'https://github.com/codesahib/league-sync',
+    revision: 'f999051',
+    evidence: 'evidence/comparison.json',
+    verification: 'evidence/verification.json',
+    baseline: 'Staff export the Club roster, upload it into League, and inspect discrepancies. The original importer keys registrations by team, so transferring a player can leave the old assignment behind. Repeating the upload does not repair it.',
+    diagnosis: 'I reproduced stale assignments and duplicate target records, then traced the missing stable identity across the two systems. A later replay/workflow regression exposed a deadlock: CSV mode could accept work that it could neither process nor switch out of.',
+    design: [
+      ['A durable handoff', 'Source changes and outbox events commit together. A background worker processes versioned events with bounded retries and per-player ordering.'],
+      ['Explicit ownership', 'Stable identity mappings update the existing League player. Club owns roster fields; League retains eligibility. Conflicting target revisions require an audited operator decision.'],
+      ['Recoverable transitions', 'Replay is guarded by workflow state. Historical trapped replays can be cancelled only when audit and mapped-version evidence prove their original delivery.'],
+    ],
+    flow: ['Club change', 'Durable outbox', 'Version + revision checks', 'League update + audit'],
+    metrics: [
+      ['Roster mismatches after replay', '10', '0'],
+      ['League records for 20 players', '30', '20'],
+      ['Correctly reconciled transfers', '0 / 10', '10 / 10'],
+    ],
+    methodology: 'Fresh identical 20-player seeds, ten fixed transfers, and one full duplicate replay. These are separate before/after runs: 30 versus 20 records shows prevention, not a migration deleting existing records. A separate outage probe accepted 2/3 deliveries in both workflows; the gain is durable recovery and correct convergence.',
+    checks: '50 backend tests and 3 browser tests pass, alongside the production build and benchmark assertions. Coverage includes retry exhaustion, competing processors, ordering, conflicts, rollback, workflow switching, and audited legacy recovery.',
+    ai: 'Codex helped inspect the existing contracts, implement identity and outbox handling, reproduce the replay deadlock, and exercise recovery with failing-before/passing-after regressions. The application uses deterministic code and database transactions.',
+    tradeoff: 'One SQLite service keeps the state machine and its audit trail inspectable. Local atomicity does not establish distributed exactly-once delivery. A real adapter would need remote idempotency, reviewed identity migration, access controls, and production-scale validation.',
+    screenshotNote: 'These browser captures show a one-player demonstration. The table below reports the separate ten-transfer benchmark.',
+    screenshots: [
+      { label: 'Before', src: leagueBefore, width: 1440, height: 1734, alt: 'League Sync CSV workflow with 20 Club players, 21 League records, and one reconciliation mismatch', caption: 'A CSV transfer leaves the old registration behind: one changed player, one mismatch.' },
+      { label: 'After', src: leagueAfter, width: 1440, height: 2401, alt: 'League Sync reliable workflow with 20 records in each system, zero mismatches, and a retained delivery audit', caption: 'The reliable workflow updates the existing identity. Retry and replay history remain in the audit.' },
+      { label: 'Recovery', src: leagueRecovery, width: 1440, height: 2287, alt: 'League Sync failed delivery showing a retained pending job, retry control, and failure audit entry', caption: 'An injected delivery failure stays visible and recoverable; the target assignment is preserved.' },
+    ],
+  },
+  {
+    slug: 'college-import',
+    number: '02',
+    title: 'College Import',
+    discipline: 'Data correctness',
+    tagline: 'New export. Same admissions data.',
+    summary: 'Maintaining a CSV importer through changed headers, date formats, and the schema decisions that need review.',
+    highlight: '3 / 15 → 14 / 15 valid rows imported',
+    intro: 'I built an admissions import workspace around a familiar maintenance problem: a working parser meets a vendor export it no longer understands.',
+    stack: ['React', 'TypeScript', 'FastAPI', 'SQLite', 'Playwright'],
+    repository: 'https://github.com/codesahib/college-import',
+    revision: '5f569bf',
+    evidence: 'evidence/ci-002/benchmark.json',
+    verification: 'evidence/ci-002/commands.jsonl',
+    baseline: 'An admissions admin uploads historical CSV exports into a strict four-field parser. The original format works, but renamed columns, decision spellings, and vendor date formats send otherwise valid records back to support.',
+    diagnosis: 'The six-file fixture set made the gap reproducible: only three of fifteen valid rows imported. The difficult boundary was semantic, not spelling—application year and graduation year cannot be treated as interchangeable.',
+    design: [
+      ['Reviewable contracts', 'Declarative mappings and unambiguous aliases normalize known formats. Exact header signatures and explicit date contracts keep the rules inspectable.'],
+      ['Human meaning, validated rows', 'Ambiguous schemas are quarantined before any record write. Approval selects distinct source fields, acknowledges ignored columns, and records a reviewer and mapping version.'],
+      ['Trustworthy replay and evidence', 'File digests and record keys prevent replay growth. Conflicts preserve existing values. Canonical multiset and stored-record assertions catch missing or duplicated benchmark output; pending imports cannot cross the visible workflow.'],
+    ],
+    flow: ['CSV upload', 'Detect contract', 'Normalize or request review', 'Validate + persist report'],
+    metrics: [
+      ['Valid rows imported', '3 / 15', '14 / 15'],
+      ['Invalid rows rejected', '4 / 4', '4 / 4'],
+      ['Record growth on exact replay', '0', '0'],
+    ],
+    methodology: 'The same six files contain 19 rows: 15 valid and four invalid. Improved results include one simulated operator approval. One valid row in an unknown schema remains held for review. Before that approval, improved acceptance is 12/15. Exact canonical multisets and persisted identity/value coverage are checked against the synthetic oracle.',
+    checks: '55 backend tests and 3 browser tests pass, with typecheck, build, and strengthened benchmark assertions. Regressions cover malformed input, approval rollback, conflicts, concurrent replay, evaluator mutations, and a delayed-response workflow-switch race.',
+    ai: 'Codex helped compare the synthetic vendor exports, implement deterministic mappings and review controls, reproduce malformed-year and stale-response failures, and strengthen the evaluation oracle. No model interprets or approves uploaded data at runtime.',
+    tradeoff: 'A small mapping registry is easier to maintain than a general inference system. The local workspace assumes globally stable applicant IDs and has no authenticated tenant or vendor namespace. Identical headers can still have different meanings; real integration needs governed source contracts and audited mapping replacement.',
+    screenshotNote: 'Browser captures use a subset of the fixtures: three imported records are visible here. They are not the full benchmark, which reaches fourteen after approval.',
+    screenshots: [
+      { label: 'Before', src: collegeBefore, width: 1280, height: 1558, alt: 'College Import strict parser rejecting the changed Atlas export at the header boundary', caption: 'The changed Atlas format is rejected by the original contract, including its otherwise valid rows.' },
+      { label: 'After', src: collegeAfter, width: 1280, height: 1720, alt: 'College Import normalized Atlas rows and a source-column error explaining a missing student identifier', caption: 'Known aliases import three valid rows and identify the invalid row by its original source column.' },
+      { label: 'Review', src: collegeReview, width: 1280, height: 2312, alt: 'College Import quarantined schema with application and graduation year samples and explicit mapping approval controls', caption: 'Application year versus graduation year stays unresolved until an operator supplies the business meaning.' },
+    ],
+  },
+  {
+    slug: 'booking-reliability',
+    number: '03',
+    title: 'Booking Reliability',
+    discipline: 'Payments & incident recovery',
+    tagline: 'One payment. One accounting effect.',
+    summary: 'Tracing duplicate and out-of-order payment events through a transactional inbox, ledger, and incident trail.',
+    highlight: '3 → 0 duplicate ledger entries',
+    intro: 'I built a campground booking lab to make payment failures reproducible: the booking can look paid while the accounting underneath is wrong.',
+    stack: ['React', 'TypeScript', 'FastAPI', 'SQLite', 'Playwright'],
+    repository: 'https://github.com/codesahib/booking-reliability',
+    revision: 'd372593',
+    evidence: 'evidence/br-002/comparison.json',
+    verification: 'evidence/br-002/verification.json',
+    baseline: 'A reservation desk receives simulated provider events. The original handler trusts each delivery and writes another accounting entry; staff piece together the event log, booking history, and ledger to investigate.',
+    diagnosis: 'Identical retries produced repeated charges, late authorization could regress a settled booking, and refund order affected accounting. Seven fixed replay scenarios exposed failures that a plausible-looking paid status would miss.',
+    design: [
+      ['Identity before effects', 'A persistent inbox compares event identity and canonical payload. Unique ledger constraints backstop the one-charge, one-full-refund contract.'],
+      ['One transaction', 'Inbox, delivery, ledger, status, history, and incident writes commit together. Early refunds wait for their charge and reconcile atomically; unexpected failures roll back for a safe retry.'],
+      ['Useful incident evidence', 'Each delivery retains correlated context. Storage failures are classified and logged with event and reservation identity. Replay checks validate response outcomes and incident linkage as well as final accounting.'],
+    ],
+    flow: ['Provider event', 'Identity + payload check', 'Transactional state transition', 'Ledger + incident trail'],
+    metrics: [
+      ['Duplicate-identity ledger entries', '3', '0'],
+      ['Final invariant violations', '7', '0'],
+      ['Failed accounting checks', '15 / 31', '0 / 31'],
+    ],
+    methodology: 'Seven identical scenarios, fifteen deliveries per version, and fresh seeded SQLite databases. The original 31 accounting checks remain separate from 38 added response/incident protocol checks: baseline fails 17/38 protocol checks; improved fails 0/38. Assertions are correlated checks, not independent incident rates.',
+    checks: '46 backend tests pass, with six strict expected baseline failures; all 3 browser tests, typecheck, build, and replay checks pass. Coverage includes concurrent duplicates, all six event orders, restart persistence, injected rollback, real lock contention, and evaluator mutations.',
+    ai: 'Codex helped trace event identity and ordering, implement the inbox and state transitions, reproduce failure paths, and test the benchmark itself with controlled mutations. Payments and decisions are simulated; runtime behavior is deterministic.',
+    tradeoff: 'The explicit one-provider, one-full-charge, one-full-refund model keeps the rules small. It does not reconcile real external settlements, partial payments, or multiple legitimate charges. SQLite audit is authoritative; the local JSON log is a best-effort mirror. Real provider, crash-durability, and production rollout claims need further work.',
+    screenshotNote: 'The retry-only screenshot has two excess charge rows. The full seven-scenario benchmark totals three, including a separate conflicting-event-ID case.',
+    screenshots: [
+      { label: 'Before', src: bookingBefore, width: 1280, height: 2792, alt: 'Booking Reliability original workflow with four webhook deliveries, two duplicate ledger rows, and three invariant violations', caption: 'One authorization and three identical success deliveries produce three charges in the original workflow.' },
+      { label: 'After', src: bookingAfter, width: 1280, height: 3001, alt: 'Booking Reliability hardened workflow with zero duplicates and a correlated duplicate-event investigation panel', caption: 'The same replay creates one charge. Repeated deliveries are suppressed and remain traceable.' },
+      { label: 'Recovery', src: bookingRecovery, width: 1280, height: 2970, alt: 'Booking Reliability refund failure alert with event, delivery, reservation, and retained paid ledger context', caption: 'A failed refund leaves the charge intact and records an open, correlated incident for investigation.' },
+    ],
+  },
+];
