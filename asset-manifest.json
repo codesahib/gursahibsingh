@@ -1,16 +1,28 @@
 {
   "files": {
-    "main.css": "./static/css/main.b9f6811f.css",
-    "main.js": "./static/js/main.d0854432.js",
-    "static/js/453.498dfd89.chunk.js": "./static/js/453.498dfd89.chunk.js",
-    "static/media/thailand.jpg": "./static/media/thailand.eb62879b06e1403da66b.jpg",
-    "index.html": "./index.html",
-    "main.b9f6811f.css.map": "./static/css/main.b9f6811f.css.map",
-    "main.d0854432.js.map": "./static/js/main.d0854432.js.map",
-    "453.498dfd89.chunk.js.map": "./static/js/453.498dfd89.chunk.js.map"
+    "main.css": "/static/css/main.879faffe.css",
+    "main.js": "/static/js/main.609f7d90.js",
+    "static/js/453.498dfd89.chunk.js": "/static/js/453.498dfd89.chunk.js",
+    "static/media/thailand.jpg": "/static/media/thailand.eb62879b06e1403da66b.jpg",
+    "static/media/master-control-terminal-dark.png": "/static/media/master-control-terminal-dark.3c53fff7c53ea641e8f4.png",
+    "static/media/master-control-terminal-light.png": "/static/media/master-control-terminal-light.c3be1ffc17b2c0c52965.png",
+    "static/media/booking-reliability-after.png": "/static/media/booking-reliability-after.7c23d45f7f00a323703a.png",
+    "static/media/booking-reliability-recovery.png": "/static/media/booking-reliability-recovery.12adab7dbd26e446ded8.png",
+    "static/media/booking-reliability-before.png": "/static/media/booking-reliability-before.c563e415e9d54baf13d7.png",
+    "static/media/league-sync-after.png": "/static/media/league-sync-after.0fbebd1c2fd3feb6d642.png",
+    "static/media/league-sync-recovery.png": "/static/media/league-sync-recovery.bafc7fac841cfb0abc02.png",
+    "static/media/college-import-review.png": "/static/media/college-import-review.ed1c6e811472bfba1acf.png",
+    "static/media/league-sync-before.png": "/static/media/league-sync-before.1fd29d5df333c04735d5.png",
+    "static/media/college-import-after.png": "/static/media/college-import-after.2d566650e01e739e99d7.png",
+    "static/media/Resume_GursahibSingh.pdf": "/static/media/Resume_GursahibSingh.1b82dc00c556d0ab91c0.pdf",
+    "static/media/college-import-before.png": "/static/media/college-import-before.d1a0a9282ebb92939286.png",
+    "index.html": "/index.html",
+    "main.879faffe.css.map": "/static/css/main.879faffe.css.map",
+    "main.609f7d90.js.map": "/static/js/main.609f7d90.js.map",
+    "453.498dfd89.chunk.js.map": "/static/js/453.498dfd89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9f6811f.css",
-    "static/js/main.d0854432.js"
+    "static/css/main.879faffe.css",
+    "static/js/main.609f7d90.js"
   ]
 }
